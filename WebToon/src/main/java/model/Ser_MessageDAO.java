@@ -58,7 +58,7 @@ public class Ser_MessageDAO {
 			connection();
 
 			// 쿼리 실행
-			String sql = "insert into customer_service values(?, ?, ?, ?, sysdate)";
+			String sql = "insert into customer_service values(?, ?, ?, ?, ?)";
 
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, message.getMember_id()); // email -> getEmail로 수정(member 객체로부터 꺼내옴)
