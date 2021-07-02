@@ -49,7 +49,7 @@ public class Ser_MessageDAO {
 
 	}
 
-	public int insertMesasge(Ser_MessageDTO message) {
+	public int Ser_insertMesasge(Ser_MessageDTO message) {
 
 		int cnt = 0;
 
