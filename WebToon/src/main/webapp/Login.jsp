@@ -30,6 +30,8 @@
     <%@ include file = "Header.jsp" %>
     <!-- Close Header -->
 
+
+
 	<div class="main-container">
 		<div class="main-wrap">
 		<header>
@@ -40,6 +42,8 @@
 			</div>
 		</header>
 
+
+	<form action = "LoginCon" method = "post">
 		<section class="login-input-section-wrap">
 			<div class="login-input-wrap">	
 				<input placeholder="아이디를 입력하세요." name="member_id" type="text"></input>
@@ -55,6 +59,8 @@
                 <span>아이디가 없다면 <span><a href="/2nd_project/join.html">회원가입</a>
 			</div>
 		</section>
+	</form>
+
 
 	<!-- Start Footer -->
 	<%@ include file = "Footer.jsp" %>

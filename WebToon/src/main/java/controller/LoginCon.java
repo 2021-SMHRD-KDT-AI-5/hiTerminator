@@ -8,8 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.MemberDAO;
-import model.MemberDTO;
 import model.T_MemberDAO;
 import model.T_MemberDTO;
 
@@ -33,10 +31,10 @@ public class LoginCon extends HttpServlet {
 				session.setAttribute("member", member_id);
 				
 				System.out.println("로그인 성공!");
-				response.sendRedirect("main.jsp");
+				response.sendRedirect("join.jsp");
 				}else {
 					System.out.println("로그인 실패...");
-				response.sendRedirect("main.jsp");
+				response.sendRedirect("join.jsp");
 			}
 		
 	
