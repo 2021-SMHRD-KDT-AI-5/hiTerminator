@@ -42,10 +42,10 @@
 
 		<section class="login-input-section-wrap">
 			<div class="login-input-wrap">	
-				<input placeholder="아이디를 입력하세요." type="text"></input>
+				<input placeholder="아이디를 입력하세요." name="member_id" type="text"></input>
 			</div>
 			<div class="login-input-wrap password-wrap">	
-				<input placeholder="비밀번호를 입력하세요." type="password"></input>
+				<input placeholder="비밀번호를 입력하세요." name="pw" type="password"></input>
 			</div>
 			<div class="login-button-wrap">
 				<!-- 로그인 버튼 -->
