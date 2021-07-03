@@ -76,7 +76,7 @@ https://templatemo.com/tm-561-purple-buzz
                     <div class="navbar align-self-center d-flex">
                         <!-- 종모양 i태그 -->
                         <!-- <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a> -->
-                        <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i>회원수정</a>
+                        <a class="nav-link" href="Mem_Update.jsp"><i class='bx bx-cog bx-sm text-primary'></i>회원수정</a>
                         <a class="nav-link"href = "Login.html"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
                     </div>
                 </div>

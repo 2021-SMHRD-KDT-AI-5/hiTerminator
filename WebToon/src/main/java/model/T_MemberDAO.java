@@ -17,7 +17,7 @@ public class T_MemberDAO {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 			// localhost : Oracle DB가 설치된 PC의 ip주소 설정
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String url = "jdbc:oracle:thin:@172.30.1.37:1521:xe";
 			String user = "hr";
 			String pass = "hr";
 
@@ -126,5 +126,33 @@ public class T_MemberDAO {
 		      return member;
 		   }
 	
-
+		   public int update(T_MemberDTO member) {
+			      
+			      int cnt = 0;
+			      
+			      //데이터베이스 연동
+			       try {
+			          connection();
+			         //쿼리 실행
+			          
+			         String sql = "update book_member set name=?,pw=?, tel=?, email=?,webtoon_link=? where member_id=?";
+			         
+			         psmt = conn.prepareStatement(sql);
+			         psmt.setString(1, member.getName());
+			         psmt.setString(2, member.getPw());
+			         psmt.setString(3, member.getTel());
+			         psmt.setString(4, member.getEmail());
+			         psmt.setString(5, member.getWebtoon_link());
+			         psmt.setString(6, member.getMember_id());
+			         
+			         cnt = psmt.executeUpdate();
+			         
+			      }catch (SQLException e) {
+			         System.out.println("sql문 오류다!!");
+			         e.printStackTrace();
+			      } finally {
+			         close();
+			      }
+			       return cnt;
+			   }
 }
