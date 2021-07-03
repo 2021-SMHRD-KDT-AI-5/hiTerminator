@@ -86,7 +86,7 @@ https://templatemo.com/tm-561-purple-buzz
                     <!-- 오른쪽 상단 아이콘 -->
                     <div class="navbar align-self-center d-flex">
                     
-                    	<%
+                    	<%-- <%
 						if (member != null) { //로그인 됐을 때
 
 							if (member.getEmail().equals("admin")) { //아이디가 관리자일때
@@ -100,16 +100,20 @@ https://templatemo.com/tm-561-purple-buzz
 						} else {
  						%> <a href="#menu">로그인</a> <%
  						}
-						%> 
+						%>  --%>
                     
                     
                         <!-- 종모양 i태그 -->
                         <!-- <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a> -->
+
                         
                         <!-- 로그인 전, 실패엔 안나옴 / 로그인 성공하면 회원수정 아이콘 나오기 -->
                         <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i>회원수정</a>
                         
                         <!-- 로그인 전에는 Login.html으로 연결 / 로그인 성공시 회원정보수정 Mem_update.jsp로 이동 -->
+
+                        <a class="nav-link" href="Mem_Update.jsp"><i class='bx bx-cog bx-sm text-primary'></i>회원수정</a>
+
                         <a class="nav-link"href = "Login.html"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
                     </div>
                     
