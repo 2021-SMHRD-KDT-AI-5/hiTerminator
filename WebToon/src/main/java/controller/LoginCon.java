@@ -8,7 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-5/hiTerminator.git
 import model.T_MemberDAO;
 import model.T_MemberDTO;
 
@@ -32,10 +35,18 @@ public class LoginCon extends HttpServlet {
 				session.setAttribute("member", member_id);
 				
 				System.out.println("로그인 성공!");
+<<<<<<< HEAD
 				response.sendRedirect("Service.jsp");
+=======
+				response.sendRedirect("join.jsp");
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-5/hiTerminator.git
 				}else {
 					System.out.println("로그인 실패...");
+<<<<<<< HEAD
 				response.sendRedirect("Service.jsp");
+=======
+				response.sendRedirect("join.jsp");
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-5/hiTerminator.git
 			}
 		
 	

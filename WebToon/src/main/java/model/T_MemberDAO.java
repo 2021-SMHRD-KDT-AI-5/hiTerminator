@@ -59,7 +59,7 @@ public class T_MemberDAO {
 		      try {
 		         connection();
 		         // Äõ¸® ½ÇÇà
-		         String sql = "insert into book_member values(?,?,?,?,?)";
+		         String sql = "insert into t_members values(?,?,?,?,?)";
 
 		         psmt = conn.prepareStatement(sql);
 

@@ -29,7 +29,13 @@
 	<!-- Header -->
     <%@ include file = "Header.jsp" %>
     <!-- Close Header -->
+<<<<<<< HEAD
 	<form action="LoginCon" method="post">
+=======
+
+
+
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-5/hiTerminator.git
 	<div class="main-container">
 		<div class="main-wrap">
 		<header>
@@ -40,6 +46,8 @@
 			</div>
 		</header>
 
+
+	<form action = "LoginCon" method = "post">
 		<section class="login-input-section-wrap">
 			<div class="login-input-wrap">	
 				<input placeholder="아이디를 입력하세요." name="member_id" type="text"></input>
@@ -56,6 +64,11 @@
 			</div>
 		</section>
 	</form>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-5/hiTerminator.git
 	<!-- Start Footer -->
 	<%@ include file = "Footer.jsp" %>
 	<!-- End Footer -->
