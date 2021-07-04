@@ -17,7 +17,7 @@ public class T_MemberDAO {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 			// localhost : Oracle DB가 설치된 PC의 ip주소 설정
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String url = "jdbc:oracle:thin:@172.30.1.37:1521:xe";
 			String user = "hr";
 			String pass = "hr";
 
@@ -51,7 +51,7 @@ public class T_MemberDAO {
 		}
 	}
 	
-	   public int insert_member(T_MemberDTO member) {
+	   public int join_member(T_MemberDTO member) {
 		   	// 회원가입 메소드
 
 		      int cnt = 0;
@@ -59,7 +59,7 @@ public class T_MemberDAO {
 		      try {
 		         connection();
 		         // 쿼리 실행
-		         String sql = "insert into t_members values(?,?,?,?,?)";
+		         String sql = "insert into t_members values(?,?,?,?,?,null,null)";
 
 		         psmt = conn.prepareStatement(sql);
 
@@ -72,19 +72,18 @@ public class T_MemberDAO {
 		         cnt = psmt.executeUpdate();
 
 		      } catch (SQLException e) {
-		         // SQL문 관련오류 발생시 실행되는 캣치-문
+		         // SQL문 관련오류 발생
 		         System.out.println("SQL문 에러");
 		         e.printStackTrace();
 		      } finally {
-		         // 무조건 실행하는 구문
 		         // 데이터베이스 종료기능 구현
 		         close();
-		      } // end
+		      } 
 		      return cnt;
 
 		   }
 
-		   public T_MemberDTO login_member(String id, String pw) {
+		   public T_MemberDTO login_member(String member_id, String pw) {
 			   // 로그인 메소드
 
 		      T_MemberDTO member = null;
@@ -94,11 +93,11 @@ public class T_MemberDAO {
 		         connection();
 
 		         // 쿼리 실행
-		         String sql = "select * from book_member where id=? and pw=?";
+		         String sql = "select * from t_members where member_id=? and pw=?";
 
 		         psmt = conn.prepareStatement(sql);
 
-		         psmt.setString(1, id);
+		         psmt.setString(1, member_id);
 		         psmt.setString(2, pw);
 
 		         // insert, update, delete : executeUpdate()
@@ -108,11 +107,12 @@ public class T_MemberDAO {
 		         // next(): 다음 행으로 넘어가서 데이터 존재 여부 판단(true/false)
 		         if (rs.next()) {// select한 데이터가 있다면
 		            String getId = rs.getString(1);
-		            String getNick = rs.getString(3);
-		            String getEmail = rs.getString(4);
-		            String getTel = rs.getString(5);
+		            String getPw = rs.getString(2);
+		            String getName = rs.getString(3);
+		            String getTel = rs.getString(4);
+		            String getEmail = rs.getString(5);
 
-		            member = new T_MemberDTO(getId, null, getNick, getEmail, getTel);
+		            member = new T_MemberDTO(getId, getPw, getName, getTel, getEmail);
 		         }
 
 		      } catch (SQLException e) {
@@ -126,5 +126,35 @@ public class T_MemberDAO {
 		      return member;
 		   }
 	
-
+		   public int update_member(T_MemberDTO member) {
+			      
+			      int cnt = 0;
+			      
+			      //데이터베이스 연동
+			       try {
+			          connection();
+			         //쿼리 실행
+			          
+//			         String sql = "update book_member set name=?,pw=?, tel=?, email=?,webtoon_link=? where member_id=?";
+			         
+			         String sql = "update t_member set name=?, pw=?, tel=?, email=? where member_id=? ";
+			         
+			         psmt = conn.prepareStatement(sql);
+			         psmt.setString(1, member.getName());
+			         psmt.setString(2, member.getPw());
+			         psmt.setString(3, member.getTel());
+			         psmt.setString(4, member.getEmail());
+//			         psmt.setString(5, member.getWebtoon_link());
+			         psmt.setString(5, member.getMember_id());
+			         
+			         cnt = psmt.executeUpdate();
+			         
+			      }catch (SQLException e) {
+			         System.out.println("sql문 오류다!!");
+			         e.printStackTrace();
+			      } finally {
+			         close();
+			      }
+			       return cnt;
+			   }
 }

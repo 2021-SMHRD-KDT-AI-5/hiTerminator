@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/*<<<<<<< HEAD
+
+=======
+>>>>>>> branch 'master' of https:*///github.com/2021-SMHRD-KDT-AI-5/hiTerminator.git
 import model.T_MemberDAO;
 import model.T_MemberDTO;
 
@@ -17,24 +21,25 @@ public class LoginCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String member_id = request.getParameter("id");
+		String member_id = request.getParameter("member_id");
 		String pw = request.getParameter("pw");
 		
 		T_MemberDAO dao = new T_MemberDAO();
-		T_MemberDTO T_MEMBERS = dao.login_member(member_id, pw);
+		T_MemberDTO member = dao.login_member(member_id, pw);
 		
 		
-			if(T_MEMBERS != null){ 
+			if(member != null){ 
 				
-
 				HttpSession session = request.getSession();
 				session.setAttribute("member", member_id);
 				
 				System.out.println("로그인 성공!");
-				response.sendRedirect("join.jsp");
+				response.sendRedirect("Service.jsp");
 				}else {
 					System.out.println("로그인 실패...");
-				response.sendRedirect("join.jsp");
+				response.sendRedirect("Login.jsp");
+
+
 			}
 		
 	
