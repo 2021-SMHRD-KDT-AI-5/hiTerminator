@@ -18,6 +18,12 @@ public class T_MemberDTO {
 		this.tel = tel;
 		this.email = email;
 	}
+	
+	public T_MemberDTO(String member_id, String email) {
+		super();
+		Member_id = member_id;
+		this.email = email;
+	}
 
 	public String getMember_id() {
 		return Member_id;
