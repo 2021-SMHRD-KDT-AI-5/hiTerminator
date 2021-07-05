@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class Ser_MessageDAO {
 	
@@ -16,7 +17,7 @@ public class Ser_MessageDAO {
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String url = "jdbc:oracle:thin:@172.30.1.37:1521:xe";
 			String user = "hr";
 			String pass = "hr";
 			conn = DriverManager.getConnection(url, user, pass);
@@ -58,14 +59,14 @@ public class Ser_MessageDAO {
 			connection();
 
 			// 쿼리 실행
-			String sql = "insert into customer_service values(?, ?, ?, ?, ?)";
+			String sql = "insert into customer_service values(?, ?, ?, ?, ?, sysdate)";
 
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, message.getMember_id()); // email -> getEmail로 수정(member 객체로부터 꺼내옴)
-			psmt.setString(2, message.getQ_ctgr());
-			psmt.setString(3, message.getQ_title());
-			psmt.setString(4, message.getQ_content());
-			psmt.setString(5, message.getQ_date());
+			psmt.setString(2, message.getEmail());
+			psmt.setString(3, message.getQ_ctgr());
+			psmt.setString(4, message.getQ_title());
+			psmt.setString(5, message.getQ_content());
 
 			// insert, update, delete : executeUpdate() --> DB내용 변경
 			// select : executeQuery() --> DB내용 검색
@@ -87,6 +88,45 @@ public class Ser_MessageDAO {
 
 		// cnt값 반환, 오류 첫 번째 선택 > void 수정
 		return cnt;
+	}
+	
+public ArrayList<Ser_MessageDTO> showMessage() {
+		
+		ArrayList<Ser_MessageDTO>list=new ArrayList<Ser_MessageDTO>(); // 단순 변수선언이 아닌 객체 생성
+		Ser_MessageDTO message = null; // 변수선언 및 초기화
+		
+		try {
+			// DB연결기능
+			connection();
+
+			// 쿼리실행  실행다시 해보세요!
+			String sql = "select * from CUSTOMER_SERVICE";
+
+			psmt = conn.prepareStatement(sql);
+			
+			rs = psmt.executeQuery();
+
+			while(rs.next()) { // 컬럼명과 데이터 사이에 커서 초기 위치, rs.next()에 따라 커서가 데이터를 가리키며 내려간다. 값이 있을(True) 때까지 반복
+				String member_id = rs.getString(1);
+				String email = rs.getString(2);
+				String q_ctgr = rs.getString(3);
+				String q_title = rs.getString(4);
+				String q_content = rs.getString(5);
+				String date = rs.getString(6);
+
+				message = new Ser_MessageDTO(member_id, email, q_ctgr, q_title, q_content, date);
+				list.add(message);
+			}
+
+		} 
+		catch (SQLException e) {
+			System.out.println("조회 sql 문 오류");
+			e.printStackTrace();
+		} finally {
+			close();
+		} // end
+
+		return list;
 	}
 	
 }
