@@ -62,7 +62,7 @@
                     <li><p>비밀번호</p><input type="password" name="pw" placeholder="수정할 비밀번호 입력" style="width: 500px; margin: 0 auto;"></li>
                    <!--  <li><p>비밀번호 확인</p><input type="password" name="pw_confirm" placeholder="수정할 비밀번호 확인" style="width: 500px; margin: 0 auto;"></li> -->
                     <li><p>전화번호</p><input type="text" name="tel" placeholder="수정할 전화번호 입력" style="width: 500px; margin: 0 auto;"></li>
-                    <li><p>이메일</p><input type="text" name="address" placeholder="수정할 이메일 입력" style="width: 500px; margin: 0 auto;"></li>
+                    <li><p>이메일</p><input type="text" name="email" placeholder="수정할 이메일 입력" style="width: 500px; margin: 0 auto;"></li>
                     <!-- <li><p>작품 등록하기</p><input type="text" name="webtoon_link" placeholder="등록할 작품 주소 입력" style="width: 500px; margin: 0 auto;"></li> -->
                     <div id="btn_section">
                         <input type="submit" value="수정완료" class="submit_btn">
