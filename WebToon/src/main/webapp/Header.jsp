@@ -70,14 +70,14 @@ https://templatemo.com/tm-561-purple-buzz
                                 <a class="nav-link btn-outline-primary rounded-pill px-3" href="Predict.html">승격예측</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Consulting.html">컨설팅</a>
+                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Consulting.jsp">컨설팅</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Service.html">고객센터</a>
+                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Service.jsp">고객센터</a>
                             </li>
                             <li class="nav-item">
                                 <!-- <a class="nav-link btn-outline-primary rounded-pill px-3" href="Login.html">로그인</a> -->
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Info.html">공지사항</a>
+                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Info.jsp">공지사항</a>
                             </li>
                         </ul>
                     </div>

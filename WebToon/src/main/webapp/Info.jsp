@@ -19,7 +19,16 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/custom.css">
 
+    <!-- css추가 -->
+    <style>
+        /* 테이블 넓이 조절 */
+        table.list_table{width: 100%;}
+        .infoform{float: right;}
+        th{background-color: #eeeeee; text-align: center;}
+        td{text-align: center;}
 
+    </style>
+    
 </head>
 <body>
 
@@ -27,29 +36,25 @@
 	<%@ include file = "Header.jsp" %>
 	
 	
-	    <!-- Start Banner Hero -->
-    <section class="bg-light">
-        <div class="container py-4">
-            <div class="row align-items-center justify-content-between">
-                <div class="contact-header col-lg-4">
-                    <h1 class="h2 pb-3 text-primary">공지사항</h1>
-                    <!-- <h3 class="h4 regular-400">000 공지사항 페이지 입니다.</h3> -->
-                    <!-- <p class="light-300">
-                        Vector illustration is from <a rel="nofollow" href="https://storyset.com/" target="_blank">StorySet</a>.
-                        Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                        여기는 뭘 적어야지..?
-                    </p> -->
-                </div>
-                <div class="contact-img col-lg-5 align-items-end col-md-4">
-                    <img src="./assets/img/notice.png" width="250" height="250">
+        <!-- Start Choice -->
+        <section class="why-us banner-bg bg-light">
+            <div class="container my-4">
+                <div class="row">
+                    <div class="banner-img col-lg-5">
+                        <img src="./assets/img/work.svg" class="rounded img-fluid" alt="">
+                    </div>
+                    <div class="banner-content col-lg-7 align-self-end">
+                        <h2 class="h2 pb-3">Notice</h2>
+                        <p class="text-muted pb-5 light-300">
+                        You are allowed to download and use this Purple Buzz template for your websites. You are <strong>not allowed</strong> to re-distribute this template ZIP file on other template websites. It is quite easy to simply copy and repost the ZIP file on any <a rel="nofollow" href="https://www.google.com/search?q=free+css" target="_blank">Free CSS collection</a> websites.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- End Banner Hero -->
-	
+        </section>
+        <!-- End Choice -->
 
-<!-- Start Contact -->
+
+    <!-- Start Contact -->
     <section class="container py-5">
 
         <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">공지사항</h1>
@@ -62,92 +67,105 @@
         </p> -->
 
         <div class="row pb-4">
-            <!-- Start Contact Form -->
-            <div class="col-lg-8 ">
-                <!-- <form class="contact-form row" method="post" action="#" role="form"> -->
-                <form name = "infoform" method="post" action="#" role="form">   
 
-                    <!-- 공지사항 검색옵션 -->
-                    <select name="infoselect" title="공지사항 검색 항목" class="select_class" style="width:90px;">
-                        <option value="all">전체</option>
-                        <option value="title">제목</option>
-                        <option value="user_name">작성자</option>
-                    </select>
-
-                    <!-- 공지사항 검색창 -->
-                    <label for="info_search">
-                        <span style="display: none;">검색</span>
-                    </label>
-                    <input type="text" id="info_search" name="search" vlaue class="inputi" style="width: 175px;">
-                    
-                    <!-- 공지사항 검색 버튼 이미지 -->
-                    <a href="Consulting.html">
-                        <img src="/assets/img/Search.png" alt="검색"style="width:27px;" >
-                    </a>
-                    </form>
-                    </div>
-                    <!-- End 검색 목록 -->
-            
-            
-            <div class="search_list">
-                <!-- 리스트 -->
-                <form name="search_form" method="POST" action="">
-                    <table class="list_table" summary="이 표는 커뮤니티_공지사항 게시판 리스트로 번호, 제목, 작성자, 작성일, 파일, 조회수 등 의 정보를 담고 있으며, 표 상단에 제공하는 검색박스를 이용하실 수 있습니다.">
-                        <caption class="search_blind">공지사항 리스트</caption>
-                        <colgroup>
-                            <col style="width:40px;">
-                            <col style="width:400px;">
-                            <col style="width:70px;">
-                            <col style="width:80px;">
-                            <col style="width:60px;">
-                            <col style="width:30px;">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">
-                                    <div class="wrap">번호</div>
-                                </th>
-                                <th scope="col">
-                                    <div class="wrap">제목</div>
-                                </th>
-                                <th scope="col">
-                                    <div class="wrap">작성자</div>
-                                </th>
-                                <th scope="col">
-                                    <div class="wrap">작성일</div>
-                                </th>
-                                <th scope="col">
-                                    <div class="wrap">조회</div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- 여기에 글이 들어감 -->
-                            <tr>
-                                <td>번호</td>
-                                <td>제목</td>
-                                <td>작성자</td>
-                                <td>작성일</td>
-                                <td>조회수</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>공지글</td>
-                                <td>관리자</td>
-                                <td>2021-07-03</td>
-                                <td>10</td>
-                            </tr>
+                    <!-- Start Contact Form -->
+                    <div class="col-lg-8 " style="padding-top: 10px; text-align: right;">
+                        <!-- <form class="contact-form row" method="post" action="#" role="form"> -->
+                        <form class = "infoform" name = "infoform" method="post" action="#" role="form">   
+        
+                            <!-- 공지사항 검색옵션 -->
+                            <select name="infoselect" title="공지사항 검색 항목" class="select_class" style="width:150px; height: 40px;">
+                                <option value="all">전체</option>
+                                <option value="title">제목</option>
+                                <option value="user_name">작성자</option>
+                            </select>
+        
+                            <!-- 공지사항 검색창 -->
+                            <label for="info_search">
+                                <span style="display: none;">검색</span>
+                            </label>
+                            <input type="text" id="info_search" name="search" vlaue class="inputi" style="width: 500px; height: 40px;">
                             
-                        </tbody>
-                        <!-- 리스트 끝 -->
-                    </table>
-                </form>
-
-            </div>
-
-        </div>
-    </section>
-    <!-- End Contact -->
+                            <!-- 공지사항 검색 버튼 이미지 -->
+                            <a href="Consulting.html">
+                                <img src="assets/img/Search.png" alt="검색"style="width:30px; margin :10px;" >
+                            </a>
+                        </form>
+                    </div>
+                            <!-- End 검색 목록 -->
+                    
+                    
+                    <div class="search_list" style="padding-top: 40px;">
+                        <!-- 리스트 -->
+                        <form name="search_form" method="POST" action="">
+                            <table class="list_table" class="table table-striped"">
+                                <!-- <caption class="search_blind">공지사항 리스트</caption> -->
+                                <colgroup>
+                                    <col style="width:40px;">
+                                    <col style="width:250px;">
+                                    <col style="width:70px;">
+                                    <col style="width:80px;">
+                                    <col style="width:100px;">
+                                    <col style="width: 30px;">
+                                </colgroup>
+                                <thead>
+                                    <tr  style="height: 50px;">
+                                        <th scope="col" >
+                                            <div class="wrap">번호</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="wrap">제목</div>
+                                        </th>
+                                        <th scope="col" >
+                                            <div class="wrap">작성자</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="wrap">작성일</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="wrap">조회</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                     <!-- 여기에 글이 들어감 -->
+                                    <tr style="height: 50px;">
+                                        <td>1</td>
+                                        <td><a href="Info_1.jsp">웹툰 승격 예측 서비스란?</a></td>
+                                        <td>작성자1</td>
+                                        <td>2021-07-05</td>
+                                        <td>조회수1</td>
+                                    </tr>
+                                    <tr style="height: 50px;">
+                                        <td>2</td>
+                                        <td><a href="Info_2.jsp">2021년도 3분기 1:1 컨설팅 모집 안내</a></td>
+                                        <td>작성자2</td>
+                                        <td>2021-07-06</td>
+                                        <td>조회수2</td>
+                                    </tr>
+                                    <tr style="height: 50px;">
+                                        <td>3</td>
+                                        <td><a href="Info_3.jsp">후원기능 사용 방법</a></td>
+                                        <td>작성자3</td>
+                                        <td>2021-07-07</td>
+                                        <td>조회수3</td>
+                                    </tr>
+                                    <tr style="height: 50px;">
+                                        <td>4</td>
+                                        <td><a href="Info_4.jsp">업데이트 소식</a></td>
+                                        <td>작성자4</td>
+                                        <td>2021-07-08</td>
+                                        <td>조회수4</td>
+                                    </tr>
+                                </tbody>
+                                <!-- 리스트 끝 -->
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- End Contact -->
+    
 
 
     

@@ -1,0 +1,105 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+    <title>Purple Buzz - Info Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- css추가 -->
+    <style>
+        /* 테이블 넓이 조절 */
+        table.list_table{width: 100%;}
+        .infoform{float: right;}
+        th,td{padding:15px;}
+        table{border-collapse: collapse solid black;}
+        button{width: 70px; height: 35px; margin-left: 550px;}
+    </style>
+
+</head>
+<body>
+
+	<!-- Header -->
+	<%@ include file = "Header.jsp" %>
+
+
+	    <!-- Start Banner Hero -->
+    <section class="bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="contact-header col-lg-4">
+                    <h1 class="h2 pb-3 text-primary">공지사항</h1>
+                    <!-- <h3 class="h4 regular-400">000 공지사항 페이지 입니다.</h3> -->
+                    <!-- <p class="light-300">
+                        Vector illustration is from <a rel="nofollow" href="https://storyset.com/" target="_blank">StorySet</a>.
+                        Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                        여기는 뭘 적어야지..?
+                    </p> -->
+                </div>
+                <div class="contact-img col-lg-5 align-items-end col-md-4">
+                    <img src="./assets/img/notice.png" width="250" height="250">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Hero -->
+
+
+    <!-- Strat 공지글 -->
+
+    <section class="container py-5" style="height: 1000px;">
+
+        <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">공지사항</h1>
+        <!-- 밑에 줄 때문에 가져옴 -->
+        <h6 class="worksingle-heading h3 pb-3 light-300 typo-space-line"></h6>
+
+        <hr>
+        <div id="info_wrap" style="#">
+            <form class="info_content">
+                <input type="hidden" value="board_write" name="command">
+                <table style="width: 100%;">
+                    <tr>
+                        <th>번호 *</th>
+                        <td>2</td>
+                        <th>작성자</th>
+                        <td>관리자</td>
+                        <th>작성일</th>
+                        <td>2021-07-05</td>
+                    </tr>
+                    <tr>
+                        <th>제목</th>
+                        <td>웹툰 승격 예측 서비스란?</td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>
+                        <td></td>
+                    </tr>
+                </table>
+                <button><a href="Info.jsp">목록</a></button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- End 공지글 -->
+
+
+	<!-- Footer -->
+	<%@ include file = "Footer.jsp" %>
+
+</body>
+</html>

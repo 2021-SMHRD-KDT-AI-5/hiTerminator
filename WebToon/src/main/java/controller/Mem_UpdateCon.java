@@ -17,7 +17,8 @@ public class Mem_UpdateCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	request.setCharacterEncoding("euc-kr");
+		
+		request.setCharacterEncoding("euc-kr");
 		
 		// 세션에 저장되어 있는 MemberDTO객체에 접근 -> 이메일 정보
 		HttpSession session = request.getSession();

@@ -38,7 +38,7 @@ public class JoinCon extends HttpServlet {
 					
 				
 					if (cnt >0) { 
-						// request 영역에 아이디 정보를 저장 
+						// request 영역에 저장 
 						request.setAttribute("member_id", member_id);
 						
 						// forward 방식 : 페이지 이동

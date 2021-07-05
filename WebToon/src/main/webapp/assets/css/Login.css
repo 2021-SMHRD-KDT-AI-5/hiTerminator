@@ -87,7 +87,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* body 크기 늘리고싶을때 */
+	/* body �겕湲� �뒛由ш퀬�떢�쓣�븣 */
 	margin-top: 0px;
 	margin-bottom: 350px;
 }
