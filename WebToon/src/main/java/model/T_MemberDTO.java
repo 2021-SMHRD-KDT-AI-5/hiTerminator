@@ -6,18 +6,18 @@ public class T_MemberDTO {
 	private String name;
 	private String tel;
 	private String email;
-	// ck -> 累啊咯何, 包府磊 咯何
+	/*
+	 * private String webtoon_link; // ck -> 累啊咯何, 包府磊 咯何
+	 */	
 	
-	// 积己磊
 	public T_MemberDTO(String member_id, String pw, String name, String tel, String email) {
-		this.Member_id = member_id;
+		super();
+		Member_id = member_id;
 		this.pw = pw;
 		this.name = name;
 		this.tel = tel;
 		this.email = email;
 	}
-	
-	// getter setter
 
 	public String getMember_id() {
 		return Member_id;
@@ -58,6 +58,9 @@ public class T_MemberDTO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	
+
 	
 	
 	

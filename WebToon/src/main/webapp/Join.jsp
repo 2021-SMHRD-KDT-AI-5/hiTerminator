@@ -24,9 +24,9 @@
 
 		<section class="login-input-section-wrap">
 
-        <form>
+        <form action ="JoinCon" method = "post">
 			<div class="login-input-wrap">	
-				<input type="text" name="id" placeholder="아이디 입력" id="input_id">
+				<input type="text" name="member_id" placeholder="아이디 입력" id="input_id">
 				<!-- <input  class="join-button-wrap button" type="button" value="중복확인" onclick="idCheck()" style="background-color: #4232c2;" > <span id="sp"></span>  -->
 			</div>
 			
@@ -38,9 +38,9 @@
 				<input type="password" name="pw" placeholder="비밀번호 입력">
 			</div>
 
-			<div class="login-input-wrap password-wrap">	
+			<!-- <div class="login-input-wrap password-wrap">	
 				<input type="password" name="pw_confirm" placeholder="비밀번호 재입력"></input>
-			</div>
+			</div> -->
 
 			<div class="login-input-wrap password-wrap">	
 				<input type="text" name="name" placeholder="성명 입력">

@@ -30,8 +30,6 @@
     <%@ include file = "Header.jsp" %>
     <!-- Close Header -->
 
-
-
 	<div class="main-container">
 		<div class="main-wrap">
 		<header>
@@ -53,14 +51,13 @@
 			</div>
 			<div class="login-button-wrap">
 				<!-- 로그인 버튼 -->
-                <button>Sign in</button>
+                <input type="submit" value="sign in">
 			</div>
 			<div class="login-stay-sign-in">
                 <span>아이디가 없다면 <span><a href="/2nd_project/join.html">회원가입</a>
 			</div>
 		</section>
 	</form>
-
 
 	<!-- Start Footer -->
 	<%@ include file = "Footer.jsp" %>
