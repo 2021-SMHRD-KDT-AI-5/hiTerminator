@@ -20,10 +20,10 @@ public class T_MemberDTO {
 		this.email = email;
 	}
 	
-	public T_MemberDTO(String member_id, String email) {
+	public T_MemberDTO(String member_id, String pw) {
 		super();
-		Member_id = member_id;
-		this.email = email;
+		this.Member_id = member_id;
+		this.pw = pw;
 	}
 
 	public String getMember_id() {

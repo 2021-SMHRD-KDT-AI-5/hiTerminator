@@ -32,7 +32,7 @@ public class Mem_UpdateCon extends HttpServlet {
 //		String webtoon_link = request.getParameter("webtoon_link");
 		
 		
-		T_MemberDTO member2 = new T_MemberDTO(session.getId(),name,pw,tel,email);
+		T_MemberDTO member2 = new T_MemberDTO(session.getId(),pw,name,tel,email);
 		T_MemberDAO dao = new T_MemberDAO();
 
 		int cnt = dao.update_member(member2);
