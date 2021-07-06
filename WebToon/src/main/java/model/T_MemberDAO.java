@@ -106,13 +106,13 @@ public class T_MemberDAO {
 
 		         // next(): 다음 행으로 넘어가서 데이터 존재 여부 판단(true/false)
 		         if (rs.next()) {// select한 데이터가 있다면
-		            String getId = rs.getString(1);
+		            String getMember_Id = rs.getString(1);
 		            String getPw = rs.getString(2);
 		            String getName = rs.getString(3);
 		            String getTel = rs.getString(4);
 		            String getEmail = rs.getString(5);
 
-		            member = new T_MemberDTO(getId, getPw, getName, getTel, getEmail);
+		            member = new T_MemberDTO(getMember_Id, getPw, getName, getTel, getEmail);
 		         }
 
 		      } catch (SQLException e) {
