@@ -59,7 +59,7 @@ public class Ser_MessageDAO {
 			connection();
 
 			// 쿼리 실행
-			String sql = "insert into customer_service values(?, ?, ?, ?, ?, sysdate)";
+			String sql = "insert into customer_service values(service_no.nextval, ?, ?, ?, ?, ?, sysdate)";
 
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, message.getMember_id()); // email -> getEmail로 수정(member 객체로부터 꺼내옴)
@@ -107,14 +107,15 @@ public ArrayList<Ser_MessageDTO> showMessage() {
 			rs = psmt.executeQuery();
 
 			while(rs.next()) { // 컬럼명과 데이터 사이에 커서 초기 위치, rs.next()에 따라 커서가 데이터를 가리키며 내려간다. 값이 있을(True) 때까지 반복
-				String member_id = rs.getString(1);
-				String email = rs.getString(2);
-				String q_ctgr = rs.getString(3);
-				String q_title = rs.getString(4);
-				String q_content = rs.getString(5);
-				String date = rs.getString(6);
+				int service_no = rs.getInt(1);
+				String member_id = rs.getString(2);
+				String email = rs.getString(3);
+				String q_ctgr = rs.getString(4);
+				String q_title = rs.getString(5);
+				String q_content = rs.getString(6);
+				String date = rs.getString(7);
 
-				message = new Ser_MessageDTO(member_id, email, q_ctgr, q_title, q_content, date);
+				message = new Ser_MessageDTO(service_no, member_id, email, q_ctgr, q_title, q_content, date);
 				list.add(message);
 			}
 
@@ -129,4 +130,35 @@ public ArrayList<Ser_MessageDTO> showMessage() {
 		return list;
 	}
 	
+	public int deleteMessage(String q_no) {
+	
+	int cnt = 0;
+
+	try {
+		// DB연결
+		connection();
+
+		// 쿼리 실행
+		String sql = "delete from customer_service where inquiry_id=?";
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1, q_no);
+		
+		// ★★★★★
+		// insert, update, delete: executeUpdate() --> DB에 내용을 변경할 때
+		// select: executeQuery() --> DB에 내용을 검색할 때
+		cnt = psmt.executeUpdate();
+
+	} catch (SQLException e) {
+		// DB관련 오류발생시 실행되는 catch문
+		System.out.println("메세지삭제 spl문 오류!");
+		e.printStackTrace();
+	} finally {
+		// 무조건 실행하는 구문(try catch문은 예외처리 구문)
+		// 데이터베이스 종료기능 구현
+		close();
+	} // end
+	return cnt;
+	
+}
+
 }
