@@ -12,9 +12,9 @@ public class T_MemberDTO {
 	
 	public T_MemberDTO(String member_id, String name, String pw, String tel, String email) {
 		super();
-		Member_id = member_id;
-		this.pw = pw;
+		this.Member_id = member_id;
 		this.name = name;
+		this.pw = pw;
 		this.tel = tel;
 		this.email = email;
 	}
