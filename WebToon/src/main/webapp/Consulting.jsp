@@ -1,4 +1,7 @@
 <%@page import="model.Consulting_messageDAO"%>
+<%@page import="model.Consulting_messageDTO"%>
+<%@page import="java.util.ArrayList"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <% T_MemberDTO member = (T_MemberDTO)session.getAttribute("member"); 
 
@@ -35,19 +38,6 @@
 	<!-- Header -->
 	<%@ include file = "Header.jsp" %>
 	
-	<!-- 컨설팅 헤더 -->
-    <!-- <section>
-        <div class="container py-4">
-            <div class="row align-items-center justify-content-between">
-                <h1 class="h2 pb-3 text-primary">컨설팅</h1>
-            </div>
-            <div class="contact-img col-lg-5 align-items-end col-md-4">
-                <img src="./assets/img/meeting.png" width="250" height="250">
-            </div>
-        </div>
-    </section> -->
-    
-
     <!-- Start pricing -->
     <div class="container-lg py-5">
         <div class="col-md-12 m-auto text-center py-5">
@@ -243,6 +233,9 @@
 					<th><%=list.get(i).getConsult_content() %></th>
 					<th><%=list.get(i).getApply_date() %></th>
 				</tr>
+				<%
+					}
+				%>
 			</table>
     	</div>
     </section>
@@ -272,34 +265,10 @@
 
                     <!-- <div class="col-lg-6 mb-4">
                         <div class="form-floating">
-                            <input type="text" class="form-control form-control-lg light-300" id="floatingemail" name="inputemail" placeholder="Email">
-                            <label for="floatingemail light-300">이메일</label>
-                        </div>
-                    </div> -->
-                    <!-- End Input Email -->
-
-                    <!-- <div class="col-lg-6 mb-4">
-                        <div class="form-floating">
-                            <input list = "question" class="form-control form-control-lg light-300" id="floatingquestion" name="inputquestion" placeholder="object" list = "Question">
-                                <datalist id = "question">
-                                    <option value = "Romance">로맨스</option>
-                                    <option value = "Action">액션</option>
-                                    <option value = "Comic">코믹</option>
-                                    <option value = "fear">공포</option>
-                                    <option value = "other">기타</option>
-                                </datalist> 
-                            </input>
-                            <label for="floatingphone light-300">장르</label>
-                        </div>
-                    </div> -->
-                    <!-- End Input Phone -->
-
-                    <div class="col-lg-6 mb-4">
-                        <div class="form-floating">
                             <input type="text" class="form-control form-control-lg light-300" id="floatingcompany" name="inputcompany" placeholder="date">
                             <label for="floatingcompany light-300">등록 일자</label>
                         </div>
-                    </div><!-- End Input Company Name -->
+                    </div>End Input Company Name -->
 
                     <div class="col-12">
                         <div class="form-floating mb-4">
