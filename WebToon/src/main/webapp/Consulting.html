@@ -266,6 +266,20 @@ https://templatemo.com/tm-561-purple-buzz
         </div>
     </section>
     <!--End Pricing Horizontal Section-->
+    
+    <!-- 메세지 확인창  -->
+    <section id="message_section">
+    	<div class="message_div">
+    		<header class="message_header">
+    			<h2> 컨설팅 지원 확인</h2>
+    		</header>
+    		<p></p>
+    		<ul class="message_ul">
+    			<li>로그인을 하세요.</li>
+    			<li><a href="#" class="message_a">전체삭제하기</a></li>
+    		</ul>
+    	</div>
+    </section>
 
     <section class="container py-5">
 
@@ -281,63 +295,32 @@ https://templatemo.com/tm-561-purple-buzz
 
             <!-- Start Contact Form -->
             <div class="col-lg-8 ">
-                <form class="contact-form row" method="post" action="#" role="form">
+                <form class="contact-form row" method="post" action="ConsultingCon" role="form">
 
                     <div class="col-lg-6 mb-4">
                         <div class="form-floating">
-                            <input type="text" class="form-control form-control-lg light-300" id="floatingname" name="inputname" placeholder="Name">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingname" name="member_id" placeholder="Name">
                             <label for="floatingname light-300">회원 아이디</label>
                         </div>
                     </div><!-- End Input Name -->
 
-                    <!-- <div class="col-lg-6 mb-4">
-                        <div class="form-floating">
-                            <input type="text" class="form-control form-control-lg light-300" id="floatingemail" name="inputemail" placeholder="Email">
-                            <label for="floatingemail light-300">이메일</label>
-                        </div>
-                    </div> -->
-                    <!-- End Input Email -->
-
-                    <!-- <div class="col-lg-6 mb-4">
-                        <div class="form-floating">
-                            <input list = "question" class="form-control form-control-lg light-300" id="floatingquestion" name="inputquestion" placeholder="object" list = "Question">
-                                <datalist id = "question">
-                                    <option value = "Romance">로맨스</option>
-                                    <option value = "Action">액션</option>
-                                    <option value = "Comic">코믹</option>
-                                    <option value = "fear">공포</option>
-                                    <option value = "other">기타</option>
-                                </datalist> 
-                            </input>
-                            <label for="floatingphone light-300">장르</label>
-                        </div>
-                    </div> -->
-                    <!-- End Input Phone -->
-
                     <div class="col-lg-6 mb-4">
                         <div class="form-floating">
-                            <input type="text" class="form-control form-control-lg light-300" id="floatingcompany" name="inputcompany" placeholder="date">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingcompany" name="apply_date" placeholder="date">
                             <label for="floatingcompany light-300">등록 일자</label>
                         </div>
                     </div><!-- End Input Company Name -->
 
                     <div class="col-12">
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="inputsubject" placeholder="Subject">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="title" placeholder="Subject">
                             <label for="floatingsubject light-300">작품 제목</label>
-                        </div>
+                         </div>
                     </div><!-- End Input Subject -->
 
-                    <!-- <div class="col-12">
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control light-300" rows="8" placeholder="Message" id="floatingtextarea"></textarea>
-                            <label for="floatingtextarea light-300">컨설팅 받고 싶은 내용</label>
-                        </div>
-                    </div> -->
-                    <!-- End Textarea Message -->
-
+                    
                     <div class="filebox"> 
-                        <input class="upload-name" value="파일선택" disabled="disabled"> 
+                        <input class="upload-name" value="파일선택" name="consult_content" disabled="disabled"> 
                         <label for="ex_filename">업로드</label> <input type="file" id="ex_filename" class="upload-hidden"> 
                     </div>
 

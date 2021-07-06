@@ -1,5 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page import="model.Consulting_messageDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% T_MemberDTO member = (T_MemberDTO)session.getAttribute("member"); 
+
+	Consulting_messageDAO dao = new Consulting_messageDAO();
+	ArrayList<Consulting_messageDTO> list = new ArrayList<Consulting_messageDTO>();
+	
+	if(member != null){
+		list = dao.showMessage(member.getMember_id());	
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -117,36 +126,9 @@
                 </div>
             </div>
 
-
-            <!-- <div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
-                <div class="pricing-table card bg-secondary h-100 card-rounded shadow-sm border-0 py-5">
-                    <div class="pricing-table-body card-body text-center text-white align-self-center p-md-0">
-                        <i class="pricing-table-icon display-3 bx bx-package text-white py-3"></i>
-                        <h2 class="pricing-table-heading h5 semi-bold-600">Standard Plan</h2>
-                        <p>$120/Year</p>
-                        <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
-                            <li class="text-white"><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
-                            <li class="text-white"><i class="bx bxs-circle me-2"></i>10 TB space</li>
-                            <li class="text-white"><i class="bx bxs-circle me-2"></i>Source Files</li>
-                            <li class="text-white"><i class="bx bxs-circle me-2"></i>Live Chat</li>
-                        </ul>
-                        <div class="pricing-table-footer pt-5 pb-2">
-                            <a href="#" class="btn rounded-pill px-4 btn-outline-light light-300">Get Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-
-            
-
         </div>
     </div>
     <!-- End Content -->
-
-
-
-
 
     <!-- Start Pricing Horizontal Section -->
     <section class="bg-light pt-sm-0 py-5">
@@ -225,7 +207,46 @@
         </div>
     </section>
     <!--End Pricing Horizontal Section-->
-
+    
+    <!-- 메세지 확인창  -->
+    <section id="message_section">
+    	<div class="message_div">
+    		<header class="message_header">
+    			<h2> 컨설팅 지원 확인</h2>
+    		</header>
+    		<p></p>
+    		<ul class="message_ul">
+    			<%
+    				if(member != null){
+    			%>
+    			<li><%=member.getMember_id()%>의 지원서</li>
+    			<%}else{ %>
+    			<li>로그인을 하세요.</li><!-- 로그인을 하지 않은경우 -->
+    			<%} %>
+    			<li><a href="#" class="message_a">전체삭제하기</a></li>
+    		</ul>
+    		<table>
+				<tr>
+					<th>번호</th>
+					<th>보내는 사람</th>
+					<th>내용</th>
+					<th>첨부파일</th>
+					<th>시간</th>
+				</tr>
+				<%
+					for(int i = 0; i < list.size(); i++){
+				%>
+				<tr>
+					<th><%=i+1 %></th>
+					<th><%=list.get(i).getMember_id() %></th>
+					<th><%=list.get(i).getTitle() %></th>
+					<th><%=list.get(i).getConsult_content() %></th>
+					<th><%=list.get(i).getApply_date() %></th>
+				</tr>
+			</table>
+    	</div>
+    </section>
+									
     <section class="container py-5">
 
         <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">Step 1</h1>
@@ -310,7 +331,6 @@
                 </form>
             </div>
             <!-- End Contact Form -->
-
 
         </div>
     </section>
