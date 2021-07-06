@@ -41,7 +41,7 @@ public class Mem_UpdateCon extends HttpServlet {
 		if(cnt > 0 ) {
 			// 변경된 session이 member2에 저장
 			session.setAttribute("member", member2);
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("Login.jsp");
 		}else {
 			response.sendRedirect("Mem_Update.jsp");
 		}
