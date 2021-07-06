@@ -40,13 +40,16 @@ https://templatemo.com/tm-561-purple-buzz
 -->
 
     <style>
-        #container{height:1000px; margin-left: 450px; margin-right: 450px auto; width:1020px;}
+        #container{height:1000px; margin-left: 430px; margin-right: 450px auto;}
         #container h1{padding:20px 0; margin-bottom:0px; color:#4232c2;}
         #container table tr{border:1px solid gray; text-align:center;}
         #container table th, td{height:40px; font-weight:normal;}
         #container table td{color:gray;}
+        #container table td>a{color:gray;}
         #container #paginate{width:1090px; float:left; height:20px; text-align:center; font-size:14px; margin-top:12px;}
-        #container #paginate a{text-decoration: none; color:gray; padding:4px;}
+        #container #paginate a{color:gray; padding:4px;}
+        #container .btnDelete{background-color:#4232c2; color:white;}
+        
         footer{clear:left;}
     </style>
 </head>
@@ -61,32 +64,35 @@ https://templatemo.com/tm-561-purple-buzz
             <h1>고객문의 확인</h1>
             <table>
                 <colgroup>
-                    <col width="150" />
-                    <col width="150" />
+                	<col width="50" />
+                	<col width="50" />
+                    <col width="100" />
                     <col width="200" />
-                    <col width="500" />
-                    <col width="300" />
+                    <col width="100" />
+                    <col width="200" />
                     <col width="200" />
                 </colgroup>
                 <tr>
-                    <th>분류</th>
+                	<th><input type="checkbox" name="checkAll" onclick="checkAll();"></th>
+                	<th>번호</th>
                     <th>아이디</th>
                     <th>이메일</th>
+                    <th>분류</th>
                     <th>제목</th>
-                    <th>내용</th>
                     <th>일시</th>
                 </tr>
                 <%for(int i=0; i<list.size(); i++){ %>
 				<tr>
+					<td><input type="checkbox" name="check" value="<%= list.get(i).getQ_no()%>"></td>
+					<td><%=list.get(i).getQ_no() %></td>
 					<td><%=list.get(i).getMember_id() %></td>
-					<td><%=list.get(i).getEmail() %></td>
+					<td><a href=""><%=list.get(i).getEmail() %></a></td>
 					<td><%=list.get(i).getQ_ctgr() %></td>
 					<td><%=list.get(i).getQ_title() %></td>
-					<td><%=list.get(i).getQ_content() %></td>
 					<td><%=list.get(i).getQ_date() %></td>
 					<!-- 삭제기능: select.jsp 참고해서 만들 수 있어요 -->
 					<%-- <td><a
-						href="MessageDeleteCon?messageNum=<%=list.get(i).getNum()%>">삭제</a></td>
+						href="Ser_MessageDeleteCon?messageNum=<%=list.get(i).getMember_id()%>">삭제</a></td>
 					<!-- 쿼리스트링으로 url에 데이터 실어보내기 --> --%>
 				</tr>
 				<%} %>
@@ -100,6 +106,7 @@ https://templatemo.com/tm-561-purple-buzz
             <a href="">5</a>
             <a href="">다음></a>
         </div>
+        <input type="button" value="삭제" class="btnDelete" onclick="deleteValue();">
     </div>
 
     <!-- Start Footer -->
@@ -133,6 +140,66 @@ https://templatemo.com/tm-561-purple-buzz
                 return false;
             });
         });
+        
+        $(function(){
+        	var chkObj = document.getElementsByName("check");
+        	var rowCnt = chkObj.length;
+        	
+        	$("input[name='checkAll']").click(function(){
+            	var chk_listArr=$("input[name='check']");
+            	for (var i=0; i<chk_listArr.length; i++){
+            		chk_listArr[i].checked=this.checked;
+            	}
+            });
+            
+            $("input[name='check']").click(function(){
+            	if($("input[name='check']:checked").length == rowCnt){
+            		$("input[name='checkAll']")[0].checked=true;
+            	}else{
+            		$("input[name='checkAll']")[0].checked=false;
+            	}
+            });
+        });
+        
+        function deleteValue(){
+        	var url="Ser_MessageDeleteCon"; // Controller로 보내고자하는 URL
+        	var valueArr = new Array();
+        	var list = $("input[name='check']");
+        	for(var i=0; i<list.length; i++){
+        		if(list[i].checked){ // 선택되어 있으면 배열에 값을 저장함.
+        			valueArr.push(list[i].value);
+        		}
+        	}
+        
+	        if(valueArr.Length==0){
+	        	alert("선택된 글이 없습니다.");
+	        }else{
+	        	var chk=confirm("정말 삭제하시겠습니까?");
+	        	$.ajax({
+	        		url:url,
+	        		type:'POST',
+	        		traditional:true,
+	        		data:{
+	        			valueArr : valueArr
+	        		},
+	        		success:function(jdata){
+	        			if(jdata=1){
+	        				location.replace("Admin_Service")
+	        				
+	        			}
+	        			else{
+	        				alert("삭제 실패");
+	        			}
+	        		}
+	        		
+	        	});
+        		}
+        }
+        
+        
+        
+        
+        
     </script>
     <!-- Templatemo -->
     <script src="assets/js/templatemo.js"></script>

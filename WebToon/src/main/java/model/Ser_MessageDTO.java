@@ -1,6 +1,7 @@
 package model;
 
 public class Ser_MessageDTO {
+	private int Q_no;
 	private String member_id;
 	private String email;
 	private String Q_ctgr;
@@ -17,14 +18,23 @@ public class Ser_MessageDTO {
 		Q_content = q_content;
 	}
 	
-	public Ser_MessageDTO(String member_id, String email, String q_ctgr, String q_title, String q_content, String q_date) {
+	public Ser_MessageDTO(int q_no, String member_id, String email, String q_ctgr, String q_title, String q_content, String q_date) {
 		super();
+		Q_no=q_no;
 		this.member_id = member_id;
 		this.email = email;
 		Q_ctgr = q_ctgr;
 		Q_title = q_title;
 		Q_content = q_content;
 		Q_date = q_date;
+	}
+	
+	public int getQ_no() {
+		return Q_no;
+	}
+
+	public void setQ_no(int q_no) {
+		Q_no = q_no;
 	}
 
 	public String getMember_id() {
