@@ -165,7 +165,7 @@ public class T_MemberDAO {
 		             // connection 메소드 불러오기 -> DB연결기능
 		             connection();
 
-		             String sql = "select * from web_member where member_id = ?";
+		             String sql = "select * from t_members where member_id = ?";
 
 		             psmt = conn.prepareStatement(sql);
 		             psmt.setString(1, member_id);
