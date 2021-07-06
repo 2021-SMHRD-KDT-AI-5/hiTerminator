@@ -56,8 +56,15 @@
 			<div class="login-stay-sign-in">
                 <span>아이디가 없다면 <span><a href="Join.jsp">회원가입</a>
 			</div>
-		</section>
+			</section>
 	</form>
+	
+	
+		
+	
+	
+	
+	
 
 	<!-- Start Footer -->
 	<%@ include file = "Footer.jsp" %>
@@ -97,5 +104,6 @@
     <script src="assets/js/custom.js"></script>
 		</div>
 	</div>
+	
 </body>
 </html>

@@ -157,4 +157,44 @@ public class T_MemberDAO {
 			      }
 			       return cnt;
 			   }
+		   public boolean IdCheck(String member_id) { // id가 있는지 없는지만 판단 ->boolean
+		          
+		          boolean check = false;
+
+		          try {
+		             // connection 메소드 불러오기 -> DB연결기능
+		             connection();
+
+		             String sql = "select * from web_member where member_id = ?";
+
+		             psmt = conn.prepareStatement(sql);
+		             psmt.setString(1, member_id);
+
+		             rs = psmt.executeQuery();
+
+		             if (rs.next()) {
+		                // 테이블에 있음 -> 사용할 수 없는 아이디
+		                check = true;
+		             }else {
+		                // 값이 없음 -> 사용할 수 있는 아이디
+		                check = false;
+		             }
+
+		          }
+		    //   catch (ClassNotFoundException e) {
+//		          e.printStackTrace();
+		    //
+		    //   } 
+		          catch (SQLException e) {
+		             System.out.println("sql오류");
+		             e.printStackTrace();
+
+		          } finally {
+		             close();
+
+		          } // end
+
+		          return check;
+		       }
+		  
 }
