@@ -8,15 +8,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import model.T_MemberDAO;
 import model.T_MemberDTO;
 
-
 @WebServlet("/JoinCon")
 public class JoinCon extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		// DB에 한글 안깨지고 저장
+		request.setCharacterEncoding("euc-kr");
 		
 		// POST 방식일 때 인코딩 설정!
 				request.setCharacterEncoding("euc-kr");
@@ -51,7 +53,7 @@ public class JoinCon extends HttpServlet {
 					else { 
 						response.sendRedirect("Join.jsp");
 					}
-		
+
 	}
 
 }

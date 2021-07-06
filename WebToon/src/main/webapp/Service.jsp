@@ -74,42 +74,41 @@ https://templatemo.com/tm-561-purple-buzz
 
             <!-- Start Contact Form -->
             <div class="col-lg-8 ">
-                <form class="contact-form row" method="post" action="#" role="form">
+                <form class="contact-form row" action="MessageCon" method="post" role="form">
 
-                    <div class="col-lg-6 mb-4">
+                    <!-- <div class="col-lg-6 mb-4">
                         <div class="form-floating">
                             <input type="text" class="form-control form-control-lg light-300" id="floatingname" name="inputname" placeholder="Name">
                             <label for="floatingname light-300">이름</label>
                         </div>
-                    </div><!-- End Input Name -->
+                    </div>End Input Name -->
 
-                    <div class="col-lg-6 mb-4">
+                    <!-- <div class="col-lg-6 mb-4">
                         <div class="form-floating">
                             <input type="text" class="form-control form-control-lg light-300" id="floatingemail" name="inputemail" placeholder="Email">
                             <label for="floatingemail light-300">이메일</label>
                         </div>
-                    </div><!-- End Input Email -->
+                    </div>End Input Email -->
 
                     <div class="col-lg-6 mb-4">
                         <div class="form-floating">
                             <input list = "question" class="form-control form-control-lg light-300" id="floatingquestion" name="inputquestion" placeholder="object" list = "Question">
                                 <datalist id = "question">
-                                    <option value = "1">1</option>
-                                    <option value = "2">2</option>
-                                    <option value = "3">3</option>
-                                    <option value = "4">4</option>
+                                    <option>donate</option>
+                                    <option>use</option>
+                                    <option>etc</option>
                                 </datalist> 
                             </input>
                             <label for="floatingphone light-300">문의 분류</label>
                         </div>
                     </div><!-- End Input Phone -->
 
-                    <div class="col-lg-6 mb-4">
+                    <!-- <div class="col-lg-6 mb-4">
                         <div class="form-floating">
                             <input type="text" class="form-control form-control-lg light-300" id="floatingcompany" name="inputcompany" placeholder="date">
                             <label for="floatingcompany light-300">날짜</label>
                         </div>
-                    </div><!-- End Input Company Name -->
+                    </div>End Input Company Name -->
 
                     <div class="col-12">
                         <div class="form-floating mb-4">
@@ -120,7 +119,7 @@ https://templatemo.com/tm-561-purple-buzz
 
                     <div class="col-12">
                         <div class="form-floating mb-3">
-                            <textarea class="form-control light-300" rows="8" placeholder="Message" id="floatingtextarea"></textarea>
+                            <textarea class="form-control light-300" rows="8" name="q_content" placeholder="Message" id="floatingtextarea"></textarea>
                             <label for="floatingtextarea light-300">내용</label>
                         </div>
                     </div><!-- End Textarea Message -->

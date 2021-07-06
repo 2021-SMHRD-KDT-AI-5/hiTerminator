@@ -26,7 +26,7 @@
         .infoform{float: right;}
         th{background-color: #eeeeee; text-align: center;}
         td{text-align: center;}
-
+        .py-5{height: 800px;}
     </style>
     
 </head>

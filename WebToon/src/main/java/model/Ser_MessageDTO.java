@@ -2,14 +2,25 @@ package model;
 
 public class Ser_MessageDTO {
 	private String member_id;
+	private String email;
 	private String Q_ctgr;
 	private String Q_title;
 	private String Q_content;
 	private String Q_date;
 	
-	public Ser_MessageDTO(String member_id, String q_ctgr, String q_title, String q_content, String q_date) {
+	public Ser_MessageDTO(String member_id, String email, String q_ctgr, String q_title, String q_content) {
 		super();
 		this.member_id = member_id;
+		this.email = email;
+		Q_ctgr = q_ctgr;
+		Q_title = q_title;
+		Q_content = q_content;
+	}
+	
+	public Ser_MessageDTO(String member_id, String email, String q_ctgr, String q_title, String q_content, String q_date) {
+		super();
+		this.member_id = member_id;
+		this.email = email;
 		Q_ctgr = q_ctgr;
 		Q_title = q_title;
 		Q_content = q_content;
@@ -22,6 +33,14 @@ public class Ser_MessageDTO {
 
 	public void setMember_id(String member_id) {
 		this.member_id = member_id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getQ_ctgr() {
@@ -56,6 +75,4 @@ public class Ser_MessageDTO {
 		Q_date = q_date;
 	}
 	
-	
-
 }
