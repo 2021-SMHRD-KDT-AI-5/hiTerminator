@@ -1,13 +1,14 @@
+<%@page import="model.Consulting_messageDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.Consulting_messageDAO"%>
 <%@page import="model.T_MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<!-- MemberDTO 객체 생성, session에 저장되어 있으므로 session.getAttribute -->
-<%-- <%
-  HttpSession session = request.getSession();
-  T_MemberDTO member = (MemberDTO)session.getAttribute("member");
 
-%> --%>
+<% T_MemberDTO member = (T_MemberDTO)session.getAttribute("member");
+
+%>
 
 <!DOCTYPE html>
 <html>
@@ -89,20 +90,20 @@ https://templatemo.com/tm-561-purple-buzz
                     
                     
                     
-                   <%--  <% if(member != null){ 
+                     <% if(member != null){ 
                      		if(member.getMember_id().equals("admin")){
                      			%>
+                     			<a href="Consulting.jsp">컨설팅message</a>
+                     			<a href="Admin_Service.jsp">고객센터message</a>
                      	<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
-                     	<a href="select.jsp">회원삭제</a>
+           
                      	<%}else {%>
                      		<a class="nav-link" href="Mem_Update.jsp"><i class='bx bx-cog bx-sm text-primary'></i>마이페이지</a>
  							 <a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
                      	<%} %>
-                        <a href="logout.jsp">로그아웃</a>
-   
                      <% }else{ %>
                         <a class="nav-link"href = "Login.jsp"><i class='bx bx-user-circle bx-sm text-primary'></i>로그인</a>
-                     <% } %> --%>
+                     <% } %> 
                         
                     	
 						 
@@ -111,10 +112,9 @@ https://templatemo.com/tm-561-purple-buzz
                         <!-- 종모양 i태그 -->
                         <!-- <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a> -->
 
-                        <a class="nav-link"href = "Login.jsp"><i class='bx bx-user-circle bx-sm text-primary'></i>로그인</a>
+                       
                         <!-- 로그인 전, 실패엔 안나옴 / 로그인 성공하면 회원수정 아이콘 나오기 -->
-                        <a class="nav-link" href="Mem_Update.jsp"><i class='bx bx-cog bx-sm text-primary'></i>마이페이지</a>
-                        <a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
+                        
                         
                         <!-- 로그인 전에는 Login.html으로 연결 / 로그인 성공시 회원정보수정 Mem_update.jsp로 이동 -->
 

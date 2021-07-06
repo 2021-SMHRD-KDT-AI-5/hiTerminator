@@ -55,6 +55,8 @@
 			</div>
 			<div class="login-stay-sign-in">
                 <span>아이디가 없다면 <span> <a href="Join.jsp">회원가입</a>
+
+                <span>아이디가 없다면 <span><a href="Join.jsp">회원가입</a>
 			</div>
 		</section>
 	</form>
