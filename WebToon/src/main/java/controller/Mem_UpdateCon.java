@@ -25,8 +25,9 @@ public class Mem_UpdateCon extends HttpServlet {
 		T_MemberDTO member = (T_MemberDTO)session.getAttribute("member");
 		
 		// update.jsp에서 입력한 패스워드 , 번호 ,주소를 가져오시오.
-		String name = request.getParameter("name");
+		
 		String pw = request.getParameter("pw");
+		String name = request.getParameter("name");
 		String tel = request.getParameter("tel");
 		String email = request.getParameter("email");
 //		String webtoon_link = request.getParameter("webtoon_link");

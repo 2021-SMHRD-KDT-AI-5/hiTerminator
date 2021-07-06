@@ -10,11 +10,12 @@ public class T_MemberDTO {
 	 * private String webtoon_link; // ck -> 작가여부, 관리자 여부
 	 */	
 	
-	public T_MemberDTO(String member_id, String name, String pw, String tel, String email) {
+	public T_MemberDTO(String member_id, String pw, String name, String tel, String email) {
 		super();
 		this.Member_id = member_id;
-		this.name = name;
+		
 		this.pw = pw;
+		this.name = name;
 		this.tel = tel;
 		this.email = email;
 	}
