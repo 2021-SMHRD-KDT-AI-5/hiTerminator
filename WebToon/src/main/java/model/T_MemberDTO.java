@@ -12,7 +12,8 @@ public class T_MemberDTO {
 	
 	public T_MemberDTO(String member_id, String pw, String name, String tel, String email) {
 		super();
-		Member_id = member_id;
+		this.Member_id = member_id;
+		
 		this.pw = pw;
 		this.name = name;
 		this.tel = tel;
