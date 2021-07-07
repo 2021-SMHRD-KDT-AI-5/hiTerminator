@@ -31,7 +31,8 @@
 			</div>
 			
 			<div class = "join-input-wrap-button">
-				<input  class="join-button-wrap-button" type="button" value="중복확인" onclick="idCheck()"> <span id="sp"></span>
+				<input  class="join-button-wrap-button" type="button" value="ID 중복확인" onclick="IdCheck()"> 
+				<span id="sp"></span>
 			</div>
 
 			<div class="login-input-wrap password-wrap">	
@@ -57,7 +58,7 @@
             
 			<!-- join 가입버튼 -->
 			<div>	
-				<input class ="join-button-wrap-button" type="submit" value="JoinUs" class="button fit">
+				<input class ="join-button-wrap-button" type="submit" value="회원가입" class="button fit">
 			</div>
         </form>
 		</section>
@@ -67,6 +68,43 @@
 	<%@ include file = "Footer.jsp" %>
 
 
+	<script>
+	
+	// 회원가입 아이디 중복 체크
+	function IdCheck() { /* onclick = idCheck() 라고 써둠 -> 함수로 만들어야함 */
+		var input = document.getElementById("input_id"); /* 태그만 가져온 것 -> 실질적인 값도 가져와야함 */
+		//altert(input.value) /* input 태그의 값을 가져올 때 // html,text는 innerHTML innerTEXT */
+
+		// ajax 활용(버튼에 onclick 속성 줌 ->함수 )
+		$.ajax({
+			type : "post", //데이터 전송방식 : get or post
+			data : {
+				'member_id' : input.value
+			}, // 서버로 보낼 데이터(사용자가 적은 이메일) -> {key(from 태그의 name값) : value}
+			url : "IdCheckCon", // 데이터를 보낼 서버 페이지
+			dataType : "text", // 응답 데이터의 타입 지정
+			// 요청에 성공 시 실행할 함수 정의 -> 가능 True / False
+			success : function(data) { //data : 응답할 때 보내줄 값(true,false) 가지고 있음
+				// alert(data); // 알림창
+				var sp = document.getElementById("sp") // id가 sp인 span 태그 요소 가져옴 
+				if (data == "true") {
+					//응답받은 텍스트가 true라면(아이디가 있음 ->불가능)
+					sp.innerHTML = "불가능한 ID입니다.";
+				} else {
+					sp.innerHTML = "가능한 ID입니다.";
+
+				}
+			},
+			// 요청에 실패시 실행할 함수 정의
+			error : function() {
+				alert("요청 실패!")
+			}
+		});
+	}
+	
+	
+	
+	</script>
 
 </body>
 </html>
