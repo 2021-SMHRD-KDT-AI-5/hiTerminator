@@ -10,7 +10,7 @@
 
 	<!-- Header -->
 	<%@ include file = "Header.jsp" %>
-
+<script src="assets/js/jquery.min.js"></script>
 	
 	<!-- Start 회원가입 -->
 	<div class="main-container">
