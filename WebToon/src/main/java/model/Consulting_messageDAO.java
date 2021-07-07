@@ -17,7 +17,8 @@ public class Consulting_messageDAO {
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+
+			String url = "jdbc:oracle:thin:@172.30.1.37:1521:xe";
 			String user = "hr";
 			String pass = "hr";
 			conn = DriverManager.getConnection(url, user, pass);

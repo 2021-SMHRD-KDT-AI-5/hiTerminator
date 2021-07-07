@@ -3,13 +3,13 @@
 <%@page import="java.util.ArrayList"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<% T_MemberDTO member = (T_MemberDTO)session.getAttribute("member"); 
+<% T_MemberDTO member_c = (T_MemberDTO)session.getAttribute("member"); 
 
 	Consulting_messageDAO dao = new Consulting_messageDAO();
 	ArrayList<Consulting_messageDTO> list = new ArrayList<Consulting_messageDTO>();
 	
-	if(member != null){
-		list = dao.showMessage(member.getMember_id());	
+	if(member_c != null){
+		list = dao.showMessage(member_c.getMember_id());	
 	}
 %>
 <!DOCTYPE html>
@@ -207,7 +207,7 @@
     		<p></p>
     		<ul class="message_ul">
     			<%
-    				if(member != null){
+    				if(member_c != null){
     			%>
     			<li><%=member.getMember_id()%>의 지원서</li>
     			<%}else{ %>
@@ -276,6 +276,14 @@
                             <label for="floatingsubject light-300">작품 제목</label>
                         </div>
                     </div><!-- End Input Subject -->
+                    
+                    <div class="col-12">
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="consult_content" placeholder="Subject">
+                            <label for="floatingsubject light-300">파일</label>
+                        </div>
+                    </div><!-- End Input Subject -->
+                    
 
                     <!-- <div class="col-12">
                         <div class="form-floating mb-3">
@@ -285,10 +293,10 @@
                     </div> -->
                     <!-- End Textarea Message -->
 
-                    <div class="filebox"> 
+                    <!-- <div class="filebox"> 
                         <input class="upload-name" value="파일선택" disabled="disabled"> 
                         <label for="ex_filename">업로드</label> <input type="file" id="ex_filename" class="upload-hidden"> 
-                    </div>
+                    </div> -->
 
                     <!-- 파일 업로드 -->
 
