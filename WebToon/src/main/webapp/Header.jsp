@@ -69,7 +69,7 @@ https://templatemo.com/tm-561-purple-buzz
                                 <a class="nav-link btn-outline-primary rounded-pill px-3" href="Main.html">홈</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Predict.html">승격예측</a>
+                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Predict.jsp">승격예측</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn-outline-primary rounded-pill px-3" href="Consulting.jsp">컨설팅</a>

@@ -17,7 +17,8 @@ public class Consulting_messageDAO {
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+
+			String url = "jdbc:oracle:thin:@172.30.1.37:1521:xe";
 			String user = "hr";
 			String pass = "hr";
 			conn = DriverManager.getConnection(url, user, pass);
@@ -57,7 +58,7 @@ public class Consulting_messageDAO {
 		try {
 			connection();
 			// 쿼리 실행
-			String sql = "insert into consulting_message values(num_message.nextval,?,?,?,sysdate)";
+			String sql = "insert into consult values(num_message.nextval,?,?,?,sysdate)";
 			// num_message.nextval -> 시퀀스 값
 			// sysdate -> 시스템 날짜
 
@@ -91,7 +92,7 @@ public class Consulting_messageDAO {
 			// DB연결기능
 			connection();
 
-			String sql = "select * from consulting_message where member_id = ?";
+			String sql = "select * from consult where member_id = ?";
 
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, member_id);
@@ -99,13 +100,13 @@ public class Consulting_messageDAO {
 			rs = psmt.executeQuery();
 
 			while (rs.next()) {
-				int getNum = rs.getInt(1);
+				int getConsult_no = rs.getInt(1);
 				String getMember_id = rs.getString(2);
 				String getTitle = rs.getString(3);
 				String getConsult_content = rs.getString(4);
 				String getApply_date = rs.getString(4);
 
-				message = new Consulting_messageDTO(getNum, getMember_id, getTitle, getConsult_content, getApply_date);
+				message = new Consulting_messageDTO(getConsult_no, getMember_id, getTitle, getConsult_content, getApply_date);
 				list.add(message);
 			}
 		} catch (SQLException e) {
