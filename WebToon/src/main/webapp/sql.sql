@@ -1,15 +1,6 @@
 1. 회원가입한 정보를 저장할 수 있는 'web_member'테이블을 만드시오.
    컬럼명 : m_email / m_pw / m_tel / m_address
 
-select * from web_member;
-create table web_member(
-	email varchar2(100),
-	pw varchar2(100),
-	tel varchar2(100),
-	address varchar2(500)
-)
-
-
 -- 메세지 번호(시퀀스), 보내는 사람, 받는사람, 메세지 내용, 메세지 보낸 시간(시스템 시간)
 create table web_message(
 	num number(10),
@@ -32,4 +23,4 @@ nocycle; --최댓값 도달시 다시 시작할 것인지
 
 select * from consult;
 
-select * from num_message;
+select * from T_MEMBERS;
