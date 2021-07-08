@@ -58,11 +58,11 @@ public class DonateDAO {
 			connection();
 
 			// 쿼리 실행
-			String sql = "insert into donate values(?, null, ?, sysdate, ?)";
+			String sql = "insert into donate values(?, ?, ?, sysdate, ?)";
 			
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, donate.getMember_id());
-//			psmt.setString(2, 피후원자);
+			psmt.setString(1, donate.getMember_id()); //후원하는 사람 아이디
+			psmt.setString(2, donate.getArtist_id()); // 후원받는 작가 아이디가 와야함
 			psmt.setInt(3, donate.getMoney());
 			psmt.setString(5, donate.getDonate_content());
 			

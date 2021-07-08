@@ -3,19 +3,31 @@ package model;
 public class DonateDTO {
 
 	private String member_id;
-	//피후원자 아이디 추가
+	private String artist_id;
 	private int money;
 	private String donate_date;
 	private String donate_content;
 	
 	
-	public DonateDTO(String member_id, int money, String donate_date, String donate_content) {
+	public DonateDTO(String member_id, String artist_id, int money, String donate_date, String donate_content) {
 		super();
 		this.member_id = member_id;
+		this.artist_id = artist_id;
 		this.money = money;
 		this.donate_date = donate_date;
 		this.donate_content = donate_content;
 	}
+
+	
+
+	public DonateDTO(String member_id, String artist_id, int money, String donate_content) {
+		super();
+		this.member_id = member_id;
+		this.artist_id = artist_id;
+		this.money = money;
+		this.donate_content = donate_content;
+	}
+
 
 
 	public String getMember_id() {
@@ -25,6 +37,16 @@ public class DonateDTO {
 
 	public void setMember_id(String member_id) {
 		this.member_id = member_id;
+	}
+
+
+	public String getArtist_id() {
+		return artist_id;
+	}
+
+
+	public void setArtist_id(String artist_id) {
+		this.artist_id = artist_id;
 	}
 
 
@@ -56,7 +78,10 @@ public class DonateDTO {
 	public void setDonate_content(String donate_content) {
 		this.donate_content = donate_content;
 	}
-	
+
+
+
+
 	
 	
 	
