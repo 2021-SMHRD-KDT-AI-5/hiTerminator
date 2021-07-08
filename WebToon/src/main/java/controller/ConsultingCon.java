@@ -35,8 +35,9 @@ public class ConsultingCon extends HttpServlet {
 			System.out.println("메세지 전송 성공");
 			response.sendRedirect("Consulting_1.jsp");
 		}else {
+//			작가 id가 아니라 실패한 경우 넘어가는 페이지
 			System.out.println("메세지 전송 실패");
-			response.sendRedirect("Login.jsp");
+			response.sendRedirect("Join.jsp");
 		}
 		
 	}

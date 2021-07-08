@@ -67,11 +67,10 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="contact-header col-lg-4">
                         <h1 class="h2 pb-3 text-primary">웹툰 승격 확률 예측</h1>
-                        <h4 class="h4 regular-400">웹툰 승격 확률을 알아보아요</h4>
-                        <p class="light-300">웹툰 전성시대를 맞아 늘어나는 많은 웹툰 작가 지망생!
-                        하지만, 여러 매체에 올려도 오지 않는 연락들..이제 오매불망 기다리기만 하는 것이 아닌
-                        댓글 분석을 통해 정식웹툰 승격 확률을 눈으로 확인 할 수있습니다. 승격확률을보고
-                        정식연재에 한걸음 다가가는 참신하고 재치있는 신생작가를 응원합니다. </p>
+                        <h4 class="h4 regular-400"> 웹툰 승격 확률을 알아보아요</h4>
+                        <p class="light-300">웹툰 전성시대를 맞아 늘어나는 많은 웹툰 작가 지망생!<br>
+                        댓글 분석을 통해 정식웹툰 승격 확률을 눈으로 확인 할 수있습니다.
+                        </p>
                         <!-- <p class="light-300">
                             Vector illustration is from <a rel="nofollow" href="https://storyset.com/" target="_blank">StorySet</a>.
                             Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
