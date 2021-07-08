@@ -205,7 +205,7 @@ https://templatemo.com/tm-561-purple-buzz
                                     <div class="wrap">보낸 날짜</div>
                                 </th>
                             </tr>
-                        </thead>    
+                        </thead>
                         <tbody>
                             <!-- 여기에 글이 들어감 -->
                             <%
@@ -214,9 +214,9 @@ https://templatemo.com/tm-561-purple-buzz
 							<tr>
 								<th><%=i+1 %></th>
 								<th><%=list.get(i).getMember_id() %></th>
+								<th><%=list.get(i).getApply_date() %></th>
 								<th><%=list.get(i).getTitle() %></th>
 								<th><%=list.get(i).getConsult_content() %></th>
-								<th><%=list.get(i).getApply_date() %></th>
 							</tr>
 							<%
 								}
@@ -295,7 +295,7 @@ https://templatemo.com/tm-561-purple-buzz
 
                     <div class="col-12">
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="title" placeholder="Subject">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="consult_content" placeholder="Subject">
                             <label for="floatingsubject light-300">파일 업로드</label>
                          </div>
                     </div><!-- End Input Subject -->

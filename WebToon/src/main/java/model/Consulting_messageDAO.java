@@ -58,8 +58,8 @@ public class Consulting_messageDAO {
 		try {
 			connection();
 			// 쿼리 실행
-			String sql = "insert into consult values(num_message.nextval,?,?,?,sysdate)";
-			// num_message.nextval -> 시퀀스 값
+			String sql = "insert into consult values(consult_no.nextval,?,sysdate, ?,?)";
+			// consult_no -> 시퀀스 값
 			// sysdate -> 시스템 날짜
 
 			psmt = conn.prepareStatement(sql);
@@ -100,13 +100,13 @@ public class Consulting_messageDAO {
 			rs = psmt.executeQuery();
 
 			while (rs.next()) {
-				int getConsult_no = rs.getInt(1);
+				int getConsult_id = rs.getInt(1);
 				String getMember_id = rs.getString(2);
-				String getTitle = rs.getString(3);
-				String getConsult_content = rs.getString(4);
-				String getApply_date = rs.getString(4);
+				String getApply_date = rs.getString(3);
+				String getTitle = rs.getString(4);
+				String getConsult_content = rs.getString(5);
 
-				message = new Consulting_messageDTO(getConsult_no, getMember_id, getTitle, getConsult_content, getApply_date);
+				message = new Consulting_messageDTO(getConsult_id, getMember_id, getTitle, getConsult_content, getApply_date);
 				list.add(message);
 			}
 		} catch (SQLException e) {
