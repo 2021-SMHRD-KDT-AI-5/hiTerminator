@@ -75,7 +75,7 @@
 		var input = document.getElementById("input_id"); /* 태그만 가져온 것 -> 실질적인 값도 가져와야함 */
 		//altert(input.value) /* input 태그의 값을 가져올 때 // html,text는 innerHTML innerTEXT */
 
-		// ajax 활용(버튼에 onclick 속성 줌 ->함수 )
+		// ajax 활용(버튼에 onclick 속성 줌 ->함수 ) 
 		$.ajax({
 			type : "post", //데이터 전송방식 : get or post
 			data : {
