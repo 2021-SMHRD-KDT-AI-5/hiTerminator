@@ -16,7 +16,7 @@ public class ConsultingCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		request.setCharacterEncoding("euc-kr");
+		request.setCharacterEncoding("UTF-8");
 		
 		String member_id = request.getParameter("member_id");
 		String title = request.getParameter("title");

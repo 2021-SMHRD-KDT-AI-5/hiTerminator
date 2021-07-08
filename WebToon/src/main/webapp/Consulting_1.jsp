@@ -7,6 +7,9 @@
 
 	Consulting_messageDAO dao = new Consulting_messageDAO();
 	ArrayList<Consulting_messageDTO> list = new ArrayList<Consulting_messageDTO>();
+	/* list = dao. */
+	
+			/*System.out.print(list.size());*/
 	
 	if(member_c != null){
 		list = dao.showMessage(member_c.getMember_id());	
@@ -62,7 +65,7 @@ https://templatemo.com/tm-561-purple-buzz
         <div class="col-md-12 m-auto text-center py-5">
             <h1 class="pricing-header h2 semi-bold-600">컨설팅이용 방법</h1>
             <p class="pricing-footer">
-                이용방법에 대한 간단한 설명
+                컨설팅을 받기위한 여정
             </p>
         </div>
 
@@ -148,7 +151,6 @@ https://templatemo.com/tm-561-purple-buzz
             
             <!-- Start Contact Form -->
             <div class="col-lg-8 " style="padding-top: 10px; text-align: right;">
-                <!-- <form class="contact-form row" method="post" action="#" role="form"> -->
                 <form class = "infoform" name = "infoform" method="post" action="#" role="form" style="display: inline-block;">   
 
                     <!-- 공지사항 검색옵션 -->
@@ -182,8 +184,8 @@ https://templatemo.com/tm-561-purple-buzz
                         <colgroup>
                             <col style="width:80px;">
                             <col style="width:150px;">
+                            <col style="width:150px;">
                             <col style="width:250px;">
-                            <col style="width:100px;">
                             <col style="width:150px;">
                             <!-- <col style="width: 30px;"> -->
                         </colgroup>
@@ -196,13 +198,13 @@ https://templatemo.com/tm-561-purple-buzz
                                     <div class="wrap">회원ID</div>
                                 </th>
                                 <th scope="col" >
+                                    <div class="wrap">날짜</div>
+                                </th>
+                                <th scope="col">
                                     <div class="wrap">작품 제목</div>
                                 </th>
                                 <th scope="col">
                                     <div class="wrap">첨부파일</div>
-                                </th>
-                                <th scope="col">
-                                    <div class="wrap">보낸 날짜</div>
                                 </th>
                             </tr>
                         </thead>
@@ -212,11 +214,11 @@ https://templatemo.com/tm-561-purple-buzz
 								for(int i = 0; i < list.size(); i++){
 							%>
 							<tr>
-								<th><%=i+1 %></th>
-								<th><%=list.get(i).getMember_id() %></th>
-								<th><%=list.get(i).getApply_date() %></th>
-								<th><%=list.get(i).getTitle() %></th>
-								<th><%=list.get(i).getConsult_content() %></th>
+								<td><%=i+1 %></td>
+								<td><%=list.get(i).getMember_id() %></td>
+								<td><%=list.get(i).getApply_date() %></td>
+								<td><%=list.get(i).getTitle() %></td>
+								<td><%=list.get(i).getConsult_content() %></td>
 							</tr>
 							<%
 								}
@@ -228,41 +230,24 @@ https://templatemo.com/tm-561-purple-buzz
             </div>
         </div>
     </section>
-    <!--End Pricing Horizontal Section-->
-    
-    <!-- 메세지 확인창  -->
-    <!-- <section id="message_section">
-    	<div class="message_div">
-    		<header class="message_header">
-    			<h2> 컨설팅 지원 확인</h2>
-    		</header>
-    		<p></p>
-    		<ul class="message_ul">
-    			<li>로그인을 하세요.</li>
-    			<li><a href="#" class="message_a">전체삭제하기</a></li>
-    		</ul>
-            <table>
-				<tr>
-					<th>번호</th>
-					<th>보내는 사람</th>
-					<th>내용</th>
-					<th>첨부파일</th>
-					<th>시간</th>
-				</tr>
-            </table>
-    	</div>
-    </section> -->
-    
-<!-- End Contact -->
 
     <section class="container py-5">
 
-        <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">Step 1</h1>
-        <h2 class="col-12 col-xl-8 h4 text-left regular-400">컨설팅 받을 웹툰을 등록해 주세요!</h2>
+        <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3"><b>Step 1</b></h1>
+        <h6 class="worksingle-heading h3 pb-3 light-300 typo-space-line"></h6>
+        <br>
+        <h2 class="col-12 col-xl-8 h4 text-left regular-400"><b>컨설팅 받을 웹툰 등록</b></h2>
+        <br>
         <p class="col-12 col-xl-8 text-left text-muted pb-5 light-300">
             --------------------------주의사항-------------------------------<br>
-            ~~~~~~<br>
-            ~~~~~
+            <br>
+            ■ 접수기간 : 공지 사항에 나온 접수기간을 엄수해주세요.
+            <br><br>
+            ■ 응모자격 : 본 홈페이지에 올라온 웹툰 작가외 불가.
+            <br><br>
+            ■ 심사기준 : 작품별로 작품성·활용성·독창성·공감도 등 평가
+			<br><br>
+			■ 당선작 발표 : 홈페이지 게시 및 개별 통보
         </p>
 
         <div class="row pb-4">

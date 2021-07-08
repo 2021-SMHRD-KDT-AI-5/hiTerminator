@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.DonateDAO;
 import model.DonateDTO;
@@ -21,7 +22,7 @@ public class DonateCon extends HttpServlet {
 		// post 방식으로 보낸 데이터 인코딩(한글데이터)
 		request.setCharacterEncoding("utf-8");
 		
-		HttpServlet session = (HttpServlet) request.getSession();
+		HttpSession session = (HttpSession) request.getSession();
 		T_MemberDTO member = (T_MemberDTO)session.getAttribute("member");
 		
 		String artist_id = request.getParameter("donee_id");
@@ -33,7 +34,7 @@ public class DonateCon extends HttpServlet {
 		System.out.println(money);
 		System.out.println(donate_content);
 		
-		DonateDTO donate = new DonateDTO(member.getMember_id(), artist_id, money, donate_content);
+		DonateDTO donate = new DonateDTO(artist_id, money, donate_content);
 		DonateDAO dao = new DonateDAO();
 		int cnt = dao.Donate_insert(donate);
 		
@@ -42,7 +43,7 @@ public class DonateCon extends HttpServlet {
 			response.sendRedirect("Webtoon_detail.jsp");
 		}else {
 			System.out.println("후원 실패");
-			response.sendRedirect("webtoon_detail.jsp");
+			response.sendRedirect("Webtoon_detail.jsp");
 		}
 		
 	}

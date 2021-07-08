@@ -29,6 +29,24 @@ public class DonateDTO {
 	}
 
 
+	public DonateDTO(String artist_id, int money, String donate_content) {
+		super();
+		this.artist_id = artist_id;
+		this.money = money;
+		this.donate_content = donate_content;
+	}
+
+
+	 // showDonate
+	public DonateDTO(String artist_id, int money, String donate_date, String donate_content) {
+		super();
+		this.artist_id = artist_id;
+		this.money = money;
+		this.donate_date = donate_date;
+		this.donate_content = donate_content;
+	}
+
+
 
 	public String getMember_id() {
 		return member_id;

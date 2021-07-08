@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class DonateDAO {
 	
@@ -64,7 +65,7 @@ public class DonateDAO {
 			psmt.setString(1, donate.getMember_id()); //후원하는 사람 아이디
 			psmt.setString(2, donate.getArtist_id()); // 후원받는 작가 아이디가 와야함
 			psmt.setInt(3, donate.getMoney());
-			psmt.setString(5, donate.getDonate_content());
+			psmt.setString(4, donate.getDonate_content());
 			
 			
 			// insert, update, delete : executeUpdate() --> DB내용 변경
@@ -87,6 +88,44 @@ public class DonateDAO {
 
 		// cnt값 반환, 오류 첫 번째 선택 > void 수정
 		return cnt;
+	}
+	
+public ArrayList<DonateDTO> showDonate() {
+		
+		ArrayList<DonateDTO>list=new ArrayList<DonateDTO>(); // 단순 변수선언이 아닌 객체 생성
+		DonateDTO donate = null; // 변수선언 및 초기화
+		
+		try {
+			// DB연결기능
+			connection();
+
+			// 쿼리실행  실행다시 해보세요!
+			String sql = "select * from donate order by donate_date desc";
+
+			psmt = conn.prepareStatement(sql);
+			
+			rs = psmt.executeQuery();
+
+			while(rs.next()) {
+				String member_id = rs.getString(1);
+				String artist_id = rs.getString(2);
+				int money = rs.getInt(3);
+				String donate_date = rs.getString(4);
+				String donate_content = rs.getString(5);
+
+				donate = new DonateDTO(member_id, artist_id, money, donate_date, donate_content);
+				list.add(donate);
+			}
+
+		} 
+		catch (SQLException e) {
+			System.out.println("donate show sql 오류");
+			e.printStackTrace();
+		} finally {
+			close();
+		} // End
+
+		return list;
 	}
 	
 	
