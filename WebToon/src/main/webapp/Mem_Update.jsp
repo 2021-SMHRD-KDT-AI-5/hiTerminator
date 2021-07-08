@@ -41,7 +41,7 @@
 
 	<!-- Header -->
 	<%@ include file = "Header.jsp" %>
-	
+	<script src="assets/js/jquery.min.js"></script>
 	<!-- Start  회원정보수정 -->
 	    <div id="container">
         <div id="left_side">
@@ -67,7 +67,7 @@
                                     NO<input type="checkbox" name="artist" value="N" style="width: 200px; margin: 0 auto;"></li>
                     <li><p>작품 등록하기</p><input type="text" name="webtoon_link" placeholder="등록할 작품 주소 입력" style="width: 500px; margin: 0 auto;"></li>
                     <div id="btn_section">
-                        <input type="submit" value="수정완료" class="submit_btn">
+                        <input type="submit" onclick="test()" value="수정완료" class="submit_btn">
                         <input type="button" value="수정취소" class="submitCancel_btn">   
                     </div>
                 </form>
@@ -79,6 +79,16 @@
 	
 	<!-- Footer -->
 	<%@ include file = "Footer.jsp" %>
-
+	<script>
+    function test() {
+        var obj_length = document.getElementsByName("artist").length;
+  
+        for (var i=0; i<obj_length; i++) {
+            if (document.getElementsByName("artist")[i].checked == true) {
+               artistv = document.getElementsByName("artist")[i].value;
+            }
+        }
+    }
+</script>
 </body>
 </html>
