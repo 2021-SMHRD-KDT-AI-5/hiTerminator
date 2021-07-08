@@ -205,7 +205,7 @@ https://templatemo.com/tm-561-purple-buzz
                                     <div class="wrap">보낸 날짜</div>
                                 </th>
                             </tr>
-                        </thead>
+                        </thead>    
                         <tbody>
                             <!-- 여기에 글이 들어감 -->
                             <%
