@@ -12,8 +12,8 @@ create table web_message(
 drop table web_member;
 drop sequence num_message;
 
-select * from t_members where member_id = 'qw';
-
+select * from t_members where member_id = 'admin';
+select * from consult
 create sequence num_message
 increment by 1 -- 1씩 증가
 start with 1 --시작 숫자(1부터 시작)

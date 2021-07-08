@@ -235,7 +235,7 @@
 					<th><%=list.get(i).getApply_date() %></th>
 				</tr>
 				<%
-					}
+					} 
 				%>
 			</table>
     	</div>

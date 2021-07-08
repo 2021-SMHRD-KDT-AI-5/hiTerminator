@@ -211,11 +211,16 @@ https://templatemo.com/tm-561-purple-buzz
                         <tbody>
                             <!-- 여기에 글이 들어감 -->
                             <%
+                            T_MemberDTO member_info = (T_MemberDTO)session.getAttribute("member");
+                            String member_id = member_info.getMember_id();
+                            
+                            list = ( ArrayList<Consulting_messageDTO>)dao.showMessage(member_id);
 								for(int i = 0; i < list.size(); i++){
 							%>
 							<tr>
+							
 								<td><%=i+1 %></td>
-								<td><%=list.get(i).getMember_id() %></td>
+								<td><%= member_id%></td>
 								<td><%=list.get(i).getApply_date() %></td>
 								<td><%=list.get(i).getTitle() %></td>
 								<td><%=list.get(i).getConsult_content() %></td>
