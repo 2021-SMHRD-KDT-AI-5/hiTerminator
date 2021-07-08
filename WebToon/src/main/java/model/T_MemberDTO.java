@@ -6,6 +6,7 @@ public class T_MemberDTO {
 	private String name;
 	private String tel;
 	private String email;
+	private String artist;
 	/*
 	 * private String webtoon_link; // ck -> 작가여부, 관리자 여부
 	 */	
@@ -13,11 +14,25 @@ public class T_MemberDTO {
 	public T_MemberDTO(String member_id, String pw, String name, String tel, String email) {
 		super();
 		this.Member_id = member_id;
-		
 		this.pw = pw;
 		this.name = name;
 		this.tel = tel;
 		this.email = email;
+	}
+	public String getArtist() {
+		return artist;
+	}
+	public void setArtist(String artist) {
+		this.artist = artist;
+	}
+	public T_MemberDTO(String member_id, String pw, String name, String tel, String email,String artist) {
+		super();
+		this.Member_id = member_id;
+		this.pw = pw;
+		this.name = name;
+		this.tel = tel;
+		this.email = email;
+		this.artist = artist;
 	}
 	
 	public T_MemberDTO(String member_id, String pw) {
