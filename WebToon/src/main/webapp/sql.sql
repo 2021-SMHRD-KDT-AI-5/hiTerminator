@@ -23,4 +23,9 @@ nocycle; --최댓값 도달시 다시 시작할 것인지
 
 select * from consult;
 
+<<<<<<< HEAD
+select * from num_message;
+
+select * from t_members where member_id='lk';
+
 select * from T_MEMBERS;

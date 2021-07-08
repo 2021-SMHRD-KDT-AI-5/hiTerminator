@@ -51,6 +51,8 @@ https://templatemo.com/tm-561-purple-buzz
         #container .btnDelete{background-color:#4232c2; color:white;}
         
         footer{clear:left;}
+        
+        
     </style>
 </head>
 <body>

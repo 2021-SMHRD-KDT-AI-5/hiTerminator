@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.T_MemberDAO;
 import model.T_MemberDTO;
@@ -48,6 +49,10 @@ public class JoinCon extends HttpServlet {
 						RequestDispatcher dispatcher = request.getRequestDispatcher("Login.jsp");
 						// request, response 두개의 정보를 가지고 이동
 						dispatcher.forward(request, response);
+						
+						// sesison에 저장
+						HttpSession session = (HttpSession) request.getSession();
+						session.setAttribute("member", member);
 						
 					}
 					else { 
