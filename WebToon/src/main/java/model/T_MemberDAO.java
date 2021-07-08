@@ -137,13 +137,14 @@ public class T_MemberDAO {
 			          
 //			         String sql = "update book_member set name=?,pw=?, tel=?, email=?,webtoon_link=? where member_id=?";
 			         
-			         String sql = "update t_members set name=?, pw=?, tel=?, email=?";
+			         String sql = "update t_members set name=?, pw=?, tel=?, email=?,artist=?";
 			         
 			         psmt = conn.prepareStatement(sql);
 			         psmt.setString(1, member.getName());
 			         psmt.setString(2, member.getPw());
 			         psmt.setString(3, member.getTel());   
-			         psmt.setString(4, member.getEmail());  
+			         psmt.setString(4, member.getEmail());
+			         psmt.setString(5, member.getArtist());
 //			         psmt.setString(5, member.getWebtoon_link());
 			        
 			         
