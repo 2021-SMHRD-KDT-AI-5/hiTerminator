@@ -127,6 +127,14 @@ body{
 	color: white;
 	border: solid 1px var(--bs-purple);
 }
+.login-button-wrap input{
+	width: 465px;
+	height :48px;
+	font-size: 18px;
+	background: var(--bs-primary);
+	color: white;
+	border: solid 1px var(--bs-purple);
+}
 .join-button-wrap-button{
 	width: 465px;
 	height :48px;

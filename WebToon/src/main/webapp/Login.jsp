@@ -24,6 +24,16 @@
     <link rel="stylesheet" href="./assets/css/Login.css">
 	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
 
+	<style>
+	.login-button-wrap input{
+		width: 465px;
+		height :48px;
+		font-size: 18px;
+		background: var(--bs-primary);
+		color: white;
+		border: solid 1px var(--bs-purple);
+		}
+	</style>
 </head>
 <body>
 	<!-- Header -->
@@ -51,12 +61,11 @@
 			</div>
 			<div class="login-button-wrap">
 				<!-- 로그인 버튼 -->
-                <input type="submit" value="sign in">
+                <input type="submit" value="로그인">
 			</div>
 			<div class="login-stay-sign-in">
                 <span>아이디가 없다면 <span> <a href="Join.jsp">회원가입</a>
 
-                <span>아이디가 없다면 <span><a href="Join.jsp">회원가입</a>
 			</div>
 			</section>
 	</form>
