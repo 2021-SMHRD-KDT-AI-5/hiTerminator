@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 
 	<style>
-	    #container{width:100%;}
+	     #container{width: 100%;}
         #search{ width:700px;margin-left:auto; margin-right:auto;}
         #search>input{width:600px; height:40px; margin-top:40px; margin-bottom:10px;}
         #content{width:100%;padding-right: 300px;padding-left: 300px;}
@@ -24,8 +24,9 @@
         .rating_type{height:25px;}
         .more{width: 90px; height:25px; background-color:#4232c2; text-align:center;}
         .more>a{color:white;}
-		li{margin: 10px;}
-		
+
+        li{margin: 10px;}
+
         /* 상세웹툰 추가 */
         .main-thumb{padding-top: 50px;}
         .comicinfo{float: left; width:100%}
@@ -37,20 +38,20 @@
         background-color: #fff;
         height: 1px;
         width: 100%;
-		}
+}
         /* 후원 css 추가 */
         .list_table{width: 100%;}
         th{text-align: center; height: 40px;}
         td{text-align: center; height: 40px;}
         .donation_btn:hover{color:white; box-shadow: 200px 0 0 0 rgba(66, 50, 194, 1) inset;
             transition: all 0.9s, color 0.3s;}
-
         body > section > div.search_list > form > table > tbody > tr > td:nth-child(4) > input{width: 75px; height: 40px;}    
         .donaiton_input{height: 40px;}
         .donaiton_input_message{width: 400px; height: 40px;}
         
         /* 내용 body쪽 길이 */
         .container.py-5{height: 1300px;}
+
 	</style>
 
 </head>
@@ -229,7 +230,7 @@
         <div class="search_list" style="padding-top: 30px; padding-bottom: 50px;">
             <h3 class="worksingle-heading h3 pb-3 light-300 typo-space-line">후원하기</h3>
             <!-- 리스트 -->
-            <form name="search_form" method="POST" action="">
+            <form name="search_form" method="POST" action="DonateCon">
                 <table class="list_table" class="table table-striped" style="width: 100%; text-align: center; width: 100%;">
                     <!-- <caption class="search_blind">공지사항 리스트</caption> -->
                     <colgroup>
@@ -259,9 +260,9 @@
                     <tbody>
                         <!-- 여기에 글이 들어감 -->
                         <tr style="height: 50px;">
-                            <td><input class = "donaiton_input" type="text" placeholder="작가 이름"></td>
-                            <td><input class = "donaiton_input" type="text" placeholder="후원 금액"></td>
-                            <td><input class = "donaiton_input_message" type="text" placeholder="후원 메세지"></td>
+                            <td><input class = "donaiton_input" type="text" name = donee_id placeholder="작가 이름"></td>
+                            <td><input class = "donaiton_input" type="text" name = money placeholder="후원 금액"></td>
+                            <td><input class = "donaiton_input_message" type="text" name = donate_content placeholder="후원 메세지"></td>
                             <!-- 후원버튼 -->
                             <td><input type="submit" value="후원" class="donation_btn" style="width: 75px; height: 40px;"></td>
                         </tr>
