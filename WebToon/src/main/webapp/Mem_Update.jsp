@@ -41,7 +41,7 @@
 
 	<!-- Header -->
 	<%@ include file = "Header.jsp" %>
-	<script src="assets/js/jquery.min.js"></script>
+	
 	<!-- Start  회원정보수정 -->
 	    <div id="container">
         <div id="left_side">
@@ -79,16 +79,6 @@
 	
 	<!-- Footer -->
 	<%@ include file = "Footer.jsp" %>
-	<script>
-    function test() {
-        var obj_length = document.getElementsByName("artist").length;
-  
-        for (var i=0; i<obj_length; i++) {
-            if (document.getElementsByName("artist")[i].checked == true) {
-               artistv = document.getElementsByName("artist")[i].value;
-            }
-        }
-    }
-</script>
+
 </body>
 </html>
