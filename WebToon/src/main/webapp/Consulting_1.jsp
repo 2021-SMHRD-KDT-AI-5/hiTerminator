@@ -134,37 +134,9 @@ https://templatemo.com/tm-561-purple-buzz
                     </div>
                 </div>
             </div>
-
-
-            <!-- <div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
-                <div class="pricing-table card bg-secondary h-100 card-rounded shadow-sm border-0 py-5">
-                    <div class="pricing-table-body card-body text-center text-white align-self-center p-md-0">
-                        <i class="pricing-table-icon display-3 bx bx-package text-white py-3"></i>
-                        <h2 class="pricing-table-heading h5 semi-bold-600">Standard Plan</h2>
-                        <p>$120/Year</p>
-                        <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
-                            <li class="text-white"><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
-                            <li class="text-white"><i class="bx bxs-circle me-2"></i>10 TB space</li>
-                            <li class="text-white"><i class="bx bxs-circle me-2"></i>Source Files</li>
-                            <li class="text-white"><i class="bx bxs-circle me-2"></i>Live Chat</li>
-                        </ul>
-                        <div class="pricing-table-footer pt-5 pb-2">
-                            <a href="#" class="btn rounded-pill px-4 btn-outline-light light-300">Get Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-
-            
-
         </div>
     </div>
     <!-- End Content -->
-
-
-
-
 
     <!-- Start Pricing Horizontal Section -->
     <section class="bg-light pt-sm-0 py-5">
@@ -233,9 +205,22 @@ https://templatemo.com/tm-561-purple-buzz
                                     <div class="wrap">보낸 날짜</div>
                                 </th>
                             </tr>
-                        </thead>
+                        </thead>    
                         <tbody>
                             <!-- 여기에 글이 들어감 -->
+                            <%
+								for(int i = 0; i < list.size(); i++){
+							%>
+							<tr>
+								<th><%=i+1 %></th>
+								<th><%=list.get(i).getMember_id() %></th>
+								<th><%=list.get(i).getTitle() %></th>
+								<th><%=list.get(i).getConsult_content() %></th>
+								<th><%=list.get(i).getApply_date() %></th>
+							</tr>
+							<%
+								}
+							%>
                         </tbody>
                         <!-- 리스트 끝 -->
                     </table>
