@@ -29,3 +29,5 @@ maxvalue 100 --최댓값(100)
 nocycle; --최댓값 도달시 다시 시작할 것인지
 
 select * from consult;
+
+select * from num_message;
