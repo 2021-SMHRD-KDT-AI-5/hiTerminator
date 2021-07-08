@@ -168,9 +168,6 @@
             </section>
             <!-- End Contact -->
     
-
-
-    
     	<!-- Footer -->
 	<%@ include file = "Footer.jsp" %>
 
