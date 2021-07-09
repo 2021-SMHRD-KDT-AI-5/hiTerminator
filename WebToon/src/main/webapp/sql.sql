@@ -12,7 +12,7 @@ create table web_message(
 drop table web_member;
 drop sequence num_message;
 
-select * from t_members where member_id = 'admin';
+select * from t_members where member_id = 'ZX';
 select * from consult
 create sequence num_message
 increment by 1 -- 1¾¿ Áõ°¡
