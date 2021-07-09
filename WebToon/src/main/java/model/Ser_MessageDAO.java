@@ -13,6 +13,15 @@ public class Ser_MessageDAO {
 	private PreparedStatement psmt = null;
 	private ResultSet rs = null;
 	
+	public static Ser_MessageDAO instance;
+	public Ser_MessageDAO() {}
+	public static Ser_MessageDAO getInstance() {
+		if(instance==null)
+			instance=new Ser_MessageDAO();
+		return instance;
+		
+	}
+	
 	public void connection() {
 
 		try {
@@ -159,6 +168,54 @@ public ArrayList<Ser_MessageDTO> showMessage() {
 	} // end
 	return cnt;
 	
-}
+	}
+	
+public Ser_MessageDTO getDetail(int q_no) {
+		
+		Ser_MessageDTO ser = null;
+
+		try {
+			// DB연결
+			connection();
+
+			// 쿼리 실행
+			String sql = "select * from customer_service where inquiry_id=?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, q_no);
+			
+			// ★★★★★
+			// insert, update, delete: executeUpdate() --> DB에 내용을 변경할 때
+			// select: executeQuery() --> DB에 내용을 검색할 때
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) { // 컬럼명과 데이터 사이에 커서 초기 위치, rs.next()에 따라 커서가 데이터를 가리키며 내려간다. 값이 있을(True) 때까지 반복
+				ser = new Ser_MessageDTO();
+				ser.setQ_no(q_no);
+				ser.setMember_id(rs.getString(2));
+				ser.setEmail(rs.getString(3));
+				ser.setQ_ctgr(rs.getString(4));
+				ser.setQ_title(rs.getString(5));
+				ser.setQ_content(rs.getString(6));
+				ser.setQ_date(rs.getString(7));
+//				int info_no1 = rs.getInt(1);
+//				String info_title = rs.getString(2);
+//				String info_content = rs.getString(3);
+//				String info_date = rs.getString(4);
+
+				//post = new InfoDTO(info_no1, info_title, info_content, info_date);
+			}
+
+		} catch (SQLException e) {
+			// DB관련 오류발생시 실행되는 catch문
+			System.out.println("getDetail spl문 오류!");
+			e.printStackTrace();
+		} finally {
+			// 무조건 실행하는 구문(try catch문은 예외처리 구문)
+			// 데이터베이스 종료기능 구현
+			close();
+		} // end
+		return ser;
+		
+	}
 
 }

@@ -1,6 +1,8 @@
+<%@page import="model.Ser_MessageDAO"%>
+<%@page import="model.Ser_MessageDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% Ser_MessageDTO ser = (Ser_MessageDTO)session.getAttribute("info");
+<% Ser_MessageDTO ser = (Ser_MessageDTO)session.getAttribute("ser");
 
 	Ser_MessageDAO dao = new Ser_MessageDAO();
 %>
@@ -80,6 +82,8 @@
                         <th>작성자</th>
                         <td><%=ser.getMember_id() %></td>
                         <td><%=ser.getEmail() %></td>
+                        <th>분류</th>
+                        <td><%=ser.getQ_ctgr() %></td>
                         <th>작성일</th>
                         <td><%=ser.getQ_date() %></td>
                     </tr>

@@ -29,6 +29,10 @@ public class Ser_MessageDTO {
 		Q_date = q_date;
 	}
 	
+	public Ser_MessageDTO() {
+		
+	}
+	
 	public int getQ_no() {
 		return Q_no;
 	}

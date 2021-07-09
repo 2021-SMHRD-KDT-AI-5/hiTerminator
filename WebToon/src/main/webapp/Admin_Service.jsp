@@ -88,7 +88,7 @@ https://templatemo.com/tm-561-purple-buzz
 					<td><%=list.get(i).getMember_id() %></td>
 					<td><a href=""><%=list.get(i).getEmail() %></a></td>
 					<td><%=list.get(i).getQ_ctgr() %></td>
-					<td><%=list.get(i).getQ_title() %></td>
+					<td><a href="Ser_MessageDetailCon?num=<%=list.get(i).getQ_no() %>"><%=list.get(i).getQ_title() %></a></td>
 					<td><%=list.get(i).getQ_date() %></td>
 					<!-- 삭제기능: select.jsp 참고해서 만들 수 있어요 -->
 					<%-- <td><a
