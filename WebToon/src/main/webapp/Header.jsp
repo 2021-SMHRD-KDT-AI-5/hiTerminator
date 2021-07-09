@@ -52,7 +52,7 @@ https://templatemo.com/tm-561-purple-buzz
 	<!-- Header -->
         <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
             <div class="container d-flex justify-content-between align-items-center">
-                <a class="navbar-brand h1" href="Main.html">
+                <a class="navbar-brand h1" href="Main.jsp">
                     <i class='bx bx-buildings bx-sm text-dark'></i>
                     <span class="text-dark h4">Purple</span> <span class="text-primary h4">Buzz</span>
                 </a>
@@ -66,7 +66,7 @@ https://templatemo.com/tm-561-purple-buzz
                             
                             <li class="nav-item">
                                 <!-- <a class="nav-link btn-outline-primary rounded-pill px-3" href="Info.html">공지사항</a> -->
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Main.html">홈</a>
+                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Main.jsp">홈</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn-outline-primary rounded-pill px-3" href="Webtoon_list.jsp">승격예측</a>
