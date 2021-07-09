@@ -137,13 +137,14 @@ public class T_MemberDAO {
 			          
 //			         String sql = "update book_member set name=?,pw=?, tel=?, email=?,webtoon_link=? where member_id=?";
 			         
-			         String sql = "update t_members set name=?, pw=?, tel=?, email=?";
+			         String sql = "update t_members set name=?, pw=?, tel=?, email=?,artist=?";
 			         
 			         psmt = conn.prepareStatement(sql);
 			         psmt.setString(1, member.getName());
 			         psmt.setString(2, member.getPw());
 			         psmt.setString(3, member.getTel());   
-			         psmt.setString(4, member.getEmail());  
+			         psmt.setString(4, member.getEmail());
+			         psmt.setString(5, member.getArtist());
 //			         psmt.setString(5, member.getWebtoon_link());
 			        
 			         
@@ -196,5 +197,46 @@ public class T_MemberDAO {
 
 		          return check;
 		       }
-		  
-}
+		
+		   public boolean Login_check(String member_id, String pw) { // id pw가 있는지 없는지만 판단 ->boolean
+		          
+		          boolean login_check = false;
+
+		          try {
+		             // connection 메소드 불러오기 -> DB연결기능
+		             connection();
+
+		             String sql = "select * from t_members where member_id = ? pw =?";
+
+		             psmt = conn.prepareStatement(sql);
+		             psmt.setString(1, member_id);
+		             psmt.setString(2, pw);
+
+		             rs = psmt.executeQuery();
+
+		             if (rs.next()) {
+		                // 테이블에 있음 -> 사용할 수 없는 아이디
+		                login_check = true;
+		             }else {
+		                // 값이 없음 -> 사용할 수 있는 아이디
+		                login_check = false;
+		             }
+
+		          }
+		    //   catch (ClassNotFoundException e) {
+//		          e.printStackTrace();
+		    //
+		    //   } 
+		          catch (SQLException e) {
+		             System.out.println("sql오류");
+		             e.printStackTrace();
+
+		          } finally {
+		             close();
+
+		          } // end
+
+		          return login_check;
+		       }
+		   
+}//end

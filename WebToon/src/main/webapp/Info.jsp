@@ -59,7 +59,9 @@
                     <div class="banner-content col-lg-7 align-self-end">
                         <h2 class="h2 pb-3">Notice</h2>
                         <p class="text-muted pb-5 light-300">
-                        You are allowed to download and use this Purple Buzz template for your websites. You are <strong>not allowed</strong> to re-distribute this template ZIP file on other template websites. It is quite easy to simply copy and repost the ZIP file on any <a rel="nofollow" href="https://www.google.com/search?q=free+css" target="_blank">Free CSS collection</a> websites.</p>
+                        본 사이트의 공지를 보여주는 페이지입니다.<br>
+                        다른 문의사항이 있다면 <a rel="nofollow" href="Service.jsp" target="_blank">고객센터</a>로 문의해 주세요. 
+                        </p>
                     </div>
                 </div>
             </div>

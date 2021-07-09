@@ -39,6 +39,7 @@
 	<!-- Header -->
     <%@ include file = "Header.jsp" %>
     <!-- Close Header -->
+    
 
 	<div class="main-container">
 		<div class="main-wrap">
@@ -61,7 +62,7 @@
 			</div>
 			<div class="login-button-wrap">
 				<!-- 로그인 버튼 -->
-                <input type="submit" value="로그인">
+                <input type="submit" value="로그인" onclick = "login_check()" id="input_login">
 			</div>
 			<div class="login-stay-sign-in">
                 <span>아이디가 없다면 <span> <a href="Join.jsp">회원가입</a>
@@ -69,11 +70,6 @@
 			</div>
 			</section>
 	</form>
-	
-	
-		
-	
-	
 	
 	
 
@@ -108,7 +104,38 @@
                 return false;
             });
         });
+         
+        
     </script>
+    
+    <script>
+    /* 로그인 체크 */
+	function login_check() {
+		var input = document.getElementById("input_login"); /* 태그만 가져온 것 -> 실질적인 값도 가져와야함 */
+		//altert(input.value) /* input 태그의 값을 가져올 때 // html,text는 innerHTML innerTEXT */
+
+		// ajax 활용(버튼에 onclick 속성 줌 ->함수 ) 
+		$.ajax({
+			type : "post", //데이터 전송방식 
+			data : {
+				'member_id' : input.value
+				'pw' : input.value
+			}, // 서버로 보낼 데이터(사용자가 적은 이메일) -> {key(from 태그의 name값) : value}
+			url : "LoginCheckCon", // 데이터를 보낼 서버 페이지
+			dataType : "text", // 응답 데이터의 타입 지정
+			// 요청에 성공 시 실행할 함수 정의 -> 가능 True / False
+			success : function(data) { //data : 응답할 때 보내줄 값(true,false) 가지고 있음
+				alert(data); // 알림창
+				
+			},
+			// 요청에 실패시 실행할 함수 정의
+			error : function() {
+				alert("요청 실패!")
+			}
+		});
+	}
+    </script>
+    
     <!-- Templatemo -->
     <script src="assets/js/templatemo.js"></script>
     <!-- Custom -->

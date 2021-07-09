@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="assets/css/templatemo.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/custom.css">
+    
 
 </head>
 <body>
@@ -234,7 +235,7 @@
 					<th><%=list.get(i).getApply_date() %></th>
 				</tr>
 				<%
-					}
+					} 
 				%>
 			</table>
     	</div>
@@ -254,34 +255,35 @@
 
             <!-- Start Contact Form -->
             <div class="col-lg-8 ">
-                <form class="contact-form row" method="post" action="#" role="form">
+                <form class="contact-form row" method="post" action="ConsultingCon" role="form">
 
                     <div class="col-lg-6 mb-4">
                         <div class="form-floating">
-                            <input type="text" class="form-control form-control-lg light-300" id="floatingname" name="inputname" placeholder="Name">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingname" name="member_id" placeholder="Name">
                             <label for="floatingname light-300">회원 아이디</label>
                         </div>
                     </div><!-- End Input Name -->
 
                     <!-- <div class="col-lg-6 mb-4">
                         <div class="form-floating">
-                            <input type="text" class="form-control form-control-lg light-300" id="floatingcompany" name="inputcompany" placeholder="date">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingcompany" name="apply_date" placeholder="date">
                             <label for="floatingcompany light-300">등록 일자</label>
                         </div>
-                    </div>End Input Company Name -->
+                    </div> -->
+                    <!-- End Input Company Name -->
 
                     <div class="col-12">
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="inputsubject" placeholder="Subject">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="title" placeholder="Subject">
                             <label for="floatingsubject light-300">작품 제목</label>
-                        </div>
+                         </div>
                     </div><!-- End Input Subject -->
-                    
+
                     <div class="col-12">
                         <div class="form-floating mb-4">
                             <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="consult_content" placeholder="Subject">
-                            <label for="floatingsubject light-300">파일</label>
-                        </div>
+                            <label for="floatingsubject light-300">파일 업로드</label>
+                         </div>
                     </div><!-- End Input Subject -->
                     
 

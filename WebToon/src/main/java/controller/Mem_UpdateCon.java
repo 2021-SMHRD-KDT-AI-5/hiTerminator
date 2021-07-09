@@ -25,15 +25,22 @@ public class Mem_UpdateCon extends HttpServlet {
 		T_MemberDTO member = (T_MemberDTO)session.getAttribute("member");
 		
 		// update.jsp에서 입력한 패스워드 , 번호 ,주소를 가져오시오.
+		if(request.getParameterValues("artist").equals("Y")) {
+			String artist="Y";
+		}else if(request.getParameterValues("artist").equals("Y")) {
+			String artist="N";
+		}
 		
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
 		String tel = request.getParameter("tel");
 		String email = request.getParameter("email");
+		String artist = request.getParameter("artist");
+		
 //		String webtoon_link = request.getParameter("webtoon_link");
 		
 		
-		T_MemberDTO member2 = new T_MemberDTO(session.getId(),pw,name,tel,email);
+		T_MemberDTO member2 = new T_MemberDTO(session.getId(),pw,name,tel,email,artist);
 		T_MemberDAO dao = new T_MemberDAO();
 
 		int cnt = dao.update_member(member2);

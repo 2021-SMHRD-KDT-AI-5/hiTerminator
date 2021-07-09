@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 
 	<style>
-	    #container{width:100%;}
+	     #container{width: 100%;}
         #search{ width:700px;margin-left:auto; margin-right:auto;}
         #search>input{width:600px; height:40px; margin-top:40px; margin-bottom:10px;}
         #content{width:100%;padding-right: 300px;padding-left: 300px;}
@@ -24,8 +24,9 @@
         .rating_type{height:25px;}
         .more{width: 90px; height:25px; background-color:#4232c2; text-align:center;}
         .more>a{color:white;}
-		li{margin: 10px;}
-		
+
+        li{margin: 10px;}
+
         /* 상세웹툰 추가 */
         .main-thumb{padding-top: 50px;}
         .comicinfo{float: left; width:100%}
@@ -37,20 +38,20 @@
         background-color: #fff;
         height: 1px;
         width: 100%;
-		}
+}
         /* 후원 css 추가 */
         .list_table{width: 100%;}
         th{text-align: center; height: 40px;}
         td{text-align: center; height: 40px;}
         .donation_btn:hover{color:white; box-shadow: 200px 0 0 0 rgba(66, 50, 194, 1) inset;
             transition: all 0.9s, color 0.3s;}
-
         body > section > div.search_list > form > table > tbody > tr > td:nth-child(4) > input{width: 75px; height: 40px;}    
         .donaiton_input{height: 40px;}
         .donaiton_input_message{width: 400px; height: 40px;}
         
         /* 내용 body쪽 길이 */
         .container.py-5{height: 1300px;}
+
 	</style>
 
 </head>
@@ -66,10 +67,10 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="contact-header col-lg-4">
                         <h1 class="h2 pb-3 text-primary">웹툰 승격 확률 예측</h1>
-                        <h4 class="h4 regular-400">고객센터를 통해 궁금증을 해결하세요!</h4>
-                        <p class="light-300">코로나19의 확산을 방지하고 지원 전문가의 건강을 지키기 위해 지원팀의 규모를 축소하여
-                            운영하게 되었습니다. 도움이 필요한 제품과 관련하여 전화로 문의하는 데 문제가 있는 경우 
-                            관리자 이메일을 참조하세요.</p>
+                        <h4 class="h4 regular-400"> 웹툰 승격 확률을 알아보아요</h4>
+                        <p class="light-300">웹툰 전성시대를 맞아 늘어나는 많은 웹툰 작가 지망생!<br>
+                        댓글 분석을 통해 정식웹툰 승격 확률을 눈으로 확인 할 수있습니다.
+                        </p>
                         <!-- <p class="light-300">
                             Vector illustration is from <a rel="nofollow" href="https://storyset.com/" target="_blank">StorySet</a>.
                             Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
@@ -229,7 +230,7 @@
         <div class="search_list" style="padding-top: 30px; padding-bottom: 50px;">
             <h3 class="worksingle-heading h3 pb-3 light-300 typo-space-line">후원하기</h3>
             <!-- 리스트 -->
-            <form name="search_form" method="POST" action="">
+            <form name="search_form" method="POST" action="DonateCon">
                 <table class="list_table" class="table table-striped" style="width: 100%; text-align: center; width: 100%;">
                     <!-- <caption class="search_blind">공지사항 리스트</caption> -->
                     <colgroup>
@@ -259,9 +260,9 @@
                     <tbody>
                         <!-- 여기에 글이 들어감 -->
                         <tr style="height: 50px;">
-                            <td><input class = "donaiton_input" type="text" placeholder="작가 이름"></td>
-                            <td><input class = "donaiton_input" type="text" placeholder="후원 금액"></td>
-                            <td><input class = "donaiton_input_message" type="text" placeholder="후원 메세지"></td>
+                            <td><input class = "donaiton_input" type="text" name = donee_id placeholder="작가 이름"></td>
+                            <td><input class = "donaiton_input" type="text" name = money placeholder="후원 금액"></td>
+                            <td><input class = "donaiton_input_message" type="text" name = donate_content placeholder="후원 메세지"></td>
                             <!-- 후원버튼 -->
                             <td><input type="submit" value="후원" class="donation_btn" style="width: 75px; height: 40px;"></td>
                         </tr>

@@ -4,16 +4,24 @@ public class Consulting_messageDTO {
 	
 	// 메세지 번호, 회원 아이디, 보낸날짜, 제목, 첨부파일 
 	
-	private int consult_no;
+	private int consult_id;
 	private String member_id;
 	private String title;
 	private String consult_content;
 	private String apply_date;
 	
-	public Consulting_messageDTO(int consult_no, String member_id, String title, String consult_content,
+	public Consulting_messageDTO(String member_id, String title, String consult_content, String apply_date) {
+		super();
+		this.member_id = member_id;
+		this.title = title;
+		this.consult_content = consult_content;
+		this.apply_date = apply_date;
+	}
+
+	public Consulting_messageDTO(int consult_id, String member_id, String title, String consult_content,
 			String apply_date) {
 		super();
-		this.consult_no = consult_no;
+		this.consult_id = consult_id;
 		this.member_id = member_id;
 		this.title = title;
 		this.consult_content = consult_content;
@@ -27,12 +35,12 @@ public class Consulting_messageDTO {
 		this.consult_content = consult_content;
 	}
 
-	public int getConsult_no() {
-		return consult_no;
+	public int getConsult_id() {
+		return consult_id;
 	}
 
-	public void setConsult_no(int consult_no) {
-		this.consult_no = consult_no;
+	public void setConsult_no(int consult_id) {
+		this.consult_id = consult_id;
 	}
 
 	public String getMember_id() {

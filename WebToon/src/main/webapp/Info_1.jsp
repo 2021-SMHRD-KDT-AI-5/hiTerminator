@@ -48,16 +48,15 @@
         <div class="container py-4">
             <div class="row align-items-center justify-content-between">
                 <div class="contact-header col-lg-4">
-                    <h1 class="h2 pb-3 text-primary">공지사항</h1>
+                    <h1 class="h2 pb-3 text-primary">Notice</h1>
                     <!-- <h3 class="h4 regular-400">000 공지사항 페이지 입니다.</h3> -->
-                    <!-- <p class="light-300">
-                        Vector illustration is from <a rel="nofollow" href="https://storyset.com/" target="_blank">StorySet</a>.
-                        Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                        여기는 뭘 적어야지..?
-                    </p> -->
+                    <p class="light-300">
+                        본 사이트의 공지를 보여주는 페이지입니다.<br>
+                        다른 문의사항이 있다면 <a rel="nofollow" href="Service.jsp" target="_blank">고객센터</a>로 문의해 주세요.
+                    </p> 
                 </div>
                 <div class="contact-img col-lg-5 align-items-end col-md-4">
-                    <img src="./assets/img/notice.png" width="250" height="250">
+                    <img src="./assets/img/work.svg" class="rounded img-fluid" alt="">
                 </div>
             </div>
         </div>
