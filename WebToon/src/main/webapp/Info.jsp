@@ -1,5 +1,14 @@
+<%@page import="model.PageDTO"%>
+<%@page import="model.InfoDTO"%>
+<%@page import="model.InfoDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% 
+	PageDTO dto = new PageDTO();
+	InfoDAO dao = new InfoDAO();
+	ArrayList<InfoDTO> list = new ArrayList<InfoDTO>();
+	list = dao.showPost();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,11 +31,15 @@
     <!-- css추가 -->
     <style>
         /* 테이블 넓이 조절 */
+        #container{height:2000px;}
         table.list_table{width: 100%;}
         .infoform{float: right;}
         th{background-color: #eeeeee; text-align: center;}
         td{text-align: center;}
         .py-5{height: 800px;}
+        .hi{background-image:url('assets/img/Search.png')}
+        #container #paginate{width:1090px; float:left; height:20px; text-align:center; font-size:14px; margin-top:12px;}
+        #container #paginate a{color:gray; padding:4px;}
     </style>
     
 </head>
@@ -35,7 +48,7 @@
 	<!-- Header -->
 	<%@ include file = "Header.jsp" %>
 	
-	
+	<div id="container">
         <!-- Start Choice -->
         <section class="why-us banner-bg bg-light">
             <div class="container my-4">
@@ -84,12 +97,14 @@
                             <label for="info_search">
                                 <span style="display: none;">검색</span>
                             </label>
-                            <input type="text" id="info_search" name="search" vlaue class="inputi" style="width: 500px; height: 40px;">
+                            <input type="text" id="info_search" name="searchWord" vlaue class="inputi" style="width: 500px; height: 40px;">
                             
                             <!-- 공지사항 검색 버튼 이미지 -->
-                            <a href="Consulting.html">
+                            <!-- <a href="Consulting.html">
                                 <img src="assets/img/Search.png" alt="검색"style="width:30px; margin :10px;" >
-                            </a>
+                            </a> -->
+                            
+                            <button type="submit" class="btn_search">검색</button>
                         </form>
                     </div>
                             <!-- End 검색 목록 -->
@@ -101,72 +116,55 @@
                             <table class="list_table" class="table table-striped"">
                                 <!-- <caption class="search_blind">공지사항 리스트</caption> -->
                                 <colgroup>
-                                    <col style="width:40px;">
                                     <col style="width:250px;">
-                                    <col style="width:70px;">
-                                    <col style="width:80px;">
                                     <col style="width:100px;">
-                                    <col style="width: 30px;">
                                 </colgroup>
                                 <thead>
                                     <tr  style="height: 50px;">
-                                        <th scope="col" >
-                                            <div class="wrap">번호</div>
-                                        </th>
                                         <th scope="col">
                                             <div class="wrap">제목</div>
-                                        </th>
-                                        <th scope="col" >
-                                            <div class="wrap">작성자</div>
                                         </th>
                                         <th scope="col">
                                             <div class="wrap">작성일</div>
                                         </th>
-                                        <th scope="col">
-                                            <div class="wrap">조회</div>
-                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                	<%for(int i=0; i<list.size(); i++){ %>
                                      <!-- 여기에 글이 들어감 -->
                                     <tr style="height: 50px;">
-                                        <td>1</td>
-                                        <td><a href="Info_1.jsp">웹툰 승격 예측 서비스란?</a></td>
-                                        <td>작성자1</td>
-                                        <td>2021-07-05</td>
-                                        <td>조회수1</td>
+                                        <td><a href="InfoDetailCon?num=<%=list.get(i).getInfo_no() %>"><%=list.get(i).getInfo_title() %></a></td>
+                                        <%-- &pageNum=<%=dto.getPageNum() %> 페이징 관련 페이지 넘버 보류--%> 
+                                        <td><%=list.get(i).getInfo_date() %></td>
                                     </tr>
-                                    <tr style="height: 50px;">
-                                        <td>2</td>
-                                        <td><a href="Info_2.jsp">2021년도 3분기 1:1 컨설팅 모집 안내</a></td>
-                                        <td>작성자2</td>
-                                        <td>2021-07-06</td>
-                                        <td>조회수2</td>
-                                    </tr>
-                                    <tr style="height: 50px;">
-                                        <td>3</td>
-                                        <td><a href="Info_3.jsp">후원기능 사용 방법</a></td>
-                                        <td>작성자3</td>
-                                        <td>2021-07-07</td>
-                                        <td>조회수3</td>
-                                    </tr>
-                                    <tr style="height: 50px;">
-                                        <td>4</td>
-                                        <td><a href="Info_4.jsp">업데이트 소식</a></td>
-                                        <td>작성자4</td>
-                                        <td>2021-07-08</td>
-                                        <td>조회수4</td>
-                                    </tr>
+                                 	<%} %>
                                 </tbody>
                                 <!-- 리스트 끝 -->
                             </table>
                         </form>
                     </div>
+                    <div id="paginate">
+                    	<%-- <!-- 이전 페이지 -->
+                    	<%if (page!=1) { 
+                    		int k = page;%>
+            					<a href="?page=<%=k-1%>">이전</a>
+            			<%} %>
+            			<!-- 숫자 페이지 -->
+            			<%for(int i=1; i<=totalPage; i++){ %>
+            				<a href="?page=<%=i %>"><%=i %></a>
+            			<%} %>
+            			<!-- 다음 페이지 -->
+            			<%if(page!=totalPage){ 
+            				int k = page;%>
+            					<a href="?page=<%=k-1%>">다음</a>
+            			<%} %> --%>
+        			</div>
+        			<a href="Info_Update.jsp">글쓰기</a>
                 </div>
             </section>
             <!-- End Contact -->
     
-
+	</div>
 
     
     	<!-- Footer -->

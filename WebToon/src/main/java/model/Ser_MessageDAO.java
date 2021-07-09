@@ -100,7 +100,7 @@ public ArrayList<Ser_MessageDTO> showMessage() {
 			connection();
 
 			// 쿼리실행  실행다시 해보세요!
-			String sql = "select * from CUSTOMER_SERVICE";
+			String sql = "select * from CUSTOMER_SERVICE order by inquiry_id desc";
 
 			psmt = conn.prepareStatement(sql);
 			

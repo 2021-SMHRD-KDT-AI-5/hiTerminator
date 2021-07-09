@@ -183,14 +183,20 @@ https://templatemo.com/tm-561-purple-buzz
 	        			valueArr : valueArr
 	        		},
 	        		success:function(jdata){
-	        			if(jdata=1){
-	        				location.replace("Admin_Service")
+	        			location.href = "Admin_Service.jsp"
+	        			/*if(jdata==1){
+	        				//location.replace("Admin_Service")
+	        				location.href = "Admin_Service.jsp"
 	        				
 	        			}
 	        			else{
 	        				alert("삭제 실패");
-	        			}
-	        		}
+	        			}*/
+	        		},
+	        		error : function(error) {
+	        	        alert("삭제실패!");
+	        	    }
+	        		
 	        		
 	        	});
         		}

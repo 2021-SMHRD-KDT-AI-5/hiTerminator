@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,10 +19,12 @@ public class Ser_MessageDeleteCon extends HttpServlet {
 		
 		String[] valueArr = request.getParameterValues("valueArr");
 		int size = valueArr.length;
-		
+		PrintWriter out = response.getWriter();
 		Ser_MessageDAO dao= new Ser_MessageDAO();
+		int sum = 0;
 		for(int i=0; i<size; i++) {
-			dao.deleteMessage(valueArr[i]);
+			int delete_num = dao.deleteMessage(valueArr[i]);
+			sum+=delete_num;
 			System.out.println(valueArr[i]);
 		}
 		
@@ -33,7 +37,8 @@ public class Ser_MessageDeleteCon extends HttpServlet {
 //			System.out.println("메세지 삭제 실패!");
 //			response.sendRedirect("Admin_Service.jsp");
 //		}
-		response.sendRedirect("/Admin_Service.jsp"); 
+//		response.sendRedirect("/Admin_Service.jsp"); 
+		out.print(sum);
 	}
 
 }

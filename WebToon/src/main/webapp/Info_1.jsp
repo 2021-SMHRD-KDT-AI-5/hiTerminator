@@ -1,5 +1,11 @@
+<%@page import="model.InfoDTO"%>
+<%@page import="model.InfoDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% InfoDTO info = (InfoDTO)session.getAttribute("info");
+
+	InfoDAO dao = new InfoDAO();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,20 +79,19 @@
                 <input type="hidden" value="board_write" name="command">
                 <table style="width: 100%;">
                     <tr>
-                        <th>번호 *</th>
-                        <td>1</td>
                         <th>작성자</th>
                         <td>관리자</td>
                         <th>작성일</th>
-                        <td>2021-07-05</td>
+                        <td><%=info.getInfo_date() %></td>
                     </tr>
+                    
                     <tr>
                         <th>제목</th>
-                        <td>웹툰 승격 예측 서비스란?</td>
+                        <td><%=info.getInfo_title() %></td>
                     </tr>
                     <tr>
                         <th>내용</th>
-                        <td></td>
+                        <td><%=info.getInfo_content() %></td>
                     </tr>
                 </table>
                 <button><a href="Info.jsp">목록</a></button>
