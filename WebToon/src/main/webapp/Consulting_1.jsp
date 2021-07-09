@@ -82,10 +82,8 @@ https://templatemo.com/tm-561-purple-buzz
                         <h2 class="pricing-table-heading h5 semi-bold-600">Step 1</h2>
                         <p>컨설팅 받을 웹툰 등록</p>
                         <ul class="pricing-table-body text-start text-dark px-4 list-unstyled light-300">
-                            <li><i class="bx bxs-circle me-2"></i>5 Users</li>
-                            <li><i class="bx bxs-circle me-2"></i>2 TB space</li>
-                            <li><i class="bx bxs-circle me-2"></i>Community Forums</li>
-                            <li><i class="bx bxs-circle me-2"></i>Email Support</li>
+                            <li><i class="bx bxs-circle me-2"></i>회원ID 입력</li>
+                            <li><i class="bx bxs-circle me-2"></i>웹툰 업로드</li>
                         </ul>
 
                         <!-- get now 버튼을 누르면 등록 페이지로 스크롤 내려가게 하고싶음 -->
@@ -105,10 +103,8 @@ https://templatemo.com/tm-561-purple-buzz
                         <h2 class="pricing-table-heading h5 semi-bold-600">Step 2</h2>
                         <p>전문가의 웹툰 평가</p>
                         <ul class="pricing-table-body text-start text-dark px-4 list-unstyled light-300">
-                            <li><i class="bx bxs-circle me-2"></i>5 Users</li>
-                            <li><i class="bx bxs-circle me-2"></i>2 TB space</li>
-                            <li><i class="bx bxs-circle me-2"></i>Community Forums</li>
-                            <li><i class="bx bxs-circle me-2"></i>Email Support</li>
+                            <li><i class="bx bxs-circle me-2"></i>전문가 평가</li>
+                            <li><i class="bx bxs-circle me-2"></i>힙격자 선발</li>
                         </ul>
                         <div class="pricing-table-footer pt-5">
                             <a href="#" class="btn rounded-pill px-4 btn-outline-primary light-300">Get Now</a>
@@ -126,10 +122,8 @@ https://templatemo.com/tm-561-purple-buzz
                         <h2 class="pricing-table-heading h5 semi-bold-600">Step 3</h2>
                         <p>선발 웹툰 컨설팅</p>
                         <ul class="pricing-table-body text-start text-dark px-4 list-unstyled light-300">
-                            <li><i class="bx bxs-circle me-2"></i>5 Users</li>
-                            <li><i class="bx bxs-circle me-2"></i>2 TB space</li>
-                            <li><i class="bx bxs-circle me-2"></i>Community Forums</li>
-                            <li><i class="bx bxs-circle me-2"></i>Email Support</li>
+                            <li><i class="bx bxs-circle me-2"></i>3개월</li>
+                            <li><i class="bx bxs-circle me-2"></i>1:1 컨설팅</li>
                         </ul>
                         <div class="pricing-table-footer pt-5">
                             <a href="#" class="btn rounded-pill px-4 btn-outline-primary light-300">Get Now</a>
@@ -211,11 +205,16 @@ https://templatemo.com/tm-561-purple-buzz
                         <tbody>
                             <!-- 여기에 글이 들어감 -->
                             <%
+                            T_MemberDTO member_info = (T_MemberDTO)session.getAttribute("member");
+                            String member_id = member_info.getMember_id();
+                            
+                            list = ( ArrayList<Consulting_messageDTO>)dao.showMessage(member_id);
 								for(int i = 0; i < list.size(); i++){
 							%>
 							<tr>
+							
 								<td><%=i+1 %></td>
-								<td><%=list.get(i).getMember_id() %></td>
+								<td><%= member_id%></td>
 								<td><%=list.get(i).getApply_date() %></td>
 								<td><%=list.get(i).getTitle() %></td>
 								<td><%=list.get(i).getConsult_content() %></td>
@@ -239,8 +238,8 @@ https://templatemo.com/tm-561-purple-buzz
         <h2 class="col-12 col-xl-8 h4 text-left regular-400"><b>컨설팅 받을 웹툰 등록</b></h2>
         <br>
         <p class="col-12 col-xl-8 text-left text-muted pb-5 light-300">
-            --------------------------주의사항-------------------------------<br>
-            <br>
+            --------------------------주의사항-------------------------------
+            <br><br>
             ■ 접수기간 : 공지 사항에 나온 접수기간을 엄수해주세요.
             <br><br>
             ■ 응모자격 : 본 홈페이지에 올라온 웹툰 작가외 불가.
