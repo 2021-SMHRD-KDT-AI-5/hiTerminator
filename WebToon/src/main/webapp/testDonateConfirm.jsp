@@ -1,14 +1,5 @@
-<%@page import="model.DonateDTO"%>
-<%@page import="model.DonateDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-  
-<%
-	DonateDAO dao = new DonateDAO();
-	ArrayList<DonateDTO> list = new ArrayList<DonateDTO>();
-	list = dao.showDonate();
-%>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,19 +73,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                  <% for(int i=0; i<list.size(); i++){ %>
-                  	<tr>
-                  		<td><%=list.get(i).getDonate_date() %></td>
-                  		<td><%=list.get(i).getArtist_id() %></td>
-                  		<td><%=list.get(i).getMoney() %></td>
-                  		<td><%=list.get(i).getDonate_content() %></td> 
-                  		
-                  	</tr>
-                  
-                  
-                  <%} %>
-                  
-                  
+                    <tr>
+                        <td>2017.07.29</td>
+                        <td>너</td>
+                        <td>100만원</td>
+                        <td>ㅎㅇ</td>
+                    </tr>
+                    <tr>
+                        <td>2017.07.29</td>
+                        <td>너</td>
+                        <td>100만원</td>
+                        <td>ㅎㅇ</td>
+                    </tr>
                 </tbody>
             </table>
             </form>
