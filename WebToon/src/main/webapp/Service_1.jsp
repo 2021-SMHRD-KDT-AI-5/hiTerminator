@@ -1,5 +1,11 @@
+<%@page import="model.Ser_MessageDAO"%>
+<%@page import="model.Ser_MessageDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% Ser_MessageDTO ser = (Ser_MessageDTO)session.getAttribute("ser");
+
+	Ser_MessageDAO dao = new Ser_MessageDAO();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,23 +79,25 @@
                 <input type="hidden" value="board_write" name="command">
                 <table style="width: 100%;">
                     <tr>
-                        <th>번호 *</th>
-                        <td>2</td>
                         <th>작성자</th>
-                        <td>관리자</td>
+                        <td><%=ser.getMember_id() %></td>
+                        <td><%=ser.getEmail() %></td>
+                        <th>분류</th>
+                        <td><%=ser.getQ_ctgr() %></td>
                         <th>작성일</th>
-                        <td>2021-07-05</td>
+                        <td><%=ser.getQ_date() %></td>
                     </tr>
+                    
                     <tr>
                         <th>제목</th>
-                        <td>웹툰 승격 예측 서비스란?</td>
+                        <td><%=ser.getQ_title() %></td>
                     </tr>
                     <tr>
                         <th>내용</th>
-                        <td></td>
+                        <td><%=ser.getQ_content() %></td>
                     </tr>
                 </table>
-                <button><a href="Info.jsp">목록</a></button>
+                <button><a href="Admin_Service.jsp">목록</a></button>
             </form>
         </div>
     </section>

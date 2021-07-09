@@ -4,20 +4,21 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class Ser_MessageDAO {
+public class InfoDAO {
 	
 	private Connection conn = null;
 	private PreparedStatement psmt = null;
 	private ResultSet rs = null;
 	
-	public static Ser_MessageDAO instance;
-	public Ser_MessageDAO() {}
-	public static Ser_MessageDAO getInstance() {
+	public static InfoDAO instance;
+	public InfoDAO() {}
+	public static InfoDAO getInstance() {
 		if(instance==null)
-			instance=new Ser_MessageDAO();
+			instance=new InfoDAO();
 		return instance;
 		
 	}
@@ -58,8 +59,8 @@ public class Ser_MessageDAO {
 		}
 
 	}
-
-	public int Ser_insertMesasge(Ser_MessageDTO message) {
+	
+	public int insertPost(InfoDTO post) {
 
 		int cnt = 0;
 
@@ -68,14 +69,12 @@ public class Ser_MessageDAO {
 			connection();
 
 			// 쿼리 실행
-			String sql = "insert into customer_service values(service_no.nextval, ?, ?, ?, ?, ?, sysdate)";
+			String sql = "insert into information values(service_no.nextval, ?, ?, sysdate)";
 
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, message.getMember_id()); // email -> getEmail로 수정(member 객체로부터 꺼내옴)
-			psmt.setString(2, message.getEmail());
-			psmt.setString(3, message.getQ_ctgr());
-			psmt.setString(4, message.getQ_title());
-			psmt.setString(5, message.getQ_content());
+			psmt.setString(1, post.getInfo_title());
+			psmt.setString(2, post.getInfo_content());
+			
 
 			// insert, update, delete : executeUpdate() --> DB내용 변경
 			// select : executeQuery() --> DB내용 검색
@@ -99,33 +98,30 @@ public class Ser_MessageDAO {
 		return cnt;
 	}
 	
-public ArrayList<Ser_MessageDTO> showMessage() {
+public ArrayList<InfoDTO> showPost() {
 		
-		ArrayList<Ser_MessageDTO>list=new ArrayList<Ser_MessageDTO>(); // 단순 변수선언이 아닌 객체 생성
-		Ser_MessageDTO message = null; // 변수선언 및 초기화
+		ArrayList<InfoDTO>list=new ArrayList<InfoDTO>(); // 단순 변수선언이 아닌 객체 생성
+		InfoDTO post = null; // 변수선언 및 초기화
 		
 		try {
 			// DB연결기능
 			connection();
 
 			// 쿼리실행  실행다시 해보세요!
-			String sql = "select * from CUSTOMER_SERVICE order by inquiry_id desc";
+			String sql = "select * from information order by info_id desc";
 
 			psmt = conn.prepareStatement(sql);
 			
 			rs = psmt.executeQuery();
 
 			while(rs.next()) { // 컬럼명과 데이터 사이에 커서 초기 위치, rs.next()에 따라 커서가 데이터를 가리키며 내려간다. 값이 있을(True) 때까지 반복
-				int service_no = rs.getInt(1);
-				String member_id = rs.getString(2);
-				String email = rs.getString(3);
-				String q_ctgr = rs.getString(4);
-				String q_title = rs.getString(5);
-				String q_content = rs.getString(6);
-				String date = rs.getString(7);
+				int info_no = rs.getInt(1);
+				String info_title = rs.getString(2);
+				String info_content = rs.getString(3);
+				String info_date = rs.getString(4);
 
-				message = new Ser_MessageDTO(service_no, member_id, email, q_ctgr, q_title, q_content, date);
-				list.add(message);
+				post = new InfoDTO(info_no, info_title, info_content, info_date);
+				list.add(post);
 			}
 
 		} 
@@ -139,49 +135,49 @@ public ArrayList<Ser_MessageDTO> showMessage() {
 		return list;
 	}
 	
-	public int deleteMessage(String q_no) {
-	
-	int cnt = 0;
-
-	try {
-		// DB연결
-		connection();
-
-		// 쿼리 실행
-		String sql = "delete from customer_service where inquiry_id=?";
-		psmt = conn.prepareStatement(sql);
-		psmt.setString(1, q_no);
+	public int deletePost(String info_no) {
 		
-		// ★★★★★
-		// insert, update, delete: executeUpdate() --> DB에 내용을 변경할 때
-		// select: executeQuery() --> DB에 내용을 검색할 때
-		cnt = psmt.executeUpdate();
-
-	} catch (SQLException e) {
-		// DB관련 오류발생시 실행되는 catch문
-		System.out.println("메세지삭제 spl문 오류!");
-		e.printStackTrace();
-	} finally {
-		// 무조건 실행하는 구문(try catch문은 예외처리 구문)
-		// 데이터베이스 종료기능 구현
-		close();
-	} // end
-	return cnt;
-	
-	}
-	
-public Ser_MessageDTO getDetail(int q_no) {
-		
-		Ser_MessageDTO ser = null;
+		int cnt = 0;
 
 		try {
 			// DB연결
 			connection();
 
 			// 쿼리 실행
-			String sql = "select * from customer_service where inquiry_id=?";
+			String sql = "delete from information where info_id=?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, q_no);
+			psmt.setString(1, info_no);
+			
+			// ★★★★★
+			// insert, update, delete: executeUpdate() --> DB에 내용을 변경할 때
+			// select: executeQuery() --> DB에 내용을 검색할 때
+			cnt = psmt.executeUpdate();
+
+		} catch (SQLException e) {
+			// DB관련 오류발생시 실행되는 catch문
+			System.out.println("메세지삭제 spl문 오류!");
+			e.printStackTrace();
+		} finally {
+			// 무조건 실행하는 구문(try catch문은 예외처리 구문)
+			// 데이터베이스 종료기능 구현
+			close();
+		} // end
+		return cnt;
+		
+	}
+	
+	public InfoDTO getDetail(int info_no) {
+		
+		InfoDTO Info = null;
+
+		try {
+			// DB연결
+			connection();
+
+			// 쿼리 실행
+			String sql = "select * from information where info_id=?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, info_no);
 			
 			// ★★★★★
 			// insert, update, delete: executeUpdate() --> DB에 내용을 변경할 때
@@ -189,14 +185,11 @@ public Ser_MessageDTO getDetail(int q_no) {
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) { // 컬럼명과 데이터 사이에 커서 초기 위치, rs.next()에 따라 커서가 데이터를 가리키며 내려간다. 값이 있을(True) 때까지 반복
-				ser = new Ser_MessageDTO();
-				ser.setQ_no(q_no);
-				ser.setMember_id(rs.getString(2));
-				ser.setEmail(rs.getString(3));
-				ser.setQ_ctgr(rs.getString(4));
-				ser.setQ_title(rs.getString(5));
-				ser.setQ_content(rs.getString(6));
-				ser.setQ_date(rs.getString(7));
+				Info = new InfoDTO();
+				Info.setInfo_no(info_no);
+				Info.setInfo_title(rs.getString(2));
+				Info.setInfo_content(rs.getString(3));
+				Info.setInfo_date(rs.getString(4));
 //				int info_no1 = rs.getInt(1);
 //				String info_title = rs.getString(2);
 //				String info_content = rs.getString(3);
@@ -214,8 +207,43 @@ public Ser_MessageDTO getDetail(int q_no) {
 			// 데이터베이스 종료기능 구현
 			close();
 		} // end
-		return ser;
+		return Info;
 		
 	}
+	
+	public int countPost() {
+		
+		int cnt = 0;
 
+		try {
+			// DB연결
+			connection();
+
+			// 쿼리 실행
+			String sql = "select count(info_id) from information";
+			psmt = conn.prepareStatement(sql);
+			
+			// ★★★★★
+			// insert, update, delete: executeUpdate() --> DB에 내용을 변경할 때
+			// select: executeQuery() --> DB에 내용을 검색할 때
+			rs = psmt.executeQuery();
+			ResultSetMetaData rsmd = rs.getMetaData();
+			int colCount = rsmd.getColumnCount();
+		
+
+		} catch (SQLException e) {
+			// DB관련 오류발생시 실행되는 catch문
+			System.out.println("countPost spl문 오류!");
+			e.printStackTrace();
+		} finally {
+			// 무조건 실행하는 구문(try catch문은 예외처리 구문)
+			// 데이터베이스 종료기능 구현
+			close();
+		} // end
+		return cnt;
+		
+	}
+	
+	
+	
 }
