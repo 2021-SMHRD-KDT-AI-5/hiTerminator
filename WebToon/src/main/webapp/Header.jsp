@@ -98,15 +98,18 @@ https://templatemo.com/tm-561-purple-buzz
                      	<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
            
                      	<%}else {%>
-                     		<a class="nav-link" href="Mem_Update.jsp"><i class='bx bx-cog bx-sm text-primary'></i>마이페이지</a>
- 							 <a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
+                     		<a class="nav-link" href="Mem_Update.jsp"><i class='bx bx-cog bx-sm text-primary'></i>내정보 수정</a>
+                     		<a class="nav-link" href="Mem_Update.jsp"><i class="fas fa-user"></i>마이페이지</a>
+ 							<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
+ 							  
                      	<%} %>
                      <% }else{ %>
-                        <a class="nav-link"href = "Login.jsp"><i class='bx bx-user-circle bx-sm text-primary'></i>로그인</a>
+                        <a class="nav-link"href = "Login.jsp"><i class="fas fa-power-off"></i>로그인</a>
+                        
                      <% } %> 
                         
                     	
-						 
+						
                     
                     
                         <!-- 종모양 i태그 -->
