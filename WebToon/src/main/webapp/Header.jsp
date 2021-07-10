@@ -102,8 +102,8 @@ https://templatemo.com/tm-561-purple-buzz
             
                      	<%}else {%>
                      		<a class="nav-link" href="Mem_Update.jsp"><i class='bx bx-cog bx-sm text-primary'></i>내정보 수정</a>
-                     		<a class="nav-link" href="Mypage_Main.jsp"><i class="fas fa-user"></i>마이페이지</a>
- 							<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
+                     		<a class="nav-link" href="Mypage_Main.jsp"><i class="fas fa-user fa-lg"></i>마이페이지</a>
+ 							<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt fa-lg"></i>로그아웃</a>
  							  
                      	<%} %>
                      <% }else{ %>
