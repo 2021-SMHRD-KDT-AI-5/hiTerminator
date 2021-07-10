@@ -36,7 +36,7 @@ public class LoginCon extends HttpServlet {
 				
 				System.out.println("로그인 성공!");
 				
-				//response.sendRedirect("Service.jsp");
+				response.sendRedirect("Main.jsp");
 
 
 				
@@ -46,7 +46,7 @@ public class LoginCon extends HttpServlet {
 				System.out.println("로그인 실패...");
 				response.getWriter().write("0");
 
-				//response.sendRedirect("Login.jsp");
+				response.sendRedirect("Login.jsp");
 
 
 			}

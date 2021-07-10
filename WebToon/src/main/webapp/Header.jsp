@@ -77,13 +77,29 @@ https://templatemo.com/tm-561-purple-buzz
                             <li class="nav-item">
                                 <a class="nav-link btn-outline-primary rounded-pill px-3" href="Consulting_1.jsp">컨설팅</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Service.jsp">고객센터</a>
-                            </li>
-                            <li class="nav-item">
-                                <!-- <a class="nav-link btn-outline-primary rounded-pill px-3" href="Login.html">로그인</a> -->
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Info.jsp">공지사항</a>
-                            </li>
+                           
+                            
+                            <!-- 관리자로 들어오면 공지사항 글쓰기 가능  -->
+                            <% if(member != null){ 
+                     			if(member.getMember_id().equals("admin")){
+                     			%>
+                     			 <li class="nav-item">
+                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="Admin_Service.jsp">고객센터</a>
+                            	</li>
+                            	<li class="nav-item">
+                                	<a class="nav-link btn-outline-primary rounded-pill px-3" href="Admin_info.jsp">공지사항</a>
+                            	</li>
+                            	<%}else {%>
+                            		<!-- 관리자 아니면  -->
+                            		 <li class="nav-item">
+                                	<a class="nav-link btn-outline-primary rounded-pill px-3" href="Service.jsp">고객센터</a>
+                            		</li>
+                            		<li class="nav-item">
+                            		<a class="nav-link btn-outline-primary rounded-pill px-3" href="Info.jsp">공지사항</a>
+                            		</li>
+                            		<%} %>
+                            		<% }else{} %>
+                        
                         </ul>
                     </div>
                     
@@ -96,18 +112,17 @@ https://templatemo.com/tm-561-purple-buzz
                      <% if(member != null){ 
                      		if(member.getMember_id().equals("admin")){
                      			%>
-                     			<a href="Consulting.jsp">컨설팅message</a>
-                     			<a href="Admin_Service.jsp">고객센터message</a>
-                     	<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
-            
+                     			
+                     	<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i></a>
+           
                      	<%}else {%>
-                     		<a class="nav-link" href="Mem_Update.jsp"><i class='bx bx-cog bx-sm text-primary'></i>내정보 수정</a>
-                     		<a class="nav-link" href="Mypage_Main.jsp"><i class="fas fa-user fa-lg"></i>마이페이지</a>
- 							<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt fa-lg"></i>로그아웃</a>
+                     		<a class="nav-link" href="Mem_Update.jsp"><i class='bx bx-cog bx-sm text-primary'></i></a>
+                     		<a class="nav-link" href="Mypage_Main.jsp"><i class="fas fa-user"></i></a>
+ 							<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i></a>
  							  
                      	<%} %>
                      <% }else{ %>
-                        <a class="nav-link"href = "Login.jsp"><i class="fas fa-power-off"></i>로그인</a>
+                        <a class="nav-link"href = "Login.jsp"><i class="fas fa-power-off"></i></a>
                         
                      <% } %> 
                         
@@ -124,9 +139,7 @@ https://templatemo.com/tm-561-purple-buzz
                         
                         <!-- 로그인 전에는 Login.html으로 연결 / 로그인 성공시 회원정보수정 Mem_update.jsp로 이동 -->
 
-                       
-
-                        
+                      
                         
                     </div>
                     

@@ -162,7 +162,7 @@
             					<a href="?page=<%=k-1%>">다음</a>
             			<%} %> --%>
         			</div>
-        			<!-- <a href="Info_Update.jsp">글쓰기</a> -->
+        			<a href="Info_Update.jsp">글쓰기</a>
                 </div>
             </section>
             <!-- End Contact -->
