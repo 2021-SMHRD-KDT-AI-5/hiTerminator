@@ -31,6 +31,14 @@
         th{background-color: #eeeeee; text-align: center;}
         td{text-align: center;}
         .py-5{height: 800px;}
+        
+      .list_table.donation_btn{color:white; box-shadow: 200px 0 0 0 rgba(66, 50, 194, 1) inset;
+      transition: all 0.9s, color 0.3s;}
+      
+      /* 마우스 올리면 나오는 효과*/
+      .list_table .donation_btn:hover{color:white; box-shadow: 200px 0 0 0 rgba(66, 50, 194, 1) inset;
+            transition: all 0.9s, color 0.3s;}
+            
     </style>
 
 </head>
@@ -70,27 +78,27 @@
 
             <!-- 5회차 상세 확률 -->
 
-            <div id="main_list" style="padding-top: 30px; padding-bottom: 30px;">
+            <div id="main_list" style="padding-top: 30px; padding-bottom: 50px;">
                 <h3 class="worksingle-heading h3 pb-3 light-300 typo-space-line">5회차 확률</h3>
                 <div class="search_list" style="padding-top: 40px;">
                     <!-- 테이블 -->
                     <form name="search_form" method="POST" action="">
-                        <table class="list_table" class="table table-striped" style="width: 100%;">
+                        <table class="list_table" class="table table-striped" style="width: 100%; text-align:center;">
                             <colgroup style="text-align: center;">
-                                <col style="width:10%;">
+                                <col style="width:9%;">
                                 <col style="width:15%;">
 
                                 <col style="width:6%;">
                                 <col style="width:7%;">
                                 <col style="width:7%;">
                                 <col style="width:6%;">
-                                <col style="width:6%;">
+                                <col style="width:5%;">
                                 <col style="width:10%;">
 
                                 <col style="width: 10%">
                                 <col style="width: 10%;">
-                                <col style="width: 7%;">
-                                <col style="width: 6%";>
+                                <col style="width: 10%;">
+                                <col style="width: 8%";>
                                 
                             </colgroup>
                             <%
@@ -188,19 +196,19 @@
                                         <div class="wrap">댓글 수</div>
                                     </th>
                                     <th scope="col" >
-                                        <div class="wrap">조회수 대비 <br>별점참여<br>(별점참여/조회수X1000)</div>
+                                        <div class="wrap">조회수 대비<br>별점참여<br>(별점참여/조회수X1000)</div>
                                     </th>
                                     <th scope="col">
-                                        <div class="wrap">조회수 대비 <br>좋아요<br>(좋아요/조회수X1000)</div>
+                                        <div class="wrap">조회수 대비<br>좋아요<br>(좋아요/조회수X1000)</div>
                                     </th>
                                     <th scope="col">
-                                        <div class="wrap">댓글수 대비 <br>긍정댓글</div>
+                                        <div class="wrap">댓글수 대비<br>긍정댓글</div>
                                     </th>
                                     <th scope="col">
-                                        <div class="wrap">댓글수 대비 <br>부정댓글</div>
+                                        <div class="wrap">댓글수 대비<br>부정댓글</div>
                                     </th>
                                     <th scope="col">
-                                        <div class="wrap">정식연재 확률<div>
+                                        <div class="wrap">정식연재<br>확률<div>
                                     </th>
                                 </tr>
                                 
@@ -279,6 +287,55 @@
                     </form>
             </div>
        
+       		
+       		<!-- START 후원 -->
+
+        <div class="search_list" style="padding-top: 100px;">
+            <h3 class="worksingle-heading h3 pb-3 light-300 typo-space-line">후원하기</h3>
+            <!-- 리스트 -->
+            <form name="search_form" method="POST" action="DonateCon">
+                <table class="list_table" class="table table-striped" style="width: 100%; text-align: center; width: 100%;">
+                    <!-- <caption class="search_blind">공지사항 리스트</caption> -->
+                    <colgroup>
+                        <col style="width:40px;">
+                        <col style="width:250px;">
+                        <col style="width:70px;">
+                        <col style="width:80px;">
+                        <col style="width:100px;">
+                        <col style="width: 30px;">
+                    </colgroup>
+                    <thead>
+                        <tr  style="height: 50px;">
+                            <th scope="col" >
+                                <div class="wrap">작가</div>
+                            </th>
+                            <th scope="col">
+                                <div class="wrap">후원금액</div>
+                            </th>
+                            <th scope="col" >
+                                <div class="wrap">후원메세지</div>
+                            </th>
+                            <th scope="col" >
+                                <div class="wrap"></div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 여기에 글이 들어감 -->
+                        <tr style="height: 50px;">
+                            <td><input class = "donaiton_input" type="text" name = donee_id placeholder="작가 이름"></td>
+                            <td><input class = "donaiton_input" type="text" name = money placeholder="후원 금액"></td>
+                            <td><input class = "donaiton_input_message" type="text" name = donate_content placeholder="후원 메세지"></td>
+                            <!-- 후원버튼 -->
+                            <td><input type="submit" value="후원" class="donation_btn" style="width: 75px; height: 40px;"></td>
+                        </tr>
+                    </tbody>
+                        
+                    <!-- 리스트 끝 -->
+                </table>
+	       		</div>
+   		  	<!-- End 후원하기  -->
+ 
         </div>
     </div>
 	
