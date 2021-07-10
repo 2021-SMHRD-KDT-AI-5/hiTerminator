@@ -113,7 +113,7 @@ https://templatemo.com/tm-561-purple-buzz
 					<div class="pricing-table card h-100 shadow-sm border-0 py-5">
 						<div
 							class="pricing-table-body card-body rounded-pill text-center align-self-center p-md-0">
-							<img src="/2nd_project/assets/img/submit.png" width="90"
+							<img src="./assets/img//web_url.png" width="90"
 								height="80">
 							<p></p>
 							<!-- <i class="pricing-table-icon display-3 bx bx-package text-secondary"></i> -->
@@ -140,7 +140,7 @@ https://templatemo.com/tm-561-purple-buzz
 					<div class="pricing-table card h-100 shadow-sm border-0 py-5">
 						<div
 							class="pricing-table-body card-body rounded-pill text-center align-self-center p-md-0">
-							<img src="/2nd_project/assets/img/test.png" width="90"
+							<img src="./assets/img/drag.png" width="90"
 								height="80">
 							<p></p>
 							<!-- <i class="pricing-table-icon display-3 bx bx-package text-secondary"></img> -->
@@ -162,7 +162,7 @@ https://templatemo.com/tm-561-purple-buzz
 					<div class="pricing-table card h-100 shadow-sm border-0 py-5">
 						<div
 							class="pricing-table-body card-body rounded-pill text-center align-self-center p-md-0">
-							<img src="/2nd_project/assets/img/assistant.png\" width="90"
+							<img src="./assets/img/wait.png" width="90"
 								height="80">
 							<p></p>
 							<!-- <i class="pricing-table-icon display-3 bx bx-package text-secondary"></i> -->
