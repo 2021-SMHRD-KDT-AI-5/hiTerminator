@@ -28,41 +28,145 @@ https://templatemo.com/tm-561-purple-buzz
 
 -->
 
-    <style>
-        #container{height:1000px; margin-left: 450px; margin-right: 450px auto; width:1020px;}
-        #search{ width:100%;margin-left:auto; margin-righ t:auto;}
-        /* #search>input{width:600px; height:40px; margin-top:40px; margin-bottom:10px;} */
-        
-        #content{width:990px; margin-left: auto; margin-right: auto;}
-        #tab_menu>ul>li{display:inline-block; text-align:center;}
-        .site_menu{width:978px; margin-left: auto; margin-right: auto;}
-        .site_menu>li{width:130px; margin-top: 10px; margin-bottom:10px;}
-        a{text-decoration: none; color:gray;}
-        .genre_menu>li{display:inline-block; width:90px; border:1px solid lightgray; height:30px}
-        .img_list>li{width:235px; height:110px; display:inline-block; font-size:15px;}
-        .img_list>li>.thumb{display:inline; float:left; background-color:yellow;}
-        .img_list>li>dl{width:70px; float:left; margin: 2px 0 0 7px;}
-        .img_list>li>dl>dt>a{color:black; font-weight:bold;}
-        .img_list>li>dl>dd{height:25px; margin:0px}
-        .rating_type{height:25px;}
-        .more{width: 90px; height:25px; background-color:#4232c2; text-align:center;}
-        .more>a{color:white;}
+<style>
 
-        .webtoon_input{width:600px; height:40px; margin-top:40px; margin-bottom:10px;}
-        .webtoon_btn{width: 100px; height: 40px ;}
-        .webtoon_container{width: 100%; height: 1800px; text-align: center;}
-        .webtoon_comment{text-align: center; display: inline-block; width: 100%; padding-top: 50px;}
-        .webtoon_url{text-align: center; display: inline-block; width: 100%;}
-        .webtoon_sub_container{text-align: center;}
+#container {
+	height: 1000px;
+	margin-left: 450px;
+	margin-right: 450px auto;
+	width: 1020px;
+}
 
-        /* 마우스 올리면 나오는 효과*/
-        .webtoon_container #search .webtoon_btn:hover{color:white; box-shadow: 200px 0 0 0 rgba(66, 50, 194, 1) inset;
-            transition: all 0.9s, color 0.3s;}
+#search {
+	width: 100%;
+	margin-left: auto;
+	margin-righ t: auto;
+}
+/* #search>input{width:600px; height:40px; margin-top:40px; margin-bottom:10px;} */
+#content {
+	width: 990px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
-    </style>
+#tab_menu>ul>li {
+	display: inline-block;
+	text-align: center;
+}
+
+.site_menu {
+	width: 978px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.site_menu>li {
+	width: 130px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: gray;
+}
+
+.genre_menu>li {
+	display: inline-block;
+	width: 90px;
+	border: 1px solid lightgray;
+	height: 30px
+}
+
+.img_list>li {
+	width: 235px;
+	height: 110px;
+	display: inline-block;
+	font-size: 15px;
+}
+
+.img_list>li>.thumb {
+	display: inline;
+	float: left;
+	background-color: yellow;
+}
+
+.img_list>li>dl {
+	width: 70px;
+	float: left;
+	margin: 2px 0 0 7px;
+}
+
+.img_list>li>dl>dt>a {
+	color: black;
+	font-weight: bold;
+}
+
+.img_list>li>dl>dd {
+	height: 25px;
+	margin: 0px
+}
+
+.rating_type {
+	height: 25px;
+}
+
+.more {
+	width: 90px;
+	height: 25px;
+	background-color: #4232c2;
+	text-align: center;
+}
+
+.more>a {
+	color: white;
+}
+
+.webtoon_input {
+	width: 600px;
+	height: 40px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+.webtoon_btn {
+	width: 100px;
+	height: 40px;
+}
+
+.webtoon_container {
+	width: 100%;
+	height: 1800px;
+	text-align: center;
+}
+
+.webtoon_comment {
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	padding-top: 50px;
+}
+
+.webtoon_url {
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+
+.webtoon_sub_container {
+	text-align: center;
+}
+
+/* 마우스 올리면 나오는 효과*/
+.webtoon_container #search .webtoon_btn:hover {
+	color: white;
+	box-shadow: 200px 0 0 0 rgba(66, 50, 194, 1) inset;
+	transition: all 0.9s, color 0.3s;
+}
+</style>
 </head>
 <body>
-   
+
 	<!-- Header -->
 	<%@ include file="Header.jsp"%>
 
@@ -96,12 +200,14 @@ https://templatemo.com/tm-561-purple-buzz
 			<h1 class="pricing-header h2 semi-bold-600"
 				style="padding-top: 30px;">정식연재 확률 구하기</h1>
 			<p class="pricing-footer">아래 이용방법을 확인해주세요.</p>
-			<form action="http://127.0.0.1:5000/learn" method="get" accept-charset="UTF-8">
+			<form action="http://127.0.0.1:5000/learn" method="get"
+				accept-charset="UTF-8">
 				<div id="search">
-					<input class="webtoon_input" type="text" placeholder="웹툰 URL을 입력하세요" name = "url"
-						style="text-align: center"> 
-					<input class="webtoon_btn"
-						type="submit" value="클릭">
+					<input class="webtoon_input" type="text"
+						placeholder="웹툰 URL을 입력하세요" name="url" style="text-align: center">
+					<div>
+						<input class="webtoon_btn" type="submit" value="결과 보기">
+					</div>
 				</div>
 			</form>
 		</div>
@@ -113,8 +219,7 @@ https://templatemo.com/tm-561-purple-buzz
 					<div class="pricing-table card h-100 shadow-sm border-0 py-5">
 						<div
 							class="pricing-table-body card-body rounded-pill text-center align-self-center p-md-0">
-							<img src="./assets/img//web_url.png" width="90"
-								height="80">
+							<img src="./assets/img//web_url.png" width="90" height="80">
 							<p></p>
 							<!-- <i class="pricing-table-icon display-3 bx bx-package text-secondary"></i> -->
 							<h2 class="pricing-table-heading h5 semi-bold-600">Step 1</h2>
@@ -140,8 +245,7 @@ https://templatemo.com/tm-561-purple-buzz
 					<div class="pricing-table card h-100 shadow-sm border-0 py-5">
 						<div
 							class="pricing-table-body card-body rounded-pill text-center align-self-center p-md-0">
-							<img src="./assets/img/drag.png" width="90"
-								height="80">
+							<img src="./assets/img/drag.png" width="90" height="80">
 							<p></p>
 							<!-- <i class="pricing-table-icon display-3 bx bx-package text-secondary"></img> -->
 							<h2 class="pricing-table-heading h5 semi-bold-600">Step 2</h2>
@@ -162,8 +266,7 @@ https://templatemo.com/tm-561-purple-buzz
 					<div class="pricing-table card h-100 shadow-sm border-0 py-5">
 						<div
 							class="pricing-table-body card-body rounded-pill text-center align-self-center p-md-0">
-							<img src="./assets/img/wait.png" width="90"
-								height="80">
+							<img src="./assets/img/wait.png" width="90" height="80">
 							<p></p>
 							<!-- <i class="pricing-table-icon display-3 bx bx-package text-secondary"></i> -->
 							<h2 class="pricing-table-heading h5 semi-bold-600">Step 3</h2>
@@ -190,9 +293,8 @@ https://templatemo.com/tm-561-purple-buzz
 	</div>
 
 
-	<!-- Start Footer -->
-	<%@ include file="Footer.jsp"%>
 
-
+		<!-- Start Footer -->
+		<%@ include file="Footer.jsp"%>
 </body>
 </html>

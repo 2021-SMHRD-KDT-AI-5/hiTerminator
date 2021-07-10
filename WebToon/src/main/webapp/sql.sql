@@ -21,6 +21,27 @@ minvalue 1 --최솟값(1)
 maxvalue 100 --최댓값(100)
 nocycle; --최댓값 도달시 다시 시작할 것인지
 
+--웹툰테이블 생성
+create table webtoons(
+	title varchar2(100),
+	vol_title varchar2(100),
+	artist varchar2(100),
+	thum varchar2(1000),
+	view_ varchar2(100),
+	star varchar2(100),
+	star_in varchar2(100),
+	like_ varchar2(100),
+	comment_ varchar2(100),
+	view_star varchar2(100),
+	view_like varchar2(100),
+	comment_pos varchar2(100),
+	comment_neg varchar2(100),
+	vol varchar2(100)
+);
+drop table webtoons;
+
+select * from webtoons;
+
 select * from consult;
 
 
