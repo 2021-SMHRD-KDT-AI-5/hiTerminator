@@ -134,6 +134,43 @@ public ArrayList<InfoDTO> showPost() {
 
 		return list;
 	}
+
+	public ArrayList<InfoDTO> searchPost(String keyword) {
+	
+	ArrayList<InfoDTO>list=new ArrayList<InfoDTO>(); // 단순 변수선언이 아닌 객체 생성
+	InfoDTO post = null; // 변수선언 및 초기화
+	
+	try {
+		// DB연결기능
+		connection();
+
+		// 쿼리실행  실행다시 해보세요!
+		String sql = "select * from information where info_title like %?% order by info_id desc";
+
+		psmt = conn.prepareStatement(sql);
+		
+		rs = psmt.executeQuery();
+
+		while(rs.next()) { // 컬럼명과 데이터 사이에 커서 초기 위치, rs.next()에 따라 커서가 데이터를 가리키며 내려간다. 값이 있을(True) 때까지 반복
+			int info_no = rs.getInt(1);
+			String info_title = rs.getString(2);
+			String info_content = rs.getString(3);
+			String info_date = rs.getString(4);
+
+			post = new InfoDTO(info_no, info_title, info_content, info_date);
+			list.add(post);
+		}
+
+	} 
+	catch (SQLException e) {
+		System.out.println("조회 sql 문 오류");
+		e.printStackTrace();
+	} finally {
+		close();
+	} // end
+
+	return list;
+}
 	
 	public int deletePost(String info_no) {
 		

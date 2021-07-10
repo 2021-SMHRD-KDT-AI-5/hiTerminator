@@ -88,30 +88,12 @@
    <div id="container">
 
         <div id="content" >
-            <!-- 메인 웹툰 -->
             
-            <div class="main-thumb">
-                <div class="comicinfo">
-                <h2 style="">웹툰 제목</h2>
-                <img scr ="" width="125" height="100">
-                </div>
-
-                <div class="detail">
-                
-                    <span>작가이름</span>
-                    <p>
-                        웹툰 설명
-                    </p>
-                    <p class="detail_info">
-                        <span>장르 에피소드, 일상</span>
-                    </p>
-                </div>
-            </div>
             
             <!-- 5회차 상세 확률 -->
 
             <div id="main_list">
-                <h3 class="worksingle-heading h3 pb-3 light-300 typo-space-line">5회차 확률</h3>
+                <h3 class="worksingle-heading h3 pb-3 light-300 typo-space-line" style ="padding-top:30px">5회차 확률</h3>
                 <br>
                 <ul class="img_list">
                     <li class = "detail_list">
