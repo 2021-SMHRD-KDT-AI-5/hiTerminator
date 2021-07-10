@@ -117,12 +117,12 @@ https://templatemo.com/tm-561-purple-buzz
            
                      	<%}else {%>
                      		<a class="nav-link" href="Mem_Update.jsp"><i class='bx bx-cog bx-sm text-primary'></i></a>
-                     		<a class="nav-link" href="Mypage_Main.jsp"><i class="fas fa-user"></i></a>
- 							<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i></a>
+                     		<a class="nav-link" href="Mypage_Main.jsp"><i class="fas fa-user fa-lg"></i></a>
+ 							<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt fa-lg"></i></a>
  							  
                      	<%} %>
                      <% }else{ %>
-                        <a class="nav-link"href = "Login.jsp"><i class="fas fa-power-off"></i></a>
+                        <a class="nav-link"href = "Login.jsp"><i class="fas fa-power-off fa-lg"></i></a>
                         
                      <% } %> 
                         
