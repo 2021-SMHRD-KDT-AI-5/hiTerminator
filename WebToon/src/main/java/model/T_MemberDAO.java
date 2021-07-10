@@ -221,7 +221,7 @@ public class T_MemberDAO {
 		                // 값이 없음 -> 사용할 수 있는 아이디
 		                login_check = false;
 		             }
-
+		             System.out.println(login_check);
 		          }
 		    //   catch (ClassNotFoundException e) {
 //		          e.printStackTrace();

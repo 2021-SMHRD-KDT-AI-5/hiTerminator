@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,30 +28,28 @@ public class LoginCon extends HttpServlet {
 		
 		T_MemberDAO dao = new T_MemberDAO();
 		T_MemberDTO member = dao.login_member(member_id, pw);
-		
-		
-			if(member != null){ 
+
+		if(member != null){ 
 				
 				HttpSession session = request.getSession();
 				session.setAttribute("member", member);
 				
 				System.out.println("로그인 성공!");
-				response.sendRedirect("Service.jsp");
+				
+				//response.sendRedirect("Service.jsp");
 
 
 				
 				
-				}else {
+			}else {
 
 				System.out.println("로그인 실패...");
+				response.getWriter().write("0");
 
-					System.out.println("로그인 실패..");
-					
-				response.sendRedirect("Login.jsp");
+				//response.sendRedirect("Login.jsp");
 
 
 			}
-		
 	
 	}
 
