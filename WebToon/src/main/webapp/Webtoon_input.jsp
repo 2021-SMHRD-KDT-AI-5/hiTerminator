@@ -96,11 +96,14 @@ https://templatemo.com/tm-561-purple-buzz
 			<h1 class="pricing-header h2 semi-bold-600"
 				style="padding-top: 30px;">정식연재 확률 구하기</h1>
 			<p class="pricing-footer">아래 이용방법을 확인해주세요.</p>
-			<div id="search">
-				<input class="webtoon_input" type="text" placeholder="웹툰 URL을 입력하세요"
-					style="text-align: center"> <input class="webtoon_btn"
-					type="submit" value="클릭">
-			</div>
+			<form action="http://127.0.0.1:5000/learn" method="get" accept-charset="UTF-8">
+				<div id="search">
+					<input class="webtoon_input" type="text" placeholder="웹툰 URL을 입력하세요" name = "url"
+						style="text-align: center"> 
+					<input class="webtoon_btn"
+						type="submit" value="클릭">
+				</div>
+			</form>
 		</div>
 
 		<div class="webtoon_sub_container" style="display: inline-block;">
