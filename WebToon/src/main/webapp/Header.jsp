@@ -122,7 +122,7 @@ https://templatemo.com/tm-561-purple-buzz
  							  
                      	<%} %>
                      <% }else{ %>
-                        <a class="nav-link"href = "Login.jsp"><i class="fas fa-power-off"></i></a>
+                        <a class="nav-link"href = "Login.jsp"><i class="fas fa-power-off fa-lg"></i></a>
                         
                      <% } %> 
                         
