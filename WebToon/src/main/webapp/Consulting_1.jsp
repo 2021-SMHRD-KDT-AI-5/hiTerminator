@@ -76,7 +76,7 @@ https://templatemo.com/tm-561-purple-buzz
             <div class="col-md-4 pb-5 pt-sm-0 mt-5 px-xl-3">
                 <div class="pricing-table card h-100 shadow-sm border-0 py-5">
                     <div class="pricing-table-body card-body rounded-pill text-center align-self-center p-md-0">
-                        <img src="/assets/img/comicbook.png" width="100" height="100">
+                        <img src="./assets/img/submit.png" width="90" height="80">
                         <p></p>
                         <!-- <i class="pricing-table-icon display-3 bx bx-package text-secondary"></i> -->
                         <h2 class="pricing-table-heading h5 semi-bold-600">Step 1</h2>
@@ -88,7 +88,7 @@ https://templatemo.com/tm-561-purple-buzz
 
                         <!-- get now 버튼을 누르면 등록 페이지로 스크롤 내려가게 하고싶음 -->
                         <div class="pricing-table-footer pt-5">
-                            <a href="#" class="btn rounded-pill px-4 btn-outline-primary light-300">Get Now</a>
+                            <a href="container py-5" class="btn rounded-pill px-4 btn-outline-primary light-300">Get Now</a>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ https://templatemo.com/tm-561-purple-buzz
             <div class="col-md-4 pb-5 pt-sm-0 mt-5 px-xl-3">
                 <div class="pricing-table card h-100 shadow-sm border-0 py-5">
                     <div class="pricing-table-body card-body rounded-pill text-center align-self-center p-md-0">
-                        <img src="/assets/img/checklist.png" width="100" height="100">
+                        <img src="./assets/img/test.png" width="90" height="80">
                         <p></p>
                         <!-- <i class="pricing-table-icon display-3 bx bx-package text-secondary"></img> -->
                         <h2 class="pricing-table-heading h5 semi-bold-600">Step 2</h2>
@@ -116,7 +116,7 @@ https://templatemo.com/tm-561-purple-buzz
             <div class="col-md-4 pb-5 pt-sm-0 mt-5 px-xl-3">
                 <div class="pricing-table card h-100 shadow-sm border-0 py-5">
                     <div class="pricing-table-body card-body rounded-pill text-center align-self-center p-md-0">
-                        <img src="/assets/img/care.png" width="100" height="100">
+                        <img src="./assets/img/assistant.png" width="90" height="80">
                         <p></p>
                         <!-- <i class="pricing-table-icon display-3 bx bx-package text-secondary"></i> -->
                         <h2 class="pricing-table-heading h5 semi-bold-600">Step 3</h2>
