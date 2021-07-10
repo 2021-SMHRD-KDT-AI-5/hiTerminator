@@ -56,11 +56,11 @@
 	<div id="container">
         <div id="left_side">
             <p class="tit">마이페이지</p>
-            <ul>
-                <li><a href="" target="_self">관심웹툰</a></li>
-                <li><a href="" target="_self">결제/후원내역</a></li>
-                <li><a href="" target="_self">컨설팅</a></li>
-                <li><a href="" target="_self">회원정보 수정</a></li>
+			<ul>
+                <li><a href="Webtoon_Favorite.jsp" target="_self">관심웹툰</a></li>
+                <li><a href="DonateConfirm.jsp" target="_self">결제/후원내역</a></li>
+                <li><a href="Consulting_1.jsp" target="_self">컨설팅</a></li>
+                <li><a href="Mem_Update.jsp" target="_self">회원정보 수정</a></li>
             </ul>
         </div>
         <div id="main"><h1>후원내역</h1>

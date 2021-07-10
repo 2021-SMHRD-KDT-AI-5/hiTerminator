@@ -55,7 +55,7 @@
 				    alert('아이디 또는 비밀번호를 잘못 입력하셨습니다.'); // 알림창
 				    location.href = "Login.jsp";
 				} else {
-					location.href = "Service.jsp";
+					location.href = "Main.jsp";
 				}
 			},
 			// 요청에 실패시 실행할 함수 정의
