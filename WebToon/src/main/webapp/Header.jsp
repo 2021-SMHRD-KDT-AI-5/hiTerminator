@@ -96,7 +96,7 @@ https://templatemo.com/tm-561-purple-buzz
                      			<a href="Consulting.jsp">컨설팅message</a>
                      			<a href="Admin_Service.jsp">고객센터message</a>
                      	<a class="nav-link" href="Logout.jsp"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
-           
+            
                      	<%}else {%>
                      		<a class="nav-link" href="Mem_Update.jsp"><i class='bx bx-cog bx-sm text-primary'></i>내정보 수정</a>
                      		<a class="nav-link" href="Mem_Update.jsp"><i class="fas fa-user"></i>마이페이지</a>
