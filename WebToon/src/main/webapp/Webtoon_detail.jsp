@@ -80,21 +80,21 @@
                                 <col style="width:10%;">
                                 <col style="width:15%;">
 
+                                <col style="width:6%;">
                                 <col style="width:7%;">
                                 <col style="width:7%;">
-                                <col style="width:7%;">
-                                <col style="width:7%;">
-                                <col style="width:7%;">
-                                <col style="width:7%;">
+                                <col style="width:6%;">
+                                <col style="width:6%;">
+                                <col style="width:10%;">
 
-                                <col style="width: 7%">
+                                <col style="width: 10%">
+                                <col style="width: 10%;">
                                 <col style="width: 7%;">
-                                <col style="width: 7%;">
-                                <col style="width: 7%";>
+                                <col style="width: 6%";>
                                 
                             </colgroup>
                             <thead>
-                                <tr  style="height: 50px;">
+                                <tr  style="height: 50px; text-align:center">
                                     <th scope="col" >
                                         <div class="wrap">웹툰제목</div>
                                     </th>
@@ -175,9 +175,7 @@
                         </table>
                     </form>
             </div>
-            <div>
-                <h3 class="worksingle-heading h3 pb-3 light-300 typo-space-line">Word Cloud</h3>
-            </div>
+       
         </div>
     </div>
 	
