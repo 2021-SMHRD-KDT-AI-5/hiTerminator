@@ -112,7 +112,8 @@
     <section class="service-wrapper py-3">
         <div class="container-fluid pb-3">
             <div class="row" style ="text-align:center; display=inline-block;">
-                <h2 class="h2 text-center col-12 py-5 semi-bold-600">TOP 10</h2>
+            	<img src ="assets/img/top10.png" style="width:3000px;height:300px;">
+                <!-- <h2 class="h2 text-center col-12 py-5 semi-bold-600">TOP 10</h2> -->
                 <!-- <div class="service-header col-2 col-lg-3 text-end light-300">
                     <i class='bx bx-gift h3 mt-1'></i>
                 </div>
@@ -120,8 +121,8 @@
                     <h2 class="h3 pb-4 typo-space-line">Terminator</h2>
                 </div> -->
             
-            <span class="service-footer col-10 offset-2 col-lg-9 offset-lg-3 pb-3 text-muted px-2"  style="maring-left:0!important;">
-                베스트 도전 만화에서 정식 연재될 가능성이 높은 TOP 10 리스트 입니다. <br>승격 상세 정보를 확인해보세요. </span>
+<!--             <span class="service-footer col-10 offset-2 col-lg-9 offset-lg-3 pb-3 text-muted px-2"  style="maring-left:0!important;">
+                베스트 도전 만화에서 정식 연재될 가능성이 높은 TOP 10 리스트 입니다. <br>승격 상세 정보를 확인해보세요. </span> -->
         	</div>
         </div>
     <!-- 1번째 템플릿 End Service -->
