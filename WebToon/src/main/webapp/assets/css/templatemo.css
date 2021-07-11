@@ -52,7 +52,8 @@ p, a {font-weight: 400;}
 
 /* Home */
 #index_banner {
-  background-image: url('./../img/banner-bg-01.jpg');
+  /* background-image: url('./../img/banner-bg-01.jpg'); */
+  background-image : url('./../img/main002.jpg');
   background-position: center center; background-size: cover;
   height: 100%;
   min-height: 60vh;

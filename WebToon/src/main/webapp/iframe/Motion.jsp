@@ -45,7 +45,7 @@
 						<a href="#">바람</a>
 					</h3>
 				</header>
-				<p>여우 요괴 문수, 그리고 돗가비 납은 각자의 바람과 운명을 지니고 저승문으로의 여정을 떠나는데...</p>
+				<p>여우 요괴 문수, 그리고 돗가비 각자의 바람과 운명..</p>
 				<span style="font-size:30px; font-weight:bold; color:#4232c2">77.62%</span>
 			</article>
 
@@ -81,8 +81,7 @@
 						<a href="#">노라줘요</a>
 					</h3>
 				</header>
-				<p>역대급으로 귀여운 반려동물 웹툰 탄생!!
-아장아장 짧은 다리, 오동통한 엉덩이, 귀여운 미소를 가진 웰시코기</p>
+				<p>역대급으로 귀여운 반려동물 웹툰 탄생!!</p>
 				<span style="font-size:30px; font-weight:bold; color:#4232c2">74.97%</span>
 			</article>
 

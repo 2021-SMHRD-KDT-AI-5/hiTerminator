@@ -30,6 +30,8 @@
     <div class="banner-wrapper bg-light">
         <div id="index_banner" class="banner-vertical-center-index container-fluid pt-5">
 
+		<!-- <img src="./assets/img/main002.jpg" style = height:100%; width:100%;> -->
+
             <!-- Start slider -->
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <ol class="carousel-indicators">
@@ -40,7 +42,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
 
-                        <div class="py-5 row d-flex align-items-center">
+                        <!-- <div class="py-5 row d-flex align-items-center">
                             <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
                                 <h1 class="banner-heading h1 text-secondary display-3 mb-0 pb-5 mx-0 px-0 light-300 typo-space-line">
                                     웹툰 작가 지망생들을
@@ -85,7 +87,7 @@
                                 </p>
                                 <a class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4" href="#" role="button">Get Started</a>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -109,18 +111,18 @@
     <!-- Start Service -->
     <section class="service-wrapper py-3">
         <div class="container-fluid pb-3">
-            <div class="row">
-                <h2 class="h2 text-center col-12 py-5 semi-bold-600">서비스 이름</h2>
-                <div class="service-header col-2 col-lg-3 text-end light-300">
+            <div class="row" style ="text-align:center; display=inline-block;">
+                <h2 class="h2 text-center col-12 py-5 semi-bold-600">TOP 10</h2>
+                <!-- <div class="service-header col-2 col-lg-3 text-end light-300">
                     <i class='bx bx-gift h3 mt-1'></i>
                 </div>
                 <div class="service-heading col-10 col-lg-9 text-start float-end light-300">
                     <h2 class="h3 pb-4 typo-space-line">Terminator</h2>
-                </div>
-            </div>
-            <p class="service-footer col-10 offset-2 col-lg-9 offset-lg-3 text-start pb-3 text-muted px-2">
-                우리 사이트에 대한 설명 적기 : 수많은 웹툰 작가 지망생들의 작품이 승격 어쩌고 ~ 저꺼고 ~ 그래서 우린 이런 서비스를 제공합니다.
-            </p>
+                </div> -->
+            
+            <span class="service-footer col-10 offset-2 col-lg-9 offset-lg-3 pb-3 text-muted px-2"  style="maring-left:0!important;">
+                베스트 도전 만화에서 정식 연재될 가능성이 높은 TOP 10 리스트 입니다. <br>승격 상세 정보를 확인해보세요. </span>
+        	</div>
         </div>
     <!-- 1번째 템플릿 End Service -->
 
