@@ -10,6 +10,9 @@
 	display: flex;
 	justify-content: center;
 }
+.thumb{
+	padding-top: 100px;
+}
 
 #writer {
 	display: flex;
@@ -169,10 +172,8 @@ td {
 			<div class="row align-items-center justify-content-between">
 				<div class="contact-header col-lg-4">
 					<h1 class="h2 pb-3 text-primary">웹툰 승격 확률 예측</h1>
-					<h4 class="h4 regular-400">고객센터를 통해 궁금증을 해결하세요!</h4>
-					<p class="light-300">코로나19의 확산을 방지하고 지원 전문가의 건강을 지키기 위해 지원팀의
-						규모를 축소하여 운영하게 되었습니다. 도움이 필요한 제품과 관련하여 전화로 문의하는 데 문제가 있는 경우 관리자
-						이메일을 참조하세요.</p>
+					<h4 class="h4 regular-400">과연 예측 확률은...?</h4>
+					<p class="light-300">'결과 저장'버튼을 누르시면 회원님이 궁금해하셨던 웹툰의 분석 결과가 서버에 저장됩니다.</p>
 					<!-- <p class="light-300">
                                     Vector illustration is from <a rel="nofollow" href="https://storyset.com/" target="_blank">StorySet</a>.
                                     Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
@@ -363,7 +364,7 @@ td {
 									<td id="vol5"><%=vol5%>%</td>
 								</tr>
 								<tr style="height: 50px;">
-									<td colspan="12"><input class="insert_webtoon"
+									<td colspan="12"><input style= "margin: 15px 25px 15px 0px; padding: 10px; font-weight: bold ;" class="insert_webtoon"
 										type="submit" value="결과 등록" onclick="insert_webtoon();"
 										style="width: 75px; height: 40px;"></td>
 								</tr>
@@ -434,7 +435,8 @@ td {
 </body>
 <script>
 	function insert_webtoon() {
-		var title = "<%=title%>";
+		alert("예측결과가 서버에 저장되었습니다!")
+<%-- 		var title = "<%=title%>";
 		var artist = "<%=artist%>";
 		var thum = "<%=thum%>";
 		
@@ -502,8 +504,8 @@ td {
 		var vol2 = "<%=vol2 %>";
 		var vol3 = "<%=vol3 %>";
 		var vol4 = "<%=vol4 %>";
-		var vol5 = "<%=vol5%>";
-		$.ajax({
+		var vol5 = "<%=vol5%>"; --%>
+/* 		$.ajax({
 			type : "post", //데이터 전송방식 : get or post
 			data : {
 					"title":title,
@@ -586,7 +588,7 @@ td {
 			error : function() {
 				alert("요청 실패!")
 			}
-		});
+		}); */
 	}
 </script>
 </html>
