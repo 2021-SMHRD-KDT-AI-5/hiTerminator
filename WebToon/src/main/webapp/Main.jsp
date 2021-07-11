@@ -112,7 +112,7 @@
     <section class="service-wrapper py-3">
         <div class="container-fluid pb-3">
             <div class="row" style ="text-align:center; display=inline-block;">
-            	<img src ="assets/img/top10.png" style="width:3000px;height:300px;">
+            	<img src ="assets/img/top10.png" style="width:2200px;height:300px;">
                 <!-- <h2 class="h2 text-center col-12 py-5 semi-bold-600">TOP 10</h2> -->
                 <!-- <div class="service-header col-2 col-lg-3 text-end light-300">
                     <i class='bx bx-gift h3 mt-1'></i>

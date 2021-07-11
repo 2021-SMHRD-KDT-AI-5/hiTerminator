@@ -66,6 +66,8 @@
         .donaiton_input_message{width: 400px; height: 40px;}
         /* 내용 body쪽 길이 */
         .container.py-5{height: 1300px;}
+        
+        a{text-decoration:none; !important}
 
     </style>
 
@@ -104,61 +106,25 @@
             <!-- Start 웹툰 승격페이지 -->
 
             <div id="container">
-                <div id="search">
-                    <input type="text" placeholder="검색어 입력">
-                    <button>검색</button>
-                </div>
-                <div id="content">
-                    <!-- <div id="first">
-                        <ul>
-                            <li>
-                                <ul>
-                                    <li><a onclick="" href="">제목</a></li>
-                                    <li><a onclick="" href="">제목</a></li>
-                                    <li><a onclick="" href="">제목</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div> -->
-                            <div id="tab_menu">
-                                <ul class="site_menu">
-                                    <li><a onclick="" href="">네이버</a></li>
-                                    <li><a onclick="" href="">다음</a></li>
-                                    <li><a onclick="" href="">사이트or장르</a></li>
-                                    <li><a onclick="" href="">사이트or장르</a></li>
-                                    <li><a onclick="" href="">사이트or장르</a></li>
-                                    <li><a onclick="" href="">사이트or장르</a></li>
-                                </ul>
-                                <ul class="genre_menu">
-                                    <li><a onclick="" href="">일상</a></li>
-                                    <li><a onclick="" href="">개그</a></li>
-                                    <li><a onclick="" href="">판타지</a></li>
-                                    <li><a onclick="" href="">액션</a></li>
-                                    <li><a onclick="" href="">드라마</a></li>
-                                    <li><a onclick="" href="">순정</a></li>
-                                    <li><a onclick="" href="">감성</a></li>
-                                    <li><a onclick="" href="">스릴러</a></li>
-                                    <li><a onclick="" href="">시대극</a></li>
-                                    <li><a onclick="" href="">스포츠</a></li>
-                                </ul>
-                            </div>
-                    <div id="main_list">
+                
+                    <div id="main_list" style = "padding-top:30px; padding-left:200px; height:500px; width:100%; display:inline-block;">
                         <ul class="img_list">
                             <li>
                                 <div class="thumb">
-                                    <a href="" title=""><img onerror="this.src=''" src="" width="83" height="90" title="" alt=""><span class="mask"></span>
+                                    <a href="" title=""><img onerror="this.src=''" src="https://shared-comic.pstatic.net/thumb/user_contents_data/challenge_comic/2020/12/07/gizmo215/thumbnail_98x79d3ca2fc8_768a_4467_a27c_18cb45de75b0_00003942.JPEG"
+                                     width="83" height="90" title="" alt=""><span class="mask"></span>
                                     </a>
                                 </div>
                                 <dl>
-                                <dt><a href="" title="">제목</a></dt>
+                                <dt><a href="" title="">빨간맛 로맨스</a></dt>
                                 <dd class="desc">
-                                        <a href="#" onclick="return artistAction.viewArtist('648419', this)">작가</a>
+                                        <a href="#" onclick="return artistAction.viewArtist('648419', this)">gizmo215</a>
                                 </dd>
                                 <dd>
                                     <div class="rating_type">
-                                        <span class="star">확률</span>
+                                        <span class="star">56.8%</span>
                                         <!-- <span class="star"><em style="width:98.22%">점수</em></span> -->
-                                        <strong>70%</strong>
+                                        <strong>56.8%</strong>
                                     </div>
                                 </dd>
                                 <dd class="more"><a href="Webtoon_detail.jsp">상세보기 ></a></dd>
@@ -166,17 +132,39 @@
                             </li>
                             <li>
                                 <div class="thumb">
-                                    <a href="" title=""><img onerror="this.src=''" src="" width="83" height="90" title="" alt=""><span class="mask"></span>
+                                    <a href="" title=""><img onerror="this.src=''" src="https://shared-comic.pstatic.net/thumb/user_contents_data/challenge_comic/2021/04/05/ari9402/thumbnail_98x792d330272_1040_49fe_be5b_a67983e4e1f4_00001418.JPEG
+                                    "
+                                     width="83" height="90" title="" alt=""><span class="mask"></span>
                                     </a>
                                 </div>
                                 <dl>
-                                <dt><a href="" title="">제목</a></dt>
+                                <dt><a href="" title="">대학원 탈출일지</a></dt>
                                 <dd class="desc">
-                                        <a href="#" onclick="return artistAction.viewArtist('648419', this)">작가</a>
+                                        <a href="#" onclick="return artistAction.viewArtist('648419', this)">ari9402</a>
                                 </dd>
                                 <dd>
                                     <div class="rating_type">
-                                        <span class="star"><em style="width:98.22%">평점</em></span>
+                                        <span class="star"><em style="width:98.22%">43.2%</em></span>
+                                        <strong>43.2%</strong>
+                                    </div>
+                                </dd>
+                                <dd class="more"><a href="Webtoon_detail.jsp">상세보기 ></a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <div class="thumb">
+                                    <a href="" title=""><img onerror="this.src=''" src="https://shared-comic.pstatic.net/thumb/user_contents_data/challenge_comic/2020/10/20/skuldness/thumbnail_98x79252b5b2b_f840_48c3_8ec5_6ebbaccbe0a4_00001416.JPEG" 
+                                    width="83" height="90" title="" alt=""><span class="mask"></span>
+                                    </a>
+                                </div>
+                                <dl>
+                                <dt><a href="" title="">저승파견고용직</a></dt>
+                                <dd class="desc">
+                                        <a href="#" onclick="return artistAction.viewArtist('648419', this)">skuldness</a>
+                                </dd>
+                                <dd>
+                                    <div class="rating_type">
+                                        <span class="star"><em style="width:98.22%">52.4%</em></span>
                                         <strong>9.82</strong>
                                     </div>
                                 </dd>
@@ -185,18 +173,20 @@
                             </li>
                             <li>
                                 <div class="thumb">
-                                    <a href="" title=""><img onerror="this.src=''" src="" width="83" height="90" title="" alt=""><span class="mask"></span>
+                                    <a href="" title=""><img onerror="this.src=''" src="https://shared-comic.pstatic.net/thumb/user_contents_data/challenge_comic/2021/05/26/mado94/thumbnail_98x79407a6636_1748_48b5_8ea2_29ededb62b1b_00000445.JPEG
+                                    " 
+                                    width="83" height="90" title="" alt=""><span class="mask"></span>
                                     </a>
                                 </div>
                                 <dl>
-                                <dt><a href="" title="">제목</a></dt>
+                                <dt><a href="" title="">잘먹는 가</a></dt>
                                 <dd class="desc">
-                                        <a href="#" onclick="return artistAction.viewArtist('648419', this)">작가</a>
+                                        <a href="#" onclick="return artistAction.viewArtist('648419', this)">mado94</a>
                                 </dd>
                                 <dd>
                                     <div class="rating_type">
-                                        <span class="star"><em style="width:98.22%">평점</em></span>
-                                        <strong>9.82</strong>
+                                        <span class="star"><em style="width:98.22%">33.0%</em></span>
+                                        <strong>33.0%</strong>
                                     </div>
                                 </dd>
                                 <dd class="more"><a href="Webtoon_detail.jsp">상세보기 ></a></dd>
@@ -204,37 +194,19 @@
                             </li>
                             <li>
                                 <div class="thumb">
-                                    <a href="" title=""><img onerror="this.src=''" src="" width="83" height="90" title="" alt=""><span class="mask"></span>
+                                    <a href="" title=""><img onerror="this.src=''" src="https://shared-comic.pstatic.net/thumb/user_contents_data/challenge_comic/2021/03/18/chuck_ae/thumbnail_98x79b1ddf6ee_cad4_433f_ae2f_dbcb3c75a4aa_00004013.JPEG" 
+                                    width="83" height="90" title="" alt=""><span class="mask"></span>
                                     </a>
                                 </div>
                                 <dl>
-                                <dt><a href="" title="">제목</a></dt>
+                                <dt><a href="" title="">하얀 하늘 꽃구름</a></dt>
                                 <dd class="desc">
-                                        <a href="#" onclick="return artistAction.viewArtist('648419', this)">작가</a>
+                                        <a href="#" onclick="return artistAction.viewArtist('648419', this)">chuck_ae</a>
                                 </dd>
                                 <dd>
                                     <div class="rating_type">
-                                        <span class="star"><em style="width:98.22%">평점</em></span>
-                                        <strong>9.82</strong>
-                                    </div>
-                                </dd>
-                                <dd class="more"><a href="Webtoon_detail.jsp">상세보기 ></a></dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <div class="thumb">
-                                    <a href="" title=""><img onerror="this.src=''" src="" width="83" height="90" title="" alt=""><span class="mask"></span>
-                                    </a>
-                                </div>
-                                <dl>
-                                <dt><a href="" title="">제목</a></dt>
-                                <dd class="desc">
-                                        <a href="#" onclick="return artistAction.viewArtist('648419', this)">작가</a>
-                                </dd>
-                                <dd>
-                                    <div class="rating_type">
-                                        <span class="star"><em style="width:98.22%">평점</em></span>
-                                        <strong>9.82</strong>
+                                        <span class="star"><em style="width:98.22%">27.18%</em></span>
+                                        <strong>27.18%</strong>
                                     </div>
                                 </dd>
                                 <dd class="more"><a href="Webtoon_detail.jsp">상세보기 ></a></dd>

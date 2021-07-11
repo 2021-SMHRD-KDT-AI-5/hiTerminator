@@ -71,19 +71,21 @@ https://templatemo.com/tm-561-purple-buzz
             <ul class="img_list">
                 <li>
                     <div class="thumb">
-                        <a href="" title=""><img onerror="this.src=''" src="" width="83" height="90" title="" alt=""><span class="mask"></span>
+                        <a href="" title=""><img onerror="this.src=''" src="https://shared-comic.pstatic.net/thumb/user_contents_data/challenge_comic/2020/12/07/gizmo215/thumbnail_98x79d3ca2fc8_768a_4467_a27c_18cb45de75b0_00003942.JPEG
+                        " 
+                        width="83" height="90" title="" alt=""><span class="mask"></span>
                         </a>
                     </div>
                     <dl>
-                    <dt><a href="" title="">제목</a></dt>
+                    <dt><a href="" title="">빨간맛 로맨스</a></dt>
                     <dd class="desc">
-                            <a href="#" onclick="return artistAction.viewArtist('648419', this)">작가</a>
+                            <a href="#" onclick="return artistAction.viewArtist('648419', this)">gizmo215</a>
                     </dd>
                     <dd>
                         <div class="rating_type">
-                            <span class="star">확률</span>
+                            <!-- <span class="star">확률</span> -->
                             <!-- <span class="star"><em style="width:98.22%">점수</em></span> -->
-                            <strong>70%</strong>
+                            <strong>56.8%</strong>
                         </div>
                     </dd>
                     <a href="" class="more info">상세정보 ></a>
@@ -92,19 +94,21 @@ https://templatemo.com/tm-561-purple-buzz
                 </li>
                 <li>
                     <div class="thumb">
-                        <a href="" title=""><img onerror="this.src=''" src="" width="83" height="90" title="" alt=""><span class="mask"></span>
+                        <a href="" title=""><img onerror="this.src=''" src="https://shared-comic.pstatic.net/thumb/user_contents_data/challenge_comic/2020/10/20/skuldness/thumbnail_98x79252b5b2b_f840_48c3_8ec5_6ebbaccbe0a4_00001416.JPEG
+                        " 
+                        width="83" height="90" title="" alt=""><span class="mask"></span>
                         </a>
                     </div>
                     <dl>
-                    <dt><a href="" title="">제목</a></dt>
+                    <dt><a href="" title="">저승파견고용직</a></dt>
                     <dd class="desc">
-                            <a href="#" onclick="return artistAction.viewArtist('648419', this)">작가</a>
+                            <a href="#" onclick="return artistAction.viewArtist('648419', this)">skuldness</a>
                     </dd>
                     <dd>
                         <div class="rating_type">
-                            <span class="star">확률</span>
+                            <!-- <span class="star">확률</span> -->
                             <!-- <span class="star"><em style="width:98.22%">점수</em></span> -->
-                            <strong>70%</strong>
+                            <strong>52.4%</strong>
                         </div>
                     </dd>
                     <a href="" class="more info">상세정보 ></a>
@@ -113,19 +117,19 @@ https://templatemo.com/tm-561-purple-buzz
                 </li>
                 <li>
                     <div class="thumb">
-                        <a href="" title=""><img onerror="this.src=''" src="" width="83" height="90" title="" alt=""><span class="mask"></span>
+                        <a href="" title=""><img onerror="this.src=''" src="https://shared-comic.pstatic.net/thumb/user_contents_data/challenge_comic/2021/05/26/mado94/thumbnail_98x79407a6636_1748_48b5_8ea2_29ededb62b1b_00000445.JPEG" width="83" height="90" title="" alt=""><span class="mask"></span>
                         </a>
                     </div>
                     <dl>
-                    <dt><a href="" title="">제목</a></dt>
+                    <dt><a href="" title="">잘먹는 가</a></dt>
                     <dd class="desc">
-                            <a href="#" onclick="return artistAction.viewArtist('648419', this)">작가</a>
+                            <a href="#" onclick="return artistAction.viewArtist('648419', this)">mado94</a>
                     </dd>
                     <dd>
                         <div class="rating_type">
-                            <span class="star">확률</span>
+                            <!-- <span class="star">확률</span> -->
                             <!-- <span class="star"><em style="width:98.22%">점수</em></span> -->
-                            <strong>70%</strong>
+                            <strong>33.0%</strong>
                         </div>
                     </dd>
                     <a href="" class="more info">상세정보 ></a>
