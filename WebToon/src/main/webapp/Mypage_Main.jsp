@@ -55,16 +55,16 @@
             </ul>
         </div>
         <div id="main">
-        	<h1><span><%-- <%=member.getName() % --%>김무성</span>님 환영합니다.</h1>
+        	<h1><span><%-- <%=member.getName() % --%>터미네이터</span>님 환영합니다.</h1>
             <div id="main_table">
                 <table>
                 	<tr>
                 		<th>이메일</th>
-                		<td><%-- <%=member.getEmail() %> --%>qedf@naver.com</td>
+                		<td><%-- <%=member.getEmail() %> --%>terminator@smhrd.com</td>
                 	</tr>
                 	<tr>
                 		<th>전화번호</th>
-                		<td><%-- <%=member.getTel() %> --%>01096510542</td>
+                		<td><%-- <%=member.getTel() %> --%>01012345678</td>
                 	</tr>
                 </table>
             </div>

@@ -86,10 +86,7 @@ https://templatemo.com/tm-561-purple-buzz
                             <li><i class="bx bxs-circle me-2"></i>웹툰 업로드</li>
                         </ul>
 
-                        <!-- get now 버튼을 누르면 등록 페이지로 스크롤 내려가게 하고싶음 -->
-                        <div class="pricing-table-footer pt-5">
-                            <a href="container py-5" class="btn rounded-pill px-4 btn-outline-primary light-300">Get Now</a>
-                        </div>
+                      
                     </div>
                 </div>
             </div>
@@ -106,9 +103,7 @@ https://templatemo.com/tm-561-purple-buzz
                             <li><i class="bx bxs-circle me-2"></i>전문가 평가</li>
                             <li><i class="bx bxs-circle me-2"></i>힙격자 선발</li>
                         </ul>
-                        <div class="pricing-table-footer pt-5">
-                            <a href="#" class="btn rounded-pill px-4 btn-outline-primary light-300">Get Now</a>
-                        </div>
+                      
                     </div>
                 </div>
             </div>
@@ -125,9 +120,7 @@ https://templatemo.com/tm-561-purple-buzz
                             <li><i class="bx bxs-circle me-2"></i>3개월</li>
                             <li><i class="bx bxs-circle me-2"></i>1:1 컨설팅</li>
                         </ul>
-                        <div class="pricing-table-footer pt-5">
-                            <a href="#" class="btn rounded-pill px-4 btn-outline-primary light-300">Get Now</a>
-                        </div>
+                    
                     </div>
                 </div>
             </div>
@@ -198,7 +191,7 @@ https://templatemo.com/tm-561-purple-buzz
                                     <div class="wrap">작품 제목</div>
                                 </th>
                                 <th scope="col">
-                                    <div class="wrap">첨부파일</div>
+                                    <div class="wrap">컨설팅 내용</div>
                                 </th>
                             </tr>
                         </thead>
@@ -279,8 +272,9 @@ https://templatemo.com/tm-561-purple-buzz
 
                     <div class="col-12">
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="consult_content" placeholder="Subject">
-                            <label for="floatingsubject light-300">파일 업로드</label>
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="consult_content" placeholder="Subject"
+                            style="width:100%; height:300px">
+                            <label for="floatingsubject light-300">컨설팅 내용</label>
                          </div>
                     </div><!-- End Input Subject -->
 
