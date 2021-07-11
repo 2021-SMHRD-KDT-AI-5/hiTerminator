@@ -81,11 +81,12 @@
                     <div class="container py-4">
                         <div class="row align-items-center justify-content-between">
                             <div class="contact-header col-lg-4">
-                                <h1 class="h2 pb-3 text-primary">웹툰 승격 확률 예측</h1>
-                                <h4 class="h4 regular-400">고객센터를 통해 궁금증을 해결하세요!</h4>
-                                <p class="light-300">코로나19의 확산을 방지하고 지원 전문가의 건강을 지키기 위해 지원팀의 규모를 축소하여
-                                    운영하게 되었습니다. 도움이 필요한 제품과 관련하여 전화로 문의하는 데 문제가 있는 경우 
-                                    관리자 이메일을 참조하세요.</p>
+                                <h1 class="h2 pb-3 text-primary">정식연재 확률 예측</h1>
+                                <h4 class="h4 regular-400">웹툰의 정식연재 확률을 확인해보세요.</h4>
+                                <p class="light-300">
+                                정식연재 확룰을 확인하는 페이지입니다.<br>
+                    			다른 문제가 있다면 <a rel="nofollow" href="Service.jsp" target="_blank">고객센터</a>로 문의해 주세요.
+                                </p>
                                 <!-- <p class="light-300">
                                     Vector illustration is from <a rel="nofollow" href="https://storyset.com/" target="_blank">StorySet</a>.
                                     Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.

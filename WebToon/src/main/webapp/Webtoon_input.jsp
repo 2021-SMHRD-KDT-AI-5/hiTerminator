@@ -181,9 +181,11 @@ a {
 			<div class="row align-items-center justify-content-between">
 				<div class="contact-header col-lg-4">
 					<h1 class="h2 pb-3 text-primary">정식연재 확률 예측</h1>
-					<h4 class="h4 regular-400">궁금증을 해결하세요!</h4>
-					<p class="light-300">베스트 도전에서 정식 웹툰으로 승격하는지 궁금한 웹툰이 있나요?아 ..
-						뭐라고 쓰지 ..</p>
+					<h4 class="h4 regular-400">승격의 궁금증을 해결하세요!</h4>
+					<p class="light-300">
+					정식연재 확룰을 예측하는 페이지입니다.<br>
+                    다른 문제가 있다면 <a rel="nofollow" href="Service.jsp" target="_blank">고객센터</a>로 문의해 주세요. 
+					</p>
 					<!-- <p class="light-300">
                                         Vector illustration is from <a rel="nofollow" href="https://storyset.com/" target="_blank">StorySet</a>.
                                         Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
