@@ -148,6 +148,7 @@ public ArrayList<InfoDTO> showPost() {
 		String sql = "select * from information where info_title like %?% order by info_id desc";
 
 		psmt = conn.prepareStatement(sql);
+		psmt.setString(1, keyword);
 		
 		rs = psmt.executeQuery();
 

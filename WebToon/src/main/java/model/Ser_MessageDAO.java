@@ -99,33 +99,40 @@ public class Ser_MessageDAO {
 		return cnt;
 	}
 	
-public ArrayList<Ser_MessageDTO> showMessage() {
+public ArrayList<Ser_MessageDTO> showMessage(int startRow, int endRow) {
 		
-		ArrayList<Ser_MessageDTO>list=new ArrayList<Ser_MessageDTO>(); // 단순 변수선언이 아닌 객체 생성
-		Ser_MessageDTO message = null; // 변수선언 및 초기화
+		String sql = "select * from "
+				+ "(select rownum rn, inquiry_id, member_id, email, inquiry_ctgr, inquiry_title, inquiry_content, inquiry_date from "
+				+ "(select * from customer_service order by inquiry_id desc)) where rn between ? and ?";
+
+	
+		ArrayList<Ser_MessageDTO>list=null; // 단순 변수선언이 아닌 객체 생성
 		
 		try {
 			// DB연결기능
 			connection();
 
 			// 쿼리실행  실행다시 해보세요!
-			String sql = "select * from CUSTOMER_SERVICE order by inquiry_id desc";
-
+			
 			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, startRow);
+			psmt.setInt(2, endRow);
 			
 			rs = psmt.executeQuery();
-
-			while(rs.next()) { // 컬럼명과 데이터 사이에 커서 초기 위치, rs.next()에 따라 커서가 데이터를 가리키며 내려간다. 값이 있을(True) 때까지 반복
-				int service_no = rs.getInt(1);
-				String member_id = rs.getString(2);
-				String email = rs.getString(3);
-				String q_ctgr = rs.getString(4);
-				String q_title = rs.getString(5);
-				String q_content = rs.getString(6);
-				String date = rs.getString(7);
-
-				message = new Ser_MessageDTO(service_no, member_id, email, q_ctgr, q_title, q_content, date);
-				list.add(message);
+			if(rs.next()) {// 데이터베이스에 데이터가 있으면 실행
+				list=new ArrayList<>();
+				do { // 컬럼명과 데이터 사이에 커서 초기 위치, rs.next()에 따라 커서가 데이터를 가리키며 내려간다. 값이 있을(True) 때까지 반복
+					
+					Ser_MessageDTO message = new Ser_MessageDTO();
+					message.setQ_no(rs.getInt("inquiry_id"));
+					message.setMember_id(rs.getString("member_id"));
+					message.setEmail(rs.getString("email"));
+					message.setQ_ctgr(rs.getString("inquiry_ctgr"));
+					message.setQ_title(rs.getString("inquiry_title"));
+					message.setQ_content(rs.getString("inquiry_content"));
+					message.setQ_date(rs.getString("inquiry_date"));
+					list.add(message);
+				}while(rs.next());
 			}
 
 		} 
@@ -137,6 +144,31 @@ public ArrayList<Ser_MessageDTO> showMessage() {
 		} // end
 
 		return list;
+	}
+
+	public int getCount() {
+		int cnt=0;
+		String sql="select count(*) from customer_service";
+		
+		try {
+			// DB연결기능
+			connection();
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+
+			if(rs.next()) {
+				cnt=rs.getInt(1);	
+			}
+
+		} 
+		catch (SQLException e) {
+			System.out.println("세는거 sql 문 오류");
+			e.printStackTrace();
+		} finally {
+			close();
+		} // end
+
+		return cnt;
 	}
 	
 	public int deleteMessage(String q_no) {

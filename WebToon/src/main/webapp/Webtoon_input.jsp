@@ -140,6 +140,10 @@ a {
 	text-align: center;
 }
 
+.webtoon_container ul li{
+	font-size:14px;
+}
+
 .webtoon_comment {
 	text-align: center;
 	display: inline-block;
@@ -273,7 +277,7 @@ a {
 							<p>정보 수집</p>
 							<ul
 								class="pricing-table-body text-start text-dark px-4 list-unstyled light-300">
-								<li><i class="bx bxs-circle me-2"></i>해당 웹툰의 정보가 수집되고 있습니다</li>
+								<li><i class="bx bxs-circle me-2"></i>해당 웹툰 정보가 수집되고 있습니다</li>
 								<li><i class="bx bxs-circle me-2"></i>잠시만 기다려 주세요</li>
 							</ul>
 							<div class="pricing-table-footer pt-5">

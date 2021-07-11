@@ -1,14 +1,14 @@
+<%@page import="model.InfoDTO"%>
+<%@page import="model.InfoDAO"%>
 <%@page import="model.T_MemberDTO"%>
-<%@page import="model.Ser_MessageDTO"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="model.Ser_MessageDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <% /* T_MemberDTO member=(T_MemberDTO)session.getAttribute("member");//member 라는 이름으로 불러와 주면 됩니다  */
 	
-	Ser_MessageDAO dao = new Ser_MessageDAO();
-	ArrayList<Ser_MessageDTO> list = new ArrayList<Ser_MessageDTO>();
-	list = dao.showMessage();
+	InfoDAO dao = new InfoDAO();
+	ArrayList<InfoDTO> list = new ArrayList<InfoDTO>();
+	list = dao.showPost();
 
 	/* if(member!=null){// if 안 쓸 경우 member가 null이면 오류나니 member가 null이 아닐경우만 실행
 		list = dao.showMessage();
